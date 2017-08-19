@@ -1,0 +1,21 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _redux = require('redux');
+var _article = require('./reducers/article');var _article2 = _interopRequireDefault(_article);
+var _articleList = require('./reducers/article-list');var _articleList2 = _interopRequireDefault(_articleList);
+var _auth = require('./reducers/auth');var _auth2 = _interopRequireDefault(_auth);
+var _common = require('./reducers/common');var _common2 = _interopRequireDefault(_common);
+var _editor = require('./reducers/editor');var _editor2 = _interopRequireDefault(_editor);
+var _home = require('./reducers/home');var _home2 = _interopRequireDefault(_home);
+var _profile = require('./reducers/profile');var _profile2 = _interopRequireDefault(_profile);
+var _profileFavorites = require('./reducers/profile-favorites');var _profileFavorites2 = _interopRequireDefault(_profileFavorites);
+var _settings = require('./reducers/settings');var _settings2 = _interopRequireDefault(_settings);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+(0, _redux.combineReducers)({
+  article: _article2.default,
+  articleList: _articleList2.default,
+  auth: _auth2.default,
+  common: _common2.default,
+  editor: _editor2.default,
+  home: _home2.default,
+  profile: _profile2.default,
+  profileFavorites: _profileFavorites2.default,
+  settings: _settings2.default });

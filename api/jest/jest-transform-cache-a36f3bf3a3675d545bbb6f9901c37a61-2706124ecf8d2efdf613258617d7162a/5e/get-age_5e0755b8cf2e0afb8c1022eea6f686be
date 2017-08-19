@@ -1,0 +1,16 @@
+'use strict';var _getAge = require('../get-age');var _getAge2 = _interopRequireDefault(_getAge);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+test('returns null if the person has no age', () => {
+  const person = {};
+  const result = (0, _getAge2.default)(person);
+  expect(result).toBe(null);
+});
+
+test(`can get a person's age`, () => {
+  const age = 23;
+  const person = { age };
+  const result = (0, _getAge2.default)(person);
+  expect(result).toBe(age);
+});
+
+test('returns 0 if ');

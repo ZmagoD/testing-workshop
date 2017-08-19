@@ -1,0 +1,22 @@
+/* istanbul ignore next */"use strict";Object.defineProperty(exports, "__esModule", { value: true });var cov_bct6d13ea = function () {var path = "/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/list-errors.js",hash = "751d91e6048dd7394f3a77426e35fdfe79f747ec",global = new Function('return this')(),gcv = "__coverage__",coverageData = { path: "/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/list-errors.js", statementMap: { "0": { start: { line: 4, column: 17 }, end: { line: 4, column: 29 } }, "1": { start: { line: 5, column: 2 }, end: { line: 19, column: 3 } }, "2": { start: { line: 6, column: 4 }, end: { line: 16, column: 5 } }, "3": { start: { line: 9, column: 10 }, end: { line: 13, column: 11 } }, "4": { start: { line: 18, column: 4 }, end: { line: 18, column: 15 } } }, fnMap: { "0": { name: "ListErrors", decl: { start: { line: 3, column: 9 }, end: { line: 3, column: 19 } }, loc: { start: { line: 3, column: 27 }, end: { line: 20, column: 1 } }, line: 3 }, "1": { name: "(anonymous_1)", decl: { start: { line: 8, column: 33 }, end: { line: 8, column: 34 } }, loc: { start: { line: 8, column: 40 }, end: { line: 14, column: 9 } }, line: 8 } }, branchMap: { "0": { loc: { start: { line: 5, column: 2 }, end: { line: 19, column: 3 } }, type: "if", locations: [{ start: { line: 5, column: 2 }, end: { line: 19, column: 3 } }, { start: { line: 5, column: 2 }, end: { line: 19, column: 3 } }], line: 5 } }, s: { "0": 0, "1": 0, "2": 0, "3": 0, "4": 0 }, f: { "0": 0, "1": 0 }, b: { "0": [0, 0] }, _coverageSchema: "332fd63041d2c1bcb487cc26dd0d5f7d97098a6c" },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = "/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/list-errors.js";var /* istanbul ignore next */_react = require("react"); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function ListErrors(props) {/* istanbul ignore next */++cov_bct6d13ea.f[0];
+  const errors = /* istanbul ignore next */(++cov_bct6d13ea.s[0], props.errors); /* istanbul ignore next */++cov_bct6d13ea.s[1];
+  if (errors) {/* istanbul ignore next */++cov_bct6d13ea.b[0][0];++cov_bct6d13ea.s[2];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */"ul", /* istanbul ignore next */{ className: "error-messages", __source: { fileName: _jsxFileName, lineNumber: 7 }, __self: this },
+        Object.keys(errors).map(key => {/* istanbul ignore next */++cov_bct6d13ea.f[1];++cov_bct6d13ea.s[3];
+          return (
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */"li", /* istanbul ignore next */{ key: key, __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: this },
+              key, /* istanbul ignore next */" ", errors[key]));
+
+
+        })));
+
+
+  } else {/* istanbul ignore next */++cov_bct6d13ea.b[0][1];++cov_bct6d13ea.s[4];
+    return null;
+  }
+} /* istanbul ignore next */exports.default =
+
+ListErrors;

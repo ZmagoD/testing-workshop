@@ -1,0 +1,19 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1dorspgskf = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/auth.js',hash = '711aedb47cfd632b155464caf7d084b66f504d08',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/auth.js', statementMap: { '0': { start: { line: 5, column: 13 }, end: { line: 17, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_expressJwt = require('express-jwt'); /* istanbul ignore next */var _expressJwt2 = _interopRequireDefault(_expressJwt);
+var /* istanbul ignore next */_config = require('../config');
+var /* istanbul ignore next */_getTokenFromHeader = require('./utils/get-token-from-header'); /* istanbul ignore next */var _getTokenFromHeader2 = _interopRequireDefault(_getTokenFromHeader);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const auth = /* istanbul ignore next */(++cov_1dorspgskf.s[0], {
+  required: /* istanbul ignore next */(0, _expressJwt2.default)({
+    secret: /* istanbul ignore next */_config.secret,
+    userProperty: 'payload',
+    getToken: /* istanbul ignore next */_getTokenFromHeader2.default }),
+
+  optional: /* istanbul ignore next */(0, _expressJwt2.default)({
+    secret: /* istanbul ignore next */_config.secret,
+    userProperty: 'payload',
+    credentialsRequired: false,
+    getToken: /* istanbul ignore next */_getTokenFromHeader2.default }) }); /* istanbul ignore next */exports.default =
+
+
+
+auth;

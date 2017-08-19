@@ -1,0 +1,10 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_27tzbyobgp = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/index.js',hash = '7419fa12938a32eeb506330e3edaa95fc2f1fc11',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/index.js', statementMap: { '0': { start: { line: 7, column: 17 }, end: { line: 7, column: 33 } }, '1': { start: { line: 8, column: 2 }, end: { line: 8, column: 36 } }, '2': { start: { line: 9, column: 2 }, end: { line: 9, column: 15 } } }, fnMap: { '0': { name: 'getRouter', decl: { start: { line: 6, column: 9 }, end: { line: 6, column: 18 } }, loc: { start: { line: 6, column: 21 }, end: { line: 10, column: 1 } } } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_express = require('express'); /* istanbul ignore next */var _express2 = _interopRequireDefault(_express);
+var /* istanbul ignore next */_api = require('./api'); /* istanbul ignore next */var _api2 = _interopRequireDefault(_api);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+getRouter;
+
+function getRouter() {/* istanbul ignore next */++cov_27tzbyobgp.f[0];
+  const router = /* istanbul ignore next */(++cov_27tzbyobgp.s[0], /* istanbul ignore next */_express2.default.Router()); /* istanbul ignore next */++cov_27tzbyobgp.s[1];
+  router.use('/api', /* istanbul ignore next */(0, _api2.default)()); /* istanbul ignore next */++cov_27tzbyobgp.s[2];
+  return router;
+}

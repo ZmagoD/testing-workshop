@@ -1,0 +1,42 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2lhu2882bz = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/profile-favorites.js',hash = '2faad8c8863a3100ff9a9c9a23781224d6320821',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/profile-favorites.js', statementMap: { '0': { start: { line: 8, column: 4 }, end: { line: 13, column: 5 } }, '1': { start: { line: 17, column: 4 }, end: { line: 17, column: 25 } }, '2': { start: { line: 21, column: 4 }, end: { line: 23, column: 5 } }, '3': { start: { line: 28, column: 2 }, end: { line: 30, column: 3 } }, '4': { start: { line: 34, column: 2 }, end: { line: 38, column: 3 } }, '5': { start: { line: 36, column: 6 }, end: { line: 36, column: 64 } }, '6': { start: { line: 37, column: 20 }, end: { line: 37, column: 71 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 7, column: 2 }, end: { line: 7, column: 3 } }, loc: { start: { line: 7, column: 23 }, end: { line: 14, column: 3 } }, line: 7 }, '1': { name: '(anonymous_1)', decl: { start: { line: 16, column: 2 }, end: { line: 16, column: 3 } }, loc: { start: { line: 16, column: 25 }, end: { line: 18, column: 3 } }, line: 16 }, '2': { name: '(anonymous_2)', decl: { start: { line: 20, column: 2 }, end: { line: 20, column: 3 } }, loc: { start: { line: 20, column: 11 }, end: { line: 24, column: 3 } }, line: 20 }, '3': { name: 'mapStateToProps', decl: { start: { line: 27, column: 9 }, end: { line: 27, column: 24 } }, loc: { start: { line: 27, column: 32 }, end: { line: 31, column: 1 } }, line: 27 }, '4': { name: 'mapDispatchToProps', decl: { start: { line: 33, column: 9 }, end: { line: 33, column: 27 } }, loc: { start: { line: 33, column: 38 }, end: { line: 39, column: 1 } }, line: 33 }, '5': { name: '(anonymous_5)', decl: { start: { line: 35, column: 12 }, end: { line: 35, column: 13 } }, loc: { start: { line: 36, column: 6 }, end: { line: 36, column: 64 } }, line: 36 }, '6': { name: '(anonymous_6)', decl: { start: { line: 37, column: 14 }, end: { line: 37, column: 15 } }, loc: { start: { line: 37, column: 20 }, end: { line: 37, column: 71 } }, line: 37 } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/profile-favorites.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_agent = require('../shared/agent'); /* istanbul ignore next */var _agent2 = _interopRequireDefault(_agent);
+var /* istanbul ignore next */_profile = require('../shared/containers/profile'); /* istanbul ignore next */var _profile2 = _interopRequireDefault(_profile);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+class ProfileFavoritesPage extends /* istanbul ignore next */_react2.default.Component {
+  componentWillMount() {/* istanbul ignore next */++cov_2lhu2882bz.f[0];++cov_2lhu2882bz.s[0];
+    this.props.onLoad(
+    Promise.all([
+    /* istanbul ignore next */_agent2.default.Profile.get(this.props.match.params.username),
+    /* istanbul ignore next */_agent2.default.Articles.favoritedBy(this.props.match.params.username)]));
+
+
+  }
+
+  componentWillUnmount() {/* istanbul ignore next */++cov_2lhu2882bz.f[1];++cov_2lhu2882bz.s[1];
+    this.props.onUnload();
+  }
+
+  render() {/* istanbul ignore next */++cov_2lhu2882bz.f[2];++cov_2lhu2882bz.s[2];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_profile2.default, /* istanbul ignore next */{ profile: this.props.profileFavorites, activeTab: 'favorites', __source: { fileName: _jsxFileName, lineNumber: 22 }, __self: this }));
+
+  }}
+
+
+function mapStateToProps(state) {/* istanbul ignore next */++cov_2lhu2882bz.f[3];++cov_2lhu2882bz.s[3];
+  return {
+    profileFavorites: state.profileFavorites };
+
+}
+
+function mapDispatchToProps(dispatch) {/* istanbul ignore next */++cov_2lhu2882bz.f[4];++cov_2lhu2882bz.s[4];
+  return {
+    onLoad: payload =>
+    {/* istanbul ignore next */++cov_2lhu2882bz.f[5];++cov_2lhu2882bz.s[5];return dispatch({ type: 'PROFILE_FAVORITES_PAGE_LOADED', payload });},
+    onUnload: () => {/* istanbul ignore next */++cov_2lhu2882bz.f[6];++cov_2lhu2882bz.s[6];return dispatch({ type: 'PROFILE_FAVORITES_PAGE_UNLOADED' });} };
+
+} /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(
+ProfileFavoritesPage);

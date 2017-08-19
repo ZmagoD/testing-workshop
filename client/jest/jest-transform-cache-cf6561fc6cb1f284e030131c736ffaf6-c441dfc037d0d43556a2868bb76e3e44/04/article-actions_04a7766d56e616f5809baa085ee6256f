@@ -1,0 +1,38 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_14y482a6g6 = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/article-actions.js',hash = 'a5837e6cacc91e879fc931d20110f6884a8656a9',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/article-actions.js', statementMap: { '0': { start: { line: 6, column: 27 }, end: { line: 8, column: 2 } }, '1': { start: { line: 6, column: 40 }, end: { line: 8, column: 1 } }, '2': { start: { line: 7, column: 28 }, end: { line: 7, column: 71 } }, '3': { start: { line: 10, column: 23 }, end: { line: 36, column: 1 } }, '4': { start: { line: 11, column: 18 }, end: { line: 11, column: 31 } }, '5': { start: { line: 12, column: 14 }, end: { line: 14, column: 3 } }, '6': { start: { line: 13, column: 4 }, end: { line: 13, column: 60 } }, '7': { start: { line: 15, column: 2 }, end: { line: 33, column: 3 } }, '8': { start: { line: 16, column: 4 }, end: { line: 32, column: 5 } }, '9': { start: { line: 35, column: 2 }, end: { line: 35, column: 17 } }, '10': { start: { line: 38, column: 30 }, end: { line: 38, column: 32 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 6, column: 27 }, end: { line: 6, column: 28 } }, loc: { start: { line: 6, column: 40 }, end: { line: 8, column: 1 } }, line: 6 }, '1': { name: '(anonymous_1)', decl: { start: { line: 7, column: 17 }, end: { line: 7, column: 18 } }, loc: { start: { line: 7, column: 28 }, end: { line: 7, column: 71 } }, line: 7 }, '2': { name: '(anonymous_2)', decl: { start: { line: 10, column: 23 }, end: { line: 10, column: 24 } }, loc: { start: { line: 10, column: 32 }, end: { line: 36, column: 1 } }, line: 10 }, '3': { name: '(anonymous_3)', decl: { start: { line: 12, column: 14 }, end: { line: 12, column: 15 } }, loc: { start: { line: 12, column: 20 }, end: { line: 14, column: 3 } }, line: 12 }, '4': { name: '(anonymous_4)', decl: { start: { line: 38, column: 23 }, end: { line: 38, column: 24 } }, loc: { start: { line: 38, column: 30 }, end: { line: 38, column: 32 } }, line: 38 } }, branchMap: { '0': { loc: { start: { line: 15, column: 2 }, end: { line: 33, column: 3 } }, type: 'if', locations: [{ start: { line: 15, column: 2 }, end: { line: 33, column: 3 } }, { start: { line: 15, column: 2 }, end: { line: 33, column: 3 } }], line: 15 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/article-actions.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRouterDom = require('react-router-dom');
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_agent = require('../../shared/agent'); /* istanbul ignore next */var _agent2 = _interopRequireDefault(_agent);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_14y482a6g6.s[0];
+
+const mapDispatchToProps = dispatch => {/* istanbul ignore next */++cov_14y482a6g6.f[0];++cov_14y482a6g6.s[1];return {
+    onClickDelete: payload => {/* istanbul ignore next */++cov_14y482a6g6.f[1];++cov_14y482a6g6.s[2];return dispatch({ type: 'DELETE_ARTICLE', payload });} };
+}; /* istanbul ignore next */++cov_14y482a6g6.s[3];
+
+const ArticleActions = props => {/* istanbul ignore next */++cov_14y482a6g6.f[2];
+  const article = /* istanbul ignore next */(++cov_14y482a6g6.s[4], props.article); /* istanbul ignore next */++cov_14y482a6g6.s[5];
+  const del = () => {/* istanbul ignore next */++cov_14y482a6g6.f[3];++cov_14y482a6g6.s[6];
+    props.onClickDelete( /* istanbul ignore next */_agent2.default.Articles.delete(article.slug));
+  }; /* istanbul ignore next */++cov_14y482a6g6.s[7];
+  if (props.canModify) {/* istanbul ignore next */++cov_14y482a6g6.b[0][0];++cov_14y482a6g6.s[8];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 17 }, __self: undefined },
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{
+            to: `/editor/${article.slug}`,
+            className: 'btn btn-outline-secondary btn-sm',
+            /* istanbul ignore next */'data-test': 'edit', __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: undefined },
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'i', /* istanbul ignore next */{ className: 'ion-edit', __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: undefined }), /* istanbul ignore next */' Edit Article'),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ className: 'btn btn-outline-danger btn-sm', onClick: del, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: undefined },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'i', /* istanbul ignore next */{ className: 'ion-trash-a', __source: { fileName: _jsxFileName, lineNumber: 28 }, __self: undefined }), /* istanbul ignore next */' Delete Article')));
+
+
+
+
+  } else /* istanbul ignore next */{++cov_14y482a6g6.b[0][1];}++cov_14y482a6g6.s[9];
+
+  return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 35 }, __self: undefined }));
+}; /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _reactRedux.connect)(() => {/* istanbul ignore next */++cov_14y482a6g6.f[4];++cov_14y482a6g6.s[10];return {};}, mapDispatchToProps)(ArticleActions);

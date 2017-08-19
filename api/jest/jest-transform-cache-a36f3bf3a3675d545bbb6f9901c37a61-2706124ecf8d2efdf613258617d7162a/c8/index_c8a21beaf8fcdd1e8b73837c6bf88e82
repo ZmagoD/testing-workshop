@@ -1,0 +1,17 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_jdnfbhf5i = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/models/index.js',hash = '0c7dae637814b3bb00e5fa5004fa3b9cf25aeba4',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/models/index.js', statementMap: { '0': { start: { line: 9, column: 21 }, end: { line: 9, column: 36 } }, '1': { start: { line: 10, column: 15 }, end: { line: 10, column: 49 } }, '2': { start: { line: 12, column: 24 }, end: { line: 12, column: 42 } }, '3': { start: { line: 13, column: 2 }, end: { line: 13, column: 42 } }, '4': { start: { line: 15, column: 24 }, end: { line: 15, column: 46 } }, '5': { start: { line: 16, column: 2 }, end: { line: 16, column: 42 } } }, fnMap: { '0': { name: 'setupModels', decl: { start: { line: 8, column: 9 }, end: { line: 8, column: 20 } }, loc: { start: { line: 8, column: 23 }, end: { line: 17, column: 1 } } } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_mongoose = require('mongoose'); /* istanbul ignore next */var _mongoose2 = _interopRequireDefault(_mongoose);
+var /* istanbul ignore next */_user = require('./user'); /* istanbul ignore next */var _user2 = _interopRequireDefault(_user);
+var /* istanbul ignore next */_comment = require('./comment'); /* istanbul ignore next */var _comment2 = _interopRequireDefault(_comment);
+var /* istanbul ignore next */_article = require('./article'); /* istanbul ignore next */var _article2 = _interopRequireDefault(_article);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+setupModels;
+
+function setupModels() {/* istanbul ignore next */++cov_jdnfbhf5i.f[0];
+  const UserSchema = /* istanbul ignore next */(++cov_jdnfbhf5i.s[0], /* istanbul ignore next */(0, _user2.default)());
+  const User = /* istanbul ignore next */(++cov_jdnfbhf5i.s[1], /* istanbul ignore next */_mongoose2.default.model('User', UserSchema));
+
+  const CommentSchema = /* istanbul ignore next */(++cov_jdnfbhf5i.s[2], /* istanbul ignore next */(0, _comment2.default)()); /* istanbul ignore next */++cov_jdnfbhf5i.s[3];
+  /* istanbul ignore next */_mongoose2.default.model('Comment', CommentSchema);
+
+  const ArticleSchema = /* istanbul ignore next */(++cov_jdnfbhf5i.s[4], /* istanbul ignore next */(0, _article2.default)(User)); /* istanbul ignore next */++cov_jdnfbhf5i.s[5];
+  /* istanbul ignore next */_mongoose2.default.model('Article', ArticleSchema);
+}

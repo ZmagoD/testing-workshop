@@ -1,0 +1,157 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1mlv0n6cq1 = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/settings.js',hash = 'c639a391faf1b9e39c5b5a0343b21ddb850d9106',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/settings.js', statementMap: { '0': { start: { line: 9, column: 25 }, end: { line: 9, column: 72 } }, '1': { start: { line: 9, column: 31 }, end: { line: 9, column: 72 } }, '2': { start: { line: 12, column: 4 }, end: { line: 12, column: 23 } }, '3': { start: { line: 14, column: 17 }, end: { line: 14, column: 32 } }, '4': { start: { line: 15, column: 4 }, end: { line: 17, column: 5 } }, '5': { start: { line: 16, column: 6 }, end: { line: 16, column: 26 } }, '6': { start: { line: 19, column: 4 }, end: { line: 19, column: 33 } }, '7': { start: { line: 23, column: 4 }, end: { line: 28, column: 5 } }, '8': { start: { line: 32, column: 4 }, end: { line: 34, column: 5 } }, '9': { start: { line: 33, column: 6 }, end: { line: 33, column: 45 } }, '10': { start: { line: 38, column: 4 }, end: { line: 108, column: 5 } }, '11': { start: { line: 112, column: 24 }, end: { line: 115, column: 2 } }, '12': { start: { line: 112, column: 34 }, end: { line: 115, column: 1 } }, '13': { start: { line: 117, column: 27 }, end: { line: 122, column: 2 } }, '14': { start: { line: 117, column: 40 }, end: { line: 122, column: 1 } }, '15': { start: { line: 118, column: 23 }, end: { line: 118, column: 49 } }, '16': { start: { line: 120, column: 4 }, end: { line: 120, column: 70 } }, '17': { start: { line: 121, column: 18 }, end: { line: 121, column: 60 } }, '18': { start: { line: 125, column: 2 }, end: { line: 154, column: 3 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 9, column: 16 }, end: { line: 9, column: 17 } }, loc: { start: { line: 9, column: 25 }, end: { line: 9, column: 72 } }, line: 9 }, '1': { name: '(anonymous_1)', decl: { start: { line: 9, column: 25 }, end: { line: 9, column: 26 } }, loc: { start: { line: 9, column: 31 }, end: { line: 9, column: 72 } }, line: 9 }, '2': { name: '(anonymous_2)', decl: { start: { line: 11, column: 15 }, end: { line: 11, column: 16 } }, loc: { start: { line: 11, column: 21 }, end: { line: 20, column: 3 } }, line: 11 }, '3': { name: '(anonymous_3)', decl: { start: { line: 22, column: 2 }, end: { line: 22, column: 3 } }, loc: { start: { line: 22, column: 22 }, end: { line: 29, column: 3 } }, line: 22 }, '4': { name: '(anonymous_4)', decl: { start: { line: 31, column: 2 }, end: { line: 31, column: 3 } }, loc: { start: { line: 31, column: 39 }, end: { line: 35, column: 3 } }, line: 31 }, '5': { name: '(anonymous_5)', decl: { start: { line: 37, column: 2 }, end: { line: 37, column: 3 } }, loc: { start: { line: 37, column: 11 }, end: { line: 109, column: 3 } }, line: 37 }, '6': { name: '(anonymous_6)', decl: { start: { line: 112, column: 24 }, end: { line: 112, column: 25 } }, loc: { start: { line: 112, column: 34 }, end: { line: 115, column: 1 } }, line: 112 }, '7': { name: '(anonymous_7)', decl: { start: { line: 117, column: 27 }, end: { line: 117, column: 28 } }, loc: { start: { line: 117, column: 40 }, end: { line: 122, column: 1 } }, line: 117 }, '8': { name: '(anonymous_8)', decl: { start: { line: 118, column: 17 }, end: { line: 118, column: 18 } }, loc: { start: { line: 118, column: 23 }, end: { line: 118, column: 49 } }, line: 118 }, '9': { name: '(anonymous_9)', decl: { start: { line: 119, column: 16 }, end: { line: 119, column: 17 } }, loc: { start: { line: 120, column: 4 }, end: { line: 120, column: 70 } }, line: 120 }, '10': { name: '(anonymous_10)', decl: { start: { line: 121, column: 12 }, end: { line: 121, column: 13 } }, loc: { start: { line: 121, column: 18 }, end: { line: 121, column: 60 } }, line: 121 }, '11': { name: 'Settings', decl: { start: { line: 124, column: 9 }, end: { line: 124, column: 17 } }, loc: { start: { line: 124, column: 25 }, end: { line: 155, column: 1 } }, line: 124 } }, branchMap: { '0': { loc: { start: { line: 15, column: 4 }, end: { line: 17, column: 5 } }, type: 'if', locations: [{ start: { line: 15, column: 4 }, end: { line: 17, column: 5 } }, { start: { line: 15, column: 4 }, end: { line: 17, column: 5 } }], line: 15 }, '1': { loc: { start: { line: 24, column: 13 }, end: { line: 24, column: 47 } }, type: 'binary-expr', locations: [{ start: { line: 24, column: 13 }, end: { line: 24, column: 41 } }, { start: { line: 24, column: 45 }, end: { line: 24, column: 47 } }], line: 24 }, '2': { loc: { start: { line: 32, column: 4 }, end: { line: 34, column: 5 } }, type: 'if', locations: [{ start: { line: 32, column: 4 }, end: { line: 34, column: 5 } }, { start: { line: 32, column: 4 }, end: { line: 34, column: 5 } }], line: 32 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/settings.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_agent = require('../shared/agent'); /* istanbul ignore next */var _agent2 = _interopRequireDefault(_agent);
+var /* istanbul ignore next */_listErrors = require('../shared/components/list-errors'); /* istanbul ignore next */var _listErrors2 = _interopRequireDefault(_listErrors);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+class SettingsForm extends /* istanbul ignore next */_react2.default.Component {/* istanbul ignore next */constructor(...args) {var _temp;return _temp = super(...args), this.
+    state = this.getStateFromProps(), this.
+
+    updateState = field => {/* istanbul ignore next */++cov_1mlv0n6cq1.f[0];++cov_1mlv0n6cq1.s[0];return ev => {/* istanbul ignore next */++cov_1mlv0n6cq1.f[1];++cov_1mlv0n6cq1.s[1];return this.setState({ [field]: ev.target.value });};}, this.
+
+    submitForm = ev => {/* istanbul ignore next */++cov_1mlv0n6cq1.f[2];++cov_1mlv0n6cq1.s[2];
+      ev.preventDefault();
+
+      const user = /* istanbul ignore next */(++cov_1mlv0n6cq1.s[3], Object.assign({}, this.state)); /* istanbul ignore next */++cov_1mlv0n6cq1.s[4];
+      if (!user.password) {/* istanbul ignore next */++cov_1mlv0n6cq1.b[0][0];++cov_1mlv0n6cq1.s[5];
+        delete user.password;
+      } else /* istanbul ignore next */{++cov_1mlv0n6cq1.b[0][1];}++cov_1mlv0n6cq1.s[6];
+
+      this.props.onSubmitForm(user);
+    }, _temp;}
+
+  getStateFromProps() {/* istanbul ignore next */++cov_1mlv0n6cq1.f[3];++cov_1mlv0n6cq1.s[7];
+    return {
+      image: /* istanbul ignore next */(++cov_1mlv0n6cq1.b[1][0], this.props.currentUser.image) || /* istanbul ignore next */(++cov_1mlv0n6cq1.b[1][1], ''),
+      username: this.props.currentUser.username,
+      bio: this.props.currentUser.bio,
+      email: this.props.currentUser.email };
+
+  }
+
+  componentWillReceiveProps(nextProps) {/* istanbul ignore next */++cov_1mlv0n6cq1.f[4];++cov_1mlv0n6cq1.s[8];
+    if (nextProps.currentUser) {/* istanbul ignore next */++cov_1mlv0n6cq1.b[2][0];++cov_1mlv0n6cq1.s[9];
+      this.setState(this.getStateFromProps());
+    } else /* istanbul ignore next */{++cov_1mlv0n6cq1.b[2][1];}
+  }
+
+  render() {/* istanbul ignore next */++cov_1mlv0n6cq1.f[5];++cov_1mlv0n6cq1.s[10];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: this.submitForm, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'fieldset', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this },
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'fieldset', /* istanbul ignore next */{ className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'input', /* istanbul ignore next */{
+              className: 'form-control',
+              type: 'text',
+              placeholder: 'URL of profile picture',
+              value: this.state.image,
+              onChange: this.updateState('image'),
+              /* istanbul ignore next */'data-test': 'profile-url', __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this })),
+
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'fieldset', /* istanbul ignore next */{ className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'input', /* istanbul ignore next */{
+              className: 'form-control form-control-lg',
+              type: 'text',
+              placeholder: 'Username',
+              value: this.state.username,
+              onChange: this.updateState('username'),
+              /* istanbul ignore next */'data-test': 'username', __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this })),
+
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'fieldset', /* istanbul ignore next */{ className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 64 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'textarea', /* istanbul ignore next */{
+              className: 'form-control form-control-lg',
+              rows: '8',
+              placeholder: 'Short bio about you',
+              value: this.state.bio,
+              onChange: this.updateState('bio'),
+              /* istanbul ignore next */'data-test': 'bio', __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this })),
+
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'fieldset', /* istanbul ignore next */{ className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 75 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'input', /* istanbul ignore next */{
+              className: 'form-control form-control-lg',
+              type: 'email',
+              placeholder: 'Email',
+              value: this.state.email,
+              onChange: this.updateState('email'),
+              /* istanbul ignore next */'data-test': 'email', __source: { fileName: _jsxFileName, lineNumber: 76 }, __self: this })),
+
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'fieldset', /* istanbul ignore next */{ className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 86 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'input', /* istanbul ignore next */{
+              className: 'form-control form-control-lg',
+              type: 'password',
+              placeholder: 'New Password',
+              value: this.state.password,
+              onChange: this.updateState('password'),
+              /* istanbul ignore next */'data-test': 'password', __source: { fileName: _jsxFileName, lineNumber: 87 }, __self: this })),
+
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{
+              className: 'btn btn-lg btn-primary pull-xs-right',
+              type: 'submit',
+              disabled: this.state.inProgress,
+              /* istanbul ignore next */'data-test': 'update', __source: { fileName: _jsxFileName, lineNumber: 97 }, __self: this }, /* istanbul ignore next */'Update Settings'))));
+
+
+
+
+
+
+
+  }} /* istanbul ignore next */++cov_1mlv0n6cq1.s[11];
+
+
+const mapStateToProps = state => {/* istanbul ignore next */++cov_1mlv0n6cq1.f[6];++cov_1mlv0n6cq1.s[12];return (/* istanbul ignore next */Object.assign({},
+    state.settings, {
+      currentUser: state.common.currentUser }));
+}; /* istanbul ignore next */++cov_1mlv0n6cq1.s[13];
+
+const mapDispatchToProps = dispatch => {/* istanbul ignore next */++cov_1mlv0n6cq1.f[7];++cov_1mlv0n6cq1.s[14];return {
+    onClickLogout: () => {/* istanbul ignore next */++cov_1mlv0n6cq1.f[8];++cov_1mlv0n6cq1.s[15];return dispatch({ type: 'LOGOUT' });},
+    onSubmitForm: user =>
+    {/* istanbul ignore next */++cov_1mlv0n6cq1.f[9];++cov_1mlv0n6cq1.s[16];return dispatch({ type: 'SETTINGS_SAVED', payload: /* istanbul ignore next */_agent2.default.Auth.save(user) });},
+    onUnload: () => {/* istanbul ignore next */++cov_1mlv0n6cq1.f[10];++cov_1mlv0n6cq1.s[17];return dispatch({ type: 'SETTINGS_PAGE_UNLOADED' });} };
+};
+
+function Settings(props) {/* istanbul ignore next */++cov_1mlv0n6cq1.f[11];++cov_1mlv0n6cq1.s[18];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'settings-page', __source: { fileName: _jsxFileName, lineNumber: 126 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'container page', __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'col-md-6 offset-md-3 col-xs-12', __source: { fileName: _jsxFileName, lineNumber: 129 }, __self: this },
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */{ className: 'text-xs-center', __source: { fileName: _jsxFileName, lineNumber: 131 }, __self: this }, /* istanbul ignore next */'Your Settings'),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_listErrors2.default, /* istanbul ignore next */{ errors: props.errors, __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this }),
+
+            /* istanbul ignore next */_react2.default.createElement(SettingsForm, /* istanbul ignore next */{
+              currentUser: props.currentUser,
+              onSubmitForm: props.onSubmitForm, __source: { fileName: _jsxFileName, lineNumber: 135 }, __self: this }),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'hr', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 140 }, __self: this }),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{
+                className: 'btn btn-outline-danger',
+                onClick: props.onClickLogout,
+                /* istanbul ignore next */'data-test': 'logout', __source: { fileName: _jsxFileName, lineNumber: 142 }, __self: this }, /* istanbul ignore next */'Or click here to logout.'))))));
+
+
+
+
+
+
+
+
+
+} /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Settings);

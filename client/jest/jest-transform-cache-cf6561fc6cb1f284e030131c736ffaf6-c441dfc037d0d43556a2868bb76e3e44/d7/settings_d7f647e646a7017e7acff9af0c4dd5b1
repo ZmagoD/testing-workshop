@@ -1,0 +1,157 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/settings.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRedux = require('react-redux');
+var _agent = require('../shared/agent');var _agent2 = _interopRequireDefault(_agent);
+var _listErrors = require('../shared/components/list-errors');var _listErrors2 = _interopRequireDefault(_listErrors);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+class SettingsForm extends _react2.default.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+    state = this.getStateFromProps(), this.
+
+    updateState = field => ev => this.setState({ [field]: ev.target.value }), this.
+
+    submitForm = ev => {
+      ev.preventDefault();
+
+      const user = Object.assign({}, this.state);
+      if (!user.password) {
+        delete user.password;
+      }
+
+      this.props.onSubmitForm(user);
+    }, _temp;}
+
+  getStateFromProps() {
+    return {
+      image: this.props.currentUser.image || '',
+      username: this.props.currentUser.username,
+      bio: this.props.currentUser.bio,
+      email: this.props.currentUser.email };
+
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.currentUser) {
+      this.setState(this.getStateFromProps());
+    }
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('form', { onSubmit: this.submitForm, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this },
+        _react2.default.createElement('fieldset', { __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this },
+
+          _react2.default.createElement('fieldset', { className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: this },
+            _react2.default.createElement('input', {
+              className: 'form-control',
+              type: 'text',
+              placeholder: 'URL of profile picture',
+              value: this.state.image,
+              onChange: this.updateState('image'),
+              'data-test': 'profile-url', __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this })),
+
+
+
+          _react2.default.createElement('fieldset', { className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this },
+            _react2.default.createElement('input', {
+              className: 'form-control form-control-lg',
+              type: 'text',
+              placeholder: 'Username',
+              value: this.state.username,
+              onChange: this.updateState('username'),
+              'data-test': 'username', __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this })),
+
+
+
+          _react2.default.createElement('fieldset', { className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 64 }, __self: this },
+            _react2.default.createElement('textarea', {
+              className: 'form-control form-control-lg',
+              rows: '8',
+              placeholder: 'Short bio about you',
+              value: this.state.bio,
+              onChange: this.updateState('bio'),
+              'data-test': 'bio', __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this })),
+
+
+
+          _react2.default.createElement('fieldset', { className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 75 }, __self: this },
+            _react2.default.createElement('input', {
+              className: 'form-control form-control-lg',
+              type: 'email',
+              placeholder: 'Email',
+              value: this.state.email,
+              onChange: this.updateState('email'),
+              'data-test': 'email', __source: { fileName: _jsxFileName, lineNumber: 76 }, __self: this })),
+
+
+
+          _react2.default.createElement('fieldset', { className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 86 }, __self: this },
+            _react2.default.createElement('input', {
+              className: 'form-control form-control-lg',
+              type: 'password',
+              placeholder: 'New Password',
+              value: this.state.password,
+              onChange: this.updateState('password'),
+              'data-test': 'password', __source: { fileName: _jsxFileName, lineNumber: 87 }, __self: this })),
+
+
+
+          _react2.default.createElement('button', {
+              className: 'btn btn-lg btn-primary pull-xs-right',
+              type: 'submit',
+              disabled: this.state.inProgress,
+              'data-test': 'update', __source: { fileName: _jsxFileName, lineNumber: 97 }, __self: this }, 'Update Settings'))));
+
+
+
+
+
+
+
+  }}
+
+
+const mapStateToProps = state => Object.assign({},
+state.settings, {
+  currentUser: state.common.currentUser });
+
+
+const mapDispatchToProps = dispatch => ({
+  onClickLogout: () => dispatch({ type: 'LOGOUT' }),
+  onSubmitForm: user =>
+  dispatch({ type: 'SETTINGS_SAVED', payload: _agent2.default.Auth.save(user) }),
+  onUnload: () => dispatch({ type: 'SETTINGS_PAGE_UNLOADED' }) });
+
+
+function Settings(props) {
+  return (
+    _react2.default.createElement('div', { className: 'settings-page', __source: { fileName: _jsxFileName, lineNumber: 126 }, __self: this },
+      _react2.default.createElement('div', { className: 'container page', __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this },
+        _react2.default.createElement('div', { className: 'row', __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this },
+          _react2.default.createElement('div', { className: 'col-md-6 offset-md-3 col-xs-12', __source: { fileName: _jsxFileName, lineNumber: 129 }, __self: this },
+
+            _react2.default.createElement('h1', { className: 'text-xs-center', __source: { fileName: _jsxFileName, lineNumber: 131 }, __self: this }, 'Your Settings'),
+
+            _react2.default.createElement(_listErrors2.default, { errors: props.errors, __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this }),
+
+            _react2.default.createElement(SettingsForm, {
+              currentUser: props.currentUser,
+              onSubmitForm: props.onSubmitForm, __source: { fileName: _jsxFileName, lineNumber: 135 }, __self: this }),
+
+
+            _react2.default.createElement('hr', { __source: { fileName: _jsxFileName, lineNumber: 140 }, __self: this }),
+
+            _react2.default.createElement('button', {
+                className: 'btn btn-outline-danger',
+                onClick: props.onClickLogout,
+                'data-test': 'logout', __source: { fileName: _jsxFileName, lineNumber: 142 }, __self: this }, 'Or click here to logout.'))))));
+
+
+
+
+
+
+
+
+
+}exports.default =
+
+(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Settings);

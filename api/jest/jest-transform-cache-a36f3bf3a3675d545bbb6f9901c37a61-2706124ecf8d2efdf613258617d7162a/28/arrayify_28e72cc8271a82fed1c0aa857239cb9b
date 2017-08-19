@@ -1,0 +1,7 @@
+/* istanbul ignore next */"use strict";Object.defineProperty(exports, "__esModule", { value: true });var cov_2p65wpn2ek = function () {var path = "/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/utils/arrayify.js",hash = "dff91fdf7800796a8d7bada6dca82ea8320ccd5d",global = new Function('return this')(),gcv = "__coverage__",coverageData = { path: "/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/utils/arrayify.js", statementMap: {}, fnMap: { "0": { name: "arrayify", decl: { start: { line: 5, column: 9 }, end: { line: 5, column: 17 } }, loc: { start: { line: 5, column: 20 }, end: { line: 7, column: 1 } } } }, branchMap: {}, s: {}, f: { "0": 0 }, b: {}, _coverageSchema: "332fd63041d2c1bcb487cc26dd0d5f7d97098a6c" },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();exports.default = arrayify;
+// Here's where you'll write arrayify. Look at
+// `api/src/routes/utils/arrayify.js` for instructions.
+
+function arrayify() {
+  // TODO don't type in here until you have a unit test first!
+  /* istanbul ignore next */++cov_2p65wpn2ek.f[0];}

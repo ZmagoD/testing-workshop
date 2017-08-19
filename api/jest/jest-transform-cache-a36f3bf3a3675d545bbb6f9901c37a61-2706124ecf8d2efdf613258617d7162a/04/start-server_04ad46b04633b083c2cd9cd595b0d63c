@@ -1,0 +1,85 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _lodash = require('lodash');var _lodash2 = _interopRequireDefault(_lodash);
+var _faker = require('faker');var _faker2 = _interopRequireDefault(_faker);
+var _express = require('express');var _express2 = _interopRequireDefault(_express);
+var _bodyParser = require('body-parser');var _bodyParser2 = _interopRequireDefault(_bodyParser);
+var _getTokenFromHeader = require('../../src/routes/utils/get-token-from-header');var _getTokenFromHeader2 = _interopRequireDefault(_getTokenFromHeader);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+startServer;
+
+const users = _lodash2.default.times(20, () => _faker2.default.helpers.contextualCard());
+const userAuth = {
+  username: 'jane',
+  password: 'I have a secure password' };
+
+const user = {
+  token: 'Wanna-hear-a-secret?-I-sometimes-sing-in-the-shower!' };
+
+
+function startServer() {
+  const app = (0, _express2.default)();
+
+  app.use(_bodyParser2.default.json());
+
+  function auth(req, res, next) {
+    const token = (0, _getTokenFromHeader2.default)(req);
+    if (!token || token !== user.token) {
+      res.sendStatus(401);
+    } else {
+      next();
+    }
+  }
+
+  const userRouter = _express2.default.Router();
+  userRouter.get('/', (req, res) => {var _req$query =
+    req.query,_req$query$limit = _req$query.limit;const limit = _req$query$limit === undefined ? 20 : _req$query$limit;var _req$query$offset = _req$query.offset;const offset = _req$query$offset === undefined ? 0 : _req$query$offset;
+    res.json({ users: _lodash2.default.take(users.slice(offset), limit) });
+  });
+
+  // Preload user objects on routes with ':username'
+  userRouter.param('username', (req, res, next, param) => {
+    req.user = users.find(({ username }) => username === param);
+    next();
+  });
+
+  userRouter.get('/:username', (req, res) => {
+    if (req.user) {
+      res.json({ user: req.user });
+    } else {
+      res.sendStatus(404);
+    }
+  });
+
+  userRouter.post('/', auth, (req, res) => {
+    users.unshift(req.body.user);
+    res.json({ user: users[0] });
+  });
+
+  userRouter.delete('/:username', auth, (req, res) => {
+    users.splice(users.indexOf(req.user), 1);
+    res.json({ success: true });
+  });
+
+  const authRouter = _express2.default.Router();
+  authRouter.post('/', (req, res) => {
+    if (
+    req.body.username === userAuth.username &&
+    req.body.password === userAuth.password)
+    {
+      res.json({ user });
+    } else {
+      res.sendStatus(401);
+    }
+  });
+
+  const apiRouter = _express2.default.Router();
+  apiRouter.use('/users', userRouter);
+  apiRouter.use('/auth', authRouter);
+
+  app.use('/api', apiRouter);
+
+  return new Promise(resolve => {
+    const server = app.listen(3001, () => {
+      resolve(server);
+    });
+  });
+}

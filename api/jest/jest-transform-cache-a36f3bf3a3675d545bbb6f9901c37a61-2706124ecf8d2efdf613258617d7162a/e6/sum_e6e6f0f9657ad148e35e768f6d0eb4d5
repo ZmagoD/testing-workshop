@@ -1,0 +1,7 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true }); // let's sum some numbers with TDD
+
+function sum(...numbers) {
+  return numbers;
+}exports.default =
+
+sum;

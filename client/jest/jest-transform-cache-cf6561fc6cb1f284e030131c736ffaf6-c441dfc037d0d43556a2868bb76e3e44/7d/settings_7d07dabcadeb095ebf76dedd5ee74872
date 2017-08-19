@@ -1,0 +1,19 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default = (state = {}, action) => {
+  switch (action.type) {
+    case 'SETTINGS_SAVED':
+      return Object.assign({},
+      state, {
+        inProgress: false,
+        errors: action.error ? action.payload.errors : null });
+
+    case 'SETTINGS_PAGE_UNLOADED':
+      return {};
+    case 'ASYNC_START':
+      return Object.assign({},
+      state, {
+        inProgress: true });
+
+    default:
+      return state;}
+
+};

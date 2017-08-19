@@ -1,0 +1,64 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2oak7ov6lx = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/app.js',hash = '543fe177100095c8e3ea7437ebc54a90cf76fc98',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/app.js', statementMap: { '0': { start: { line: 7, column: 24 }, end: { line: 12, column: 2 } }, '1': { start: { line: 7, column: 34 }, end: { line: 12, column: 1 } }, '2': { start: { line: 14, column: 27 }, end: { line: 18, column: 2 } }, '3': { start: { line: 14, column: 40 }, end: { line: 18, column: 1 } }, '4': { start: { line: 16, column: 4 }, end: { line: 16, column: 68 } }, '5': { start: { line: 17, column: 20 }, end: { line: 17, column: 48 } }, '6': { start: { line: 22, column: 4 }, end: { line: 25, column: 5 } }, '7': { start: { line: 23, column: 6 }, end: { line: 23, column: 60 } }, '8': { start: { line: 24, column: 6 }, end: { line: 24, column: 29 } }, '9': { start: { line: 29, column: 18 }, end: { line: 29, column: 52 } }, '10': { start: { line: 30, column: 4 }, end: { line: 32, column: 5 } }, '11': { start: { line: 31, column: 6 }, end: { line: 31, column: 27 } }, '12': { start: { line: 34, column: 4 }, end: { line: 34, column: 65 } }, '13': { start: { line: 38, column: 4 }, end: { line: 48, column: 5 } }, '14': { start: { line: 39, column: 6 }, end: { line: 47, column: 7 } }, '15': { start: { line: 49, column: 4 }, end: { line: 56, column: 5 } }, '16': { start: { line: 60, column: 0 }, end: { line: 62, column: 1 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 7, column: 24 }, end: { line: 7, column: 25 } }, loc: { start: { line: 7, column: 34 }, end: { line: 12, column: 1 } }, line: 7 }, '1': { name: '(anonymous_1)', decl: { start: { line: 14, column: 27 }, end: { line: 14, column: 28 } }, loc: { start: { line: 14, column: 40 }, end: { line: 18, column: 1 } }, line: 14 }, '2': { name: '(anonymous_2)', decl: { start: { line: 15, column: 10 }, end: { line: 15, column: 11 } }, loc: { start: { line: 16, column: 4 }, end: { line: 16, column: 68 } }, line: 16 }, '3': { name: '(anonymous_3)', decl: { start: { line: 17, column: 14 }, end: { line: 17, column: 15 } }, loc: { start: { line: 17, column: 20 }, end: { line: 17, column: 48 } }, line: 17 }, '4': { name: '(anonymous_4)', decl: { start: { line: 21, column: 2 }, end: { line: 21, column: 3 } }, loc: { start: { line: 21, column: 39 }, end: { line: 26, column: 3 } }, line: 21 }, '5': { name: '(anonymous_5)', decl: { start: { line: 28, column: 2 }, end: { line: 28, column: 3 } }, loc: { start: { line: 28, column: 23 }, end: { line: 35, column: 3 } }, line: 28 }, '6': { name: '(anonymous_6)', decl: { start: { line: 37, column: 2 }, end: { line: 37, column: 3 } }, loc: { start: { line: 37, column: 11 }, end: { line: 57, column: 3 } }, line: 37 } }, branchMap: { '0': { loc: { start: { line: 22, column: 4 }, end: { line: 25, column: 5 } }, type: 'if', locations: [{ start: { line: 22, column: 4 }, end: { line: 25, column: 5 } }, { start: { line: 22, column: 4 }, end: { line: 25, column: 5 } }], line: 22 }, '1': { loc: { start: { line: 30, column: 4 }, end: { line: 32, column: 5 } }, type: 'if', locations: [{ start: { line: 30, column: 4 }, end: { line: 32, column: 5 } }, { start: { line: 30, column: 4 }, end: { line: 32, column: 5 } }], line: 30 }, '2': { loc: { start: { line: 34, column: 22 }, end: { line: 34, column: 57 } }, type: 'cond-expr', locations: [{ start: { line: 34, column: 30 }, end: { line: 34, column: 50 } }, { start: { line: 34, column: 53 }, end: { line: 34, column: 57 } }], line: 34 }, '3': { loc: { start: { line: 38, column: 4 }, end: { line: 48, column: 5 } }, type: 'if', locations: [{ start: { line: 38, column: 4 }, end: { line: 48, column: 5 } }, { start: { line: 38, column: 4 }, end: { line: 48, column: 5 } }], line: 38 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0], '3': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/app.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_propTypes = require('prop-types'); /* istanbul ignore next */var _propTypes2 = _interopRequireDefault(_propTypes);
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_agent = require('../shared/agent'); /* istanbul ignore next */var _agent2 = _interopRequireDefault(_agent);
+var /* istanbul ignore next */_header = require('../shared/components/header'); /* istanbul ignore next */var _header2 = _interopRequireDefault(_header);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_2oak7ov6lx.s[0];
+
+const mapStateToProps = state => {/* istanbul ignore next */++cov_2oak7ov6lx.f[0];++cov_2oak7ov6lx.s[1];return {
+    appLoaded: state.common.appLoaded,
+    appName: state.common.appName,
+    currentUser: state.common.currentUser,
+    redirectTo: state.common.redirectTo };
+}; /* istanbul ignore next */++cov_2oak7ov6lx.s[2];
+
+const mapDispatchToProps = dispatch => {/* istanbul ignore next */++cov_2oak7ov6lx.f[1];++cov_2oak7ov6lx.s[3];return {
+    onLoad: (payload, token) =>
+    {/* istanbul ignore next */++cov_2oak7ov6lx.f[2];++cov_2oak7ov6lx.s[4];return dispatch({ type: 'APP_LOAD', payload, token, skipTracking: true });},
+    onRedirect: () => {/* istanbul ignore next */++cov_2oak7ov6lx.f[3];++cov_2oak7ov6lx.s[5];return dispatch({ type: 'REDIRECT' });} };
+};
+
+class App extends /* istanbul ignore next */_react2.default.Component {
+  componentWillReceiveProps(nextProps) {/* istanbul ignore next */++cov_2oak7ov6lx.f[4];++cov_2oak7ov6lx.s[6];
+    if (nextProps.redirectTo) {/* istanbul ignore next */++cov_2oak7ov6lx.b[0][0];++cov_2oak7ov6lx.s[7];
+      this.context.router.history.push(nextProps.redirectTo); /* istanbul ignore next */++cov_2oak7ov6lx.s[8];
+      this.props.onRedirect();
+    } else /* istanbul ignore next */{++cov_2oak7ov6lx.b[0][1];}
+  }
+
+  componentWillMount() {/* istanbul ignore next */++cov_2oak7ov6lx.f[5];
+    const token = /* istanbul ignore next */(++cov_2oak7ov6lx.s[9], window.localStorage.getItem('jwt')); /* istanbul ignore next */++cov_2oak7ov6lx.s[10];
+    if (token) {/* istanbul ignore next */++cov_2oak7ov6lx.b[1][0];++cov_2oak7ov6lx.s[11];
+      /* istanbul ignore next */_agent2.default.setToken(token);
+    } else /* istanbul ignore next */{++cov_2oak7ov6lx.b[1][1];}++cov_2oak7ov6lx.s[12];
+
+    this.props.onLoad(token ? /* istanbul ignore next */(++cov_2oak7ov6lx.b[2][0], /* istanbul ignore next */_agent2.default.Auth.current()) : /* istanbul ignore next */(++cov_2oak7ov6lx.b[2][1], null), token);
+  }
+
+  render() {/* istanbul ignore next */++cov_2oak7ov6lx.f[6];++cov_2oak7ov6lx.s[13];
+    if (this.props.appLoaded) {/* istanbul ignore next */++cov_2oak7ov6lx.b[3][0];++cov_2oak7ov6lx.s[14];
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_header2.default, /* istanbul ignore next */{
+            appName: this.props.appName,
+            currentUser: this.props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this }),
+
+          this.props.children));
+
+
+    } else /* istanbul ignore next */{++cov_2oak7ov6lx.b[3][1];}++cov_2oak7ov6lx.s[15];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_header2.default, /* istanbul ignore next */{
+          appName: this.props.appName,
+          currentUser: this.props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this })));
+
+
+
+  }} /* istanbul ignore next */++cov_2oak7ov6lx.s[16];
+
+
+App.contextTypes = {
+  router: /* istanbul ignore next */_propTypes2.default.object.isRequired }; /* istanbul ignore next */exports.default =
+
+
+/* istanbul ignore next */(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);

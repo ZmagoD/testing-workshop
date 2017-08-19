@@ -1,0 +1,21 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2ferv6l741 = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/api/tags.js',hash = '30a555b8f4c01f1025d27114ffdbfc4503764093',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/api/tags.js', statementMap: { '0': { start: { line: 7, column: 17 }, end: { line: 7, column: 33 } }, '1': { start: { line: 8, column: 18 }, end: { line: 8, column: 43 } }, '2': { start: { line: 11, column: 2 }, end: { line: 18, column: 4 } }, '3': { start: { line: 12, column: 4 }, end: { line: 17, column: 18 } }, '4': { start: { line: 15, column: 8 }, end: { line: 15, column: 31 } }, '5': { start: { line: 20, column: 2 }, end: { line: 20, column: 15 } } }, fnMap: { '0': { name: 'getTagsRouter', decl: { start: { line: 6, column: 9 }, end: { line: 6, column: 22 } }, loc: { start: { line: 6, column: 25 }, end: { line: 21, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 11, column: 18 }, end: { line: 11, column: 19 } }, loc: { start: { line: 11, column: 38 }, end: { line: 18, column: 3 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 14, column: 12 }, end: { line: 14, column: 13 } }, loc: { start: { line: 14, column: 20 }, end: { line: 16, column: 7 } } } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_mongoose = require('mongoose'); /* istanbul ignore next */var _mongoose2 = _interopRequireDefault(_mongoose);
+var /* istanbul ignore next */_express = require('express'); /* istanbul ignore next */var _express2 = _interopRequireDefault(_express);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+getTagsRouter;
+
+function getTagsRouter() {/* istanbul ignore next */++cov_2ferv6l741.f[0];
+  const router = /* istanbul ignore next */(++cov_2ferv6l741.s[0], /* istanbul ignore next */_express2.default.Router());
+  const Article = /* istanbul ignore next */(++cov_2ferv6l741.s[1], /* istanbul ignore next */_mongoose2.default.model('Article'));
+
+  // return a list of tags
+  /* istanbul ignore next */++cov_2ferv6l741.s[2];router.get('/', (req, res, next) => {/* istanbul ignore next */++cov_2ferv6l741.f[1];++cov_2ferv6l741.s[3];
+    Article.find().
+    distinct('tagList').
+    then(tags => {/* istanbul ignore next */++cov_2ferv6l741.f[2];++cov_2ferv6l741.s[4];
+      return res.json({ tags });
+    }).
+    catch(next);
+  }); /* istanbul ignore next */++cov_2ferv6l741.s[5];
+
+  return router;
+}

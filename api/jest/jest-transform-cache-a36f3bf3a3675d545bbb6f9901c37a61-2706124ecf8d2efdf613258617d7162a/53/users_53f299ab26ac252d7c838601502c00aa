@@ -1,0 +1,118 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _express = require('express');var _express2 = _interopRequireDefault(_express);
+var _mongoose = require('mongoose');var _mongoose2 = _interopRequireDefault(_mongoose);
+var _passport = require('passport');var _passport2 = _interopRequireDefault(_passport);
+var _auth = require('../auth');var _auth2 = _interopRequireDefault(_auth);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _asyncToGenerator(fn) {return function () {var gen = fn.apply(this, arguments);return new Promise(function (resolve, reject) {function step(key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {return Promise.resolve(value).then(function (value) {step("next", value);}, function (err) {step("throw", err);});}}return step("next");});};}exports.default =
+
+getUsersRouter;
+
+function getUsersRouter() {
+  const router = _express2.default.Router();
+  const User = _mongoose2.default.model('User');
+
+  // Preload user objects on routes with ':username'
+  router.param('username', (() => {var _ref = _asyncToGenerator(function* (req, res, next, username) {
+      const user = yield User.findOne({ username }).catch(function () {
+        res.sendStatus(500); // TODO make this more helpful
+      });
+      if (!user) {
+        return res.sendStatus(404);
+      }
+      req.user = user;
+      next();
+    });return function (_x, _x2, _x3, _x4) {return _ref.apply(this, arguments);};})());
+
+  router.get('/user', _auth2.default.required, (req, res, next) => {
+    User.findById(req.payload.id).
+    then(user => {
+      if (!user) {
+        return res.sendStatus(401);
+      }
+
+      return res.json({ user: user.toAuthJSON() });
+    }).
+    catch(next);
+  });
+
+  router.put('/user', _auth2.default.required, (req, res, next) => {
+    User.findById(req.payload.id).
+    then(user => {
+      if (!user) {
+        return res.sendStatus(401);
+      }
+
+      // only update fields that were actually passed...
+      if (typeof req.body.user.username !== 'undefined') {
+        user.username = req.body.user.username;
+      }
+      if (typeof req.body.user.email !== 'undefined') {
+        user.email = req.body.user.email;
+      }
+      if (typeof req.body.user.bio !== 'undefined') {
+        user.bio = req.body.user.bio;
+      }
+      if (typeof req.body.user.image !== 'undefined') {
+        user.image = req.body.user.image;
+      }
+      if (typeof req.body.user.password !== 'undefined') {
+        user.setPassword(req.body.user.password);
+      }
+
+      return user.save().then(() => {
+        return res.json({ user: user.toAuthJSON() });
+      });
+    }).
+    catch(next);
+  });
+
+  router.post('/users/login', (req, res, next) => {
+    if (!req.body.user.email) {
+      return res.status(422).json({ errors: { email: "can't be blank" } });
+    }
+
+    if (!req.body.user.password) {
+      return res.status(422).json({ errors: { password: "can't be blank" } });
+    }
+
+    _passport2.default.authenticate('local', { session: false }, (err, user, info) => {
+      if (err) {
+        return next(err);
+      }
+
+      if (user) {
+        user.token = user.generateJWT();
+        return res.json({ user: user.toAuthJSON() });
+      } else {
+        return res.status(422).json(info);
+      }
+    })(req, res, next);
+  });
+
+  router.post('/users', (req, res, next) => {
+    const user = new User();
+
+    user.username = req.body.user.username;
+    user.email = req.body.user.email;
+    user.setPassword(req.body.user.password);
+
+    user.
+    save().
+    then(() => {
+      return res.json({ user: user.toAuthJSON() });
+    }).
+    catch(next);
+  });
+
+  // delete user
+  router.delete('/users/:username', _auth2.default.required, (() => {var _ref2 = _asyncToGenerator(function* (req, res) {
+      yield User.findById(req.payload.id);
+
+      if (req.user._id.toString() === req.payload.id.toString()) {
+        yield req.user.remove();
+        return res.sendStatus(204);
+      } else {
+        return res.sendStatus(403);
+      }
+    });return function (_x5, _x6) {return _ref2.apply(this, arguments);};})());
+
+  return router;
+}

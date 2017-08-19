@@ -1,0 +1,64 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/app.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _propTypes = require('prop-types');var _propTypes2 = _interopRequireDefault(_propTypes);
+var _reactRedux = require('react-redux');
+var _agent = require('../shared/agent');var _agent2 = _interopRequireDefault(_agent);
+var _header = require('../shared/components/header');var _header2 = _interopRequireDefault(_header);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const mapStateToProps = state => ({
+  appLoaded: state.common.appLoaded,
+  appName: state.common.appName,
+  currentUser: state.common.currentUser,
+  redirectTo: state.common.redirectTo });
+
+
+const mapDispatchToProps = dispatch => ({
+  onLoad: (payload, token) =>
+  dispatch({ type: 'APP_LOAD', payload, token, skipTracking: true }),
+  onRedirect: () => dispatch({ type: 'REDIRECT' }) });
+
+
+class App extends _react2.default.Component {
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.redirectTo) {
+      this.context.router.history.push(nextProps.redirectTo);
+      this.props.onRedirect();
+    }
+  }
+
+  componentWillMount() {
+    const token = window.localStorage.getItem('jwt');
+    if (token) {
+      _agent2.default.setToken(token);
+    }
+
+    this.props.onLoad(token ? _agent2.default.Auth.current() : null, token);
+  }
+
+  render() {
+    if (this.props.appLoaded) {
+      return (
+        _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this },
+          _react2.default.createElement(_header2.default, {
+            appName: this.props.appName,
+            currentUser: this.props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this }),
+
+          this.props.children));
+
+
+    }
+    return (
+      _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this },
+        _react2.default.createElement(_header2.default, {
+          appName: this.props.appName,
+          currentUser: this.props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this })));
+
+
+
+  }}
+
+
+App.contextTypes = {
+  router: _propTypes2.default.object.isRequired };exports.default =
+
+
+(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);

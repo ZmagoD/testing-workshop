@@ -1,0 +1,13 @@
+'use strict';
+
+
+
+var _sum = require('../sum');var _sum2 = _interopRequireDefault(_sum);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// Let's test drive summing numbers
+test('passing nothing give us 0', () => {
+  const result = (0, _sum2.default)();
+  expect();
+}); // sum() -> 0
+// sum(5) -> 5
+// sum(4, 5, 6) -> 15

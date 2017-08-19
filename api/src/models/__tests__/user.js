@@ -13,6 +13,14 @@ import {getUserConstructor, generateUser} from './helpers/utils'
 // totally fine (the client will handle the default)
 // so don't worry about checking that case.
 
+test('toProfileJSONfor returns the correct object', () => {
+  const image = 'http://example.com/avatar.png'
+  const user = generateUser({
+    image
+  })
+  const result = user.toProfileJSONFor()
+  expect(result.image).toEqual(image)
+})
 
 //////// Elaboration & Feedback /////////
 // When you've finished with the exercises:

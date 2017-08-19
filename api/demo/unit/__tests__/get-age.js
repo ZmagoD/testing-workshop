@@ -13,3 +13,10 @@ test(`can get a person's age`, () => {
   expect(result).toBe(age)
 })
 
+test('returns 0 if the person age is 0', () => {
+  const age = 0
+  const person = {age}
+  const result = getAge(person)
+  expect(result).toBe(age)
+})
+

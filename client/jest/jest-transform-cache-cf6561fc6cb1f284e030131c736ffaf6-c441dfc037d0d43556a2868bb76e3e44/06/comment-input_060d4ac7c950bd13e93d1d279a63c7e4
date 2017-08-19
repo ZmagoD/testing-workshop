@@ -1,0 +1,58 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_27bzkfwbna = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-input.js',hash = '40a15fba5993d7aba9f8237f842371515d3c5262',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-input.js', statementMap: { '0': { start: { line: 6, column: 27 }, end: { line: 8, column: 2 } }, '1': { start: { line: 6, column: 40 }, end: { line: 8, column: 1 } }, '2': { start: { line: 7, column: 23 }, end: { line: 7, column: 63 } }, '3': { start: { line: 12, column: 4 }, end: { line: 12, column: 11 } }, '4': { start: { line: 13, column: 4 }, end: { line: 15, column: 5 } }, '5': { start: { line: 17, column: 4 }, end: { line: 19, column: 5 } }, '6': { start: { line: 18, column: 6 }, end: { line: 18, column: 44 } }, '7': { start: { line: 21, column: 4 }, end: { line: 28, column: 5 } }, '8': { start: { line: 22, column: 6 }, end: { line: 22, column: 25 } }, '9': { start: { line: 23, column: 22 }, end: { line: 25, column: 8 } }, '10': { start: { line: 26, column: 6 }, end: { line: 26, column: 31 } }, '11': { start: { line: 27, column: 6 }, end: { line: 27, column: 34 } }, '12': { start: { line: 32, column: 4 }, end: { line: 54, column: 5 } }, '13': { start: { line: 58, column: 30 }, end: { line: 58, column: 32 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 6, column: 27 }, end: { line: 6, column: 28 } }, loc: { start: { line: 6, column: 40 }, end: { line: 8, column: 1 } }, line: 6 }, '1': { name: '(anonymous_1)', decl: { start: { line: 7, column: 12 }, end: { line: 7, column: 13 } }, loc: { start: { line: 7, column: 23 }, end: { line: 7, column: 63 } }, line: 7 }, '2': { name: '(anonymous_2)', decl: { start: { line: 11, column: 2 }, end: { line: 11, column: 3 } }, loc: { start: { line: 11, column: 16 }, end: { line: 29, column: 3 } }, line: 11 }, '3': { name: '(anonymous_3)', decl: { start: { line: 17, column: 19 }, end: { line: 17, column: 20 } }, loc: { start: { line: 17, column: 25 }, end: { line: 19, column: 5 } }, line: 17 }, '4': { name: '(anonymous_4)', decl: { start: { line: 21, column: 25 }, end: { line: 21, column: 26 } }, loc: { start: { line: 21, column: 31 }, end: { line: 28, column: 5 } }, line: 21 }, '5': { name: '(anonymous_5)', decl: { start: { line: 31, column: 2 }, end: { line: 31, column: 3 } }, loc: { start: { line: 31, column: 11 }, end: { line: 55, column: 3 } }, line: 31 }, '6': { name: '(anonymous_6)', decl: { start: { line: 58, column: 23 }, end: { line: 58, column: 24 } }, loc: { start: { line: 58, column: 30 }, end: { line: 58, column: 32 } }, line: 58 } }, branchMap: { '0': { loc: { start: { line: 45, column: 17 }, end: { line: 45, column: 55 } }, type: 'binary-expr', locations: [{ start: { line: 45, column: 17 }, end: { line: 45, column: 45 } }, { start: { line: 45, column: 49 }, end: { line: 45, column: 55 } }], line: 45 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-input.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_smileyCyrus = require('../../shared/smiley-cyrus.jpg'); /* istanbul ignore next */var _smileyCyrus2 = _interopRequireDefault(_smileyCyrus);
+var /* istanbul ignore next */_agent = require('../../shared/agent'); /* istanbul ignore next */var _agent2 = _interopRequireDefault(_agent);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_27bzkfwbna.s[0];
+
+const mapDispatchToProps = dispatch => {/* istanbul ignore next */++cov_27bzkfwbna.f[0];++cov_27bzkfwbna.s[1];return {
+    onSubmit: payload => {/* istanbul ignore next */++cov_27bzkfwbna.f[1];++cov_27bzkfwbna.s[2];return dispatch({ type: 'ADD_COMMENT', payload });} };
+};
+
+class CommentInput extends /* istanbul ignore next */_react2.default.Component {
+  constructor() {/* istanbul ignore next */++cov_27bzkfwbna.f[2];++cov_27bzkfwbna.s[3];
+    super(); /* istanbul ignore next */++cov_27bzkfwbna.s[4];
+    this.state = {
+      body: '' }; /* istanbul ignore next */++cov_27bzkfwbna.s[5];
+
+
+    this.setBody = ev => {/* istanbul ignore next */++cov_27bzkfwbna.f[3];++cov_27bzkfwbna.s[6];
+      this.setState({ body: ev.target.value });
+    }; /* istanbul ignore next */++cov_27bzkfwbna.s[7];
+
+    this.createComment = ev => {/* istanbul ignore next */++cov_27bzkfwbna.f[4];++cov_27bzkfwbna.s[8];
+      ev.preventDefault();
+      const payload = /* istanbul ignore next */(++cov_27bzkfwbna.s[9], /* istanbul ignore next */_agent2.default.Comments.create(this.props.slug, {
+        body: this.state.body })); /* istanbul ignore next */++cov_27bzkfwbna.s[10];
+
+      this.setState({ body: '' }); /* istanbul ignore next */++cov_27bzkfwbna.s[11];
+      this.props.onSubmit(payload);
+    };
+  }
+
+  render() {/* istanbul ignore next */++cov_27bzkfwbna.f[5];++cov_27bzkfwbna.s[12];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ className: 'card comment-form', onSubmit: this.createComment, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'card-block', __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'textarea', /* istanbul ignore next */{
+            className: 'form-control',
+            placeholder: 'Write a comment...',
+            value: this.state.body,
+            onChange: this.setBody,
+            rows: '3', __source: { fileName: _jsxFileName, lineNumber: 35 }, __self: this })),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'card-footer', __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{
+            src: /* istanbul ignore next */(++cov_27bzkfwbna.b[0][0], this.props.currentUser.image) || /* istanbul ignore next */(++cov_27bzkfwbna.b[0][1], _smileyCyrus2.default),
+            className: 'comment-author-img',
+            alt: 'you', __source: { fileName: _jsxFileName, lineNumber: 44 }, __self: this }),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ className: 'btn btn-sm btn-primary', type: 'submit', __source: { fileName: _jsxFileName, lineNumber: 49 }, __self: this }, /* istanbul ignore next */'Post Comment'))));
+
+
+
+
+
+  }} /* istanbul ignore next */exports.default =
+
+
+/* istanbul ignore next */(0, _reactRedux.connect)(() => {/* istanbul ignore next */++cov_27bzkfwbna.f[6];++cov_27bzkfwbna.s[13];return {};}, mapDispatchToProps)(CommentInput);

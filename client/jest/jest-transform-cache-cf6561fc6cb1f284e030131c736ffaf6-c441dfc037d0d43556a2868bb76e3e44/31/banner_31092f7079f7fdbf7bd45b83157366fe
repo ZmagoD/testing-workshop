@@ -1,0 +1,19 @@
+/* istanbul ignore next */"use strict";Object.defineProperty(exports, "__esModule", { value: true });var cov_7xybccp85 = function () {var path = "/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/home/banner.js",hash = "6b686cf4f04ab7d8ca956488db7dad56688026cb",global = new Function('return this')(),gcv = "__coverage__",coverageData = { path: "/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/home/banner.js", statementMap: { "0": { start: { line: 3, column: 15 }, end: { line: 17, column: 1 } }, "1": { start: { line: 4, column: 2 }, end: { line: 6, column: 3 } }, "2": { start: { line: 5, column: 4 }, end: { line: 5, column: 15 } }, "3": { start: { line: 7, column: 2 }, end: { line: 16, column: 3 } } }, fnMap: { "0": { name: "(anonymous_0)", decl: { start: { line: 3, column: 15 }, end: { line: 3, column: 16 } }, loc: { start: { line: 3, column: 37 }, end: { line: 17, column: 1 } }, line: 3 } }, branchMap: { "0": { loc: { start: { line: 4, column: 2 }, end: { line: 6, column: 3 } }, type: "if", locations: [{ start: { line: 4, column: 2 }, end: { line: 6, column: 3 } }, { start: { line: 4, column: 2 }, end: { line: 6, column: 3 } }], line: 4 } }, s: { "0": 0, "1": 0, "2": 0, "3": 0 }, f: { "0": 0 }, b: { "0": [0, 0] }, _coverageSchema: "332fd63041d2c1bcb487cc26dd0d5f7d97098a6c" },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = "/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/home/banner.js";var /* istanbul ignore next */_react = require("react"); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_7xybccp85.s[0];
+
+const Banner = ({ appName, token }) => {/* istanbul ignore next */++cov_7xybccp85.f[0];++cov_7xybccp85.s[1];
+  if (token) {/* istanbul ignore next */++cov_7xybccp85.b[0][0];++cov_7xybccp85.s[2];
+    return null;
+  } else /* istanbul ignore next */{++cov_7xybccp85.b[0][1];}++cov_7xybccp85.s[3];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */"div", /* istanbul ignore next */{ className: "banner", __source: { fileName: _jsxFileName, lineNumber: 8 }, __self: undefined },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */"div", /* istanbul ignore next */{ className: "container", __source: { fileName: _jsxFileName, lineNumber: 9 }, __self: undefined },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */"h1", /* istanbul ignore next */{ className: "logo-font", __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: undefined },
+          appName.toLowerCase()),
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */"p", /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: undefined }, /* istanbul ignore next */"A place to share your knowledge."))));
+
+
+
+}; /* istanbul ignore next */exports.default =
+
+Banner;

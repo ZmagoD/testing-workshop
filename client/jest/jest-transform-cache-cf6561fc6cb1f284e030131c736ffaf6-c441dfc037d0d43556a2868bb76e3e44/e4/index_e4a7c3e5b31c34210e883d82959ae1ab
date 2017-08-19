@@ -1,0 +1,67 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/home/index.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRedux = require('react-redux');
+var _agent = require('../../shared/agent');var _agent2 = _interopRequireDefault(_agent);
+var _banner = require('./banner');var _banner2 = _interopRequireDefault(_banner);
+var _mainView = require('./main-view');var _mainView2 = _interopRequireDefault(_mainView);
+var _tags = require('./tags');var _tags2 = _interopRequireDefault(_tags);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const Promise = global.Promise;
+
+const mapStateToProps = state => Object.assign({},
+state.home, {
+  appName: state.common.appName,
+  token: state.common.token });
+
+
+const mapDispatchToProps = dispatch => ({
+  onClickTag: (tag, payload) =>
+  dispatch({ type: 'APPLY_TAG_FILTER', tag, payload }),
+  onLoad: (tab, payload) => dispatch({ type: 'HOME_PAGE_LOADED', tab, payload }),
+  onUnload: () => dispatch({ type: 'HOME_PAGE_UNLOADED' }) });
+
+
+class Home extends _react2.default.Component {
+  componentWillMount() {
+    const tab = this.props.token ? 'feed' : 'all';
+    const articlesPromise = this.props.token ?
+    _agent2.default.Articles.feed() :
+    _agent2.default.Articles.all();
+
+    this.props.onLoad(tab, Promise.all([_agent2.default.Tags.getAll(), articlesPromise]));
+  }
+
+  componentWillUnmount() {
+    this.props.onUnload();
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'home-page', __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this },
+
+        _react2.default.createElement(_banner2.default, { token: this.props.token, appName: this.props.appName, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this }),
+
+        _react2.default.createElement('div', { className: 'container page', __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this },
+          _react2.default.createElement('div', { className: 'row', __source: { fileName: _jsxFileName, lineNumber: 44 }, __self: this },
+            _react2.default.createElement(_mainView2.default, { __source: { fileName: _jsxFileName, lineNumber: 45 }, __self: this }),
+
+            _react2.default.createElement('div', { className: 'col-md-3', __source: { fileName: _jsxFileName, lineNumber: 47 }, __self: this },
+              _react2.default.createElement('div', { className: 'sidebar', __source: { fileName: _jsxFileName, lineNumber: 48 }, __self: this },
+
+                _react2.default.createElement('p', { __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this }, 'Popular Tags'),
+
+                _react2.default.createElement(_tags2.default, {
+                  tags: this.props.tags,
+                  onClickTag: this.props.onClickTag, __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this })))))));
+
+
+
+
+
+
+
+
+
+  }}exports.default =
+
+
+(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Home);

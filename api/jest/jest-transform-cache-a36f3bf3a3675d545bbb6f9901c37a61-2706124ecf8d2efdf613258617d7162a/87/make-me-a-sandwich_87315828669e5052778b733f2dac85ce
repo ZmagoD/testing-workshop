@@ -1,0 +1,7 @@
+'use strict';var _makeMeASandwich = require('../make-me-a-sandwich');var _makeMeASandwich2 = _interopRequireDefault(_makeMeASandwich);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+test('retunrs null if the sandwich does not exist', () => {
+    const req = { query: {} };
+    const result = (0, _makeMeASandwich2.default)(req);
+    expect(result).not.toBeNull();
+});

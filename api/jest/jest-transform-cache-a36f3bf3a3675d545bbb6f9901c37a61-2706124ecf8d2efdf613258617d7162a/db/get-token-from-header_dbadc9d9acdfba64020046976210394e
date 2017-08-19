@@ -1,0 +1,23 @@
+'use strict';var _getTokenFromHeader = require('../get-token-from-header');var _getTokenFromHeader2 = _interopRequireDefault(_getTokenFromHeader);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+test('getTokenFromHeader returns null if there is no token', () => {
+  const result = (0, _getTokenFromHeader2.default)({ headers: {} });
+  expect(result).toBe(null);
+});
+
+test('getTokenFromHeader returns the token from the headers', () => {
+  const token = 'hi.mom!';
+  const authHeader = `Token ${token}`;
+  const req = {
+    headers: {
+      authorization: authHeader } };
+
+
+
+  const result = (0, _getTokenFromHeader2.default)(req);
+  expect(result).toBe(token);
+});
+test('I submitted my elaboration and feedback', () => {
+  const submitted = true;
+  expect(true).toBe(submitted);
+});

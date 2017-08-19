@@ -1,0 +1,33 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1w3sfxymkm = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/home/tags.js',hash = '1376c3b80a7f354752a3dd332909036b70bdb047',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/home/tags.js', statementMap: { '0': { start: { line: 4, column: 13 }, end: { line: 31, column: 1 } }, '1': { start: { line: 5, column: 15 }, end: { line: 5, column: 25 } }, '2': { start: { line: 6, column: 2 }, end: { line: 30, column: 3 } }, '3': { start: { line: 7, column: 4 }, end: { line: 27, column: 5 } }, '4': { start: { line: 10, column: 30 }, end: { line: 13, column: 11 } }, '5': { start: { line: 11, column: 12 }, end: { line: 11, column: 31 } }, '6': { start: { line: 12, column: 12 }, end: { line: 12, column: 60 } }, '7': { start: { line: 15, column: 10 }, end: { line: 24, column: 11 } }, '8': { start: { line: 29, column: 4 }, end: { line: 29, column: 37 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 4, column: 13 }, end: { line: 4, column: 14 } }, loc: { start: { line: 4, column: 22 }, end: { line: 31, column: 1 } }, line: 4 }, '1': { name: '(anonymous_1)', decl: { start: { line: 9, column: 18 }, end: { line: 9, column: 19 } }, loc: { start: { line: 9, column: 25 }, end: { line: 25, column: 9 } }, line: 9 }, '2': { name: '(anonymous_2)', decl: { start: { line: 10, column: 30 }, end: { line: 10, column: 31 } }, loc: { start: { line: 10, column: 36 }, end: { line: 13, column: 11 } }, line: 10 } }, branchMap: { '0': { loc: { start: { line: 6, column: 2 }, end: { line: 30, column: 3 } }, type: 'if', locations: [{ start: { line: 6, column: 2 }, end: { line: 30, column: 3 } }, { start: { line: 6, column: 2 }, end: { line: 30, column: 3 } }], line: 6 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/home/tags.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_agent = require('../../shared/agent'); /* istanbul ignore next */var _agent2 = _interopRequireDefault(_agent);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_1w3sfxymkm.s[0];
+
+const Tags = props => {/* istanbul ignore next */++cov_1w3sfxymkm.f[0];
+  const tags = /* istanbul ignore next */(++cov_1w3sfxymkm.s[1], props.tags); /* istanbul ignore next */++cov_1w3sfxymkm.s[2];
+  if (tags) {/* istanbul ignore next */++cov_1w3sfxymkm.b[0][0];++cov_1w3sfxymkm.s[3];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'tag-list', __source: { fileName: _jsxFileName, lineNumber: 8 }, __self: undefined },
+        tags.map(tag => {/* istanbul ignore next */++cov_1w3sfxymkm.f[1];++cov_1w3sfxymkm.s[4];
+          const handleClick = ev => {/* istanbul ignore next */++cov_1w3sfxymkm.f[2];++cov_1w3sfxymkm.s[5];
+            ev.preventDefault(); /* istanbul ignore next */++cov_1w3sfxymkm.s[6];
+            props.onClickTag(tag, /* istanbul ignore next */_agent2.default.Articles.byTag(tag));
+          }; /* istanbul ignore next */++cov_1w3sfxymkm.s[7];
+
+          return (
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'a', /* istanbul ignore next */{
+                href: '',
+                className: 'tag-default tag-pill',
+                key: tag,
+                onClick: handleClick, __source: { fileName: _jsxFileName, lineNumber: 16 }, __self: undefined },
+
+              tag));
+
+
+        })));
+
+
+  } else {/* istanbul ignore next */++cov_1w3sfxymkm.b[0][1];++cov_1w3sfxymkm.s[8];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 29 }, __self: undefined }, /* istanbul ignore next */'Loading Tags...'));
+  }
+}; /* istanbul ignore next */exports.default =
+
+Tags;

@@ -1,0 +1,12 @@
+'use strict';var _loglevel = require('loglevel');var _loglevel2 = _interopRequireDefault(_loglevel);
+var _startServer = require('./start-server');var _startServer2 = _interopRequireDefault(_startServer);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+_loglevel2.default.setLevel(getLogLevel());
+
+(0, _startServer2.default)();
+
+function getLogLevel() {
+  const notProd = process.env.NODE_ENV !== 'production';
+  const notTest = process.env.NODE_ENV !== 'test';
+  return process.env.LOG_LEVEL || (notProd && notTest ? 'info' : 'warn');
+}

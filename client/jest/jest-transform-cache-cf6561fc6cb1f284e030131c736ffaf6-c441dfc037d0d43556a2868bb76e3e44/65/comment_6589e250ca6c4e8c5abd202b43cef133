@@ -1,0 +1,36 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRouterDom = require('react-router-dom');
+var _smileyCyrus = require('../../shared/smiley-cyrus.jpg');var _smileyCyrus2 = _interopRequireDefault(_smileyCyrus);
+var _deleteButton = require('./delete-button');var _deleteButton2 = _interopRequireDefault(_deleteButton);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const Comment = props => {
+  const comment = props.comment;
+  const show =
+  props.currentUser && props.currentUser.username === comment.author.username;
+  return (
+    _react2.default.createElement('div', { className: 'card', __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: undefined },
+      _react2.default.createElement('div', { className: 'card-block', __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: undefined },
+        _react2.default.createElement('p', { className: 'card-text', __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: undefined }, comment.body)),
+
+      _react2.default.createElement('div', { className: 'card-footer', __source: { fileName: _jsxFileName, lineNumber: 15 }, __self: undefined },
+        _react2.default.createElement(_reactRouterDom.Link, { to: `/@${comment.author.username}`, className: 'comment-author', __source: { fileName: _jsxFileName, lineNumber: 16 }, __self: undefined },
+          _react2.default.createElement('img', {
+            src: comment.author.image || _smileyCyrus2.default,
+            className: 'comment-author-img',
+            alt: 'comment author', __source: { fileName: _jsxFileName, lineNumber: 17 }, __self: undefined })), '\xA0',
+
+
+
+        _react2.default.createElement(_reactRouterDom.Link, { to: `/@${comment.author.username}`, className: 'comment-author', __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: undefined },
+          comment.author.username),
+
+        _react2.default.createElement('span', { className: 'date-posted', __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: undefined },
+          new Date(comment.createdAt).toDateString()),
+
+        _react2.default.createElement(_deleteButton2.default, { show: show, slug: props.slug, commentId: comment.id, __source: { fileName: _jsxFileName, lineNumber: 30 }, __self: undefined }))));
+
+
+
+};exports.default =
+
+Comment;

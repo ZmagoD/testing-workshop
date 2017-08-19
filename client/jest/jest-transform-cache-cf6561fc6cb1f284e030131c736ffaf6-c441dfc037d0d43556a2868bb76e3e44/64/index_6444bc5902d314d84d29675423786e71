@@ -1,0 +1,90 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/index.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRedux = require('react-redux');
+var _marked = require('marked');var _marked2 = _interopRequireDefault(_marked);
+var _agent = require('../../shared/agent');var _agent2 = _interopRequireDefault(_agent);
+var _articleMeta = require('./article-meta');var _articleMeta2 = _interopRequireDefault(_articleMeta);
+var _commentContainer = require('./comment-container');var _commentContainer2 = _interopRequireDefault(_commentContainer);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const mapStateToProps = state => Object.assign({},
+state.article, {
+  currentUser: state.common.currentUser });
+
+
+const mapDispatchToProps = dispatch => ({
+  onLoad: payload => dispatch({ type: 'ARTICLE_PAGE_LOADED', payload }),
+  onUnload: () => dispatch({ type: 'ARTICLE_PAGE_UNLOADED' }) });
+
+
+class Article extends _react2.default.Component {
+  componentWillMount() {
+    this.props.onLoad(
+    Promise.all([
+    _agent2.default.Articles.get(this.props.match.params.id),
+    _agent2.default.Comments.forArticle(this.props.match.params.id)]));
+
+
+  }
+
+  componentWillUnmount() {
+    this.props.onUnload();
+  }
+
+  render() {
+    if (!this.props.article) {
+      return null;
+    }
+
+    const markup = { __html: (0, _marked2.default)(this.props.article.body, { sanitize: true }) };
+    const canModify = this.props.currentUser &&
+    this.props.currentUser.username === this.props.article.author.username;
+    return (
+      _react2.default.createElement('div', { className: 'article-page', __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this },
+
+        _react2.default.createElement('div', { className: 'banner', __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this },
+          _react2.default.createElement('div', { className: 'container', __source: { fileName: _jsxFileName, lineNumber: 44 }, __self: this },
+
+            _react2.default.createElement('h1', { 'data-test': 'title', __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this }, this.props.article.title),
+            _react2.default.createElement(_articleMeta2.default, { article: this.props.article, canModify: canModify, __source: { fileName: _jsxFileName, lineNumber: 47 }, __self: this }))),
+
+
+
+
+        _react2.default.createElement('div', { className: 'container page', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this },
+
+          _react2.default.createElement('div', { className: 'row article-content', __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this },
+            _react2.default.createElement('div', { className: 'col-xs-12', __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this },
+
+              _react2.default.createElement('div', { dangerouslySetInnerHTML: markup, 'data-test': 'body', __source: { fileName: _jsxFileName, lineNumber: 57 }, __self: this }),
+
+              _react2.default.createElement('ul', { className: 'tag-list', 'data-test': 'tags', __source: { fileName: _jsxFileName, lineNumber: 59 }, __self: this },
+                this.props.article.tagList.map(tag => {
+                  return (
+                    _react2.default.createElement('li', { className: 'tag-default tag-pill tag-outline', key: tag, __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: this },
+                      tag));
+
+
+                })))),
+
+
+
+
+
+          _react2.default.createElement('hr', { __source: { fileName: _jsxFileName, lineNumber: 72 }, __self: this }),
+
+          _react2.default.createElement('div', { className: 'article-actions', __source: { fileName: _jsxFileName, lineNumber: 74 }, __self: this }),
+
+          _react2.default.createElement('div', { className: 'row', __source: { fileName: _jsxFileName, lineNumber: 76 }, __self: this },
+            _react2.default.createElement(_commentContainer2.default, {
+              comments: this.props.comments || [],
+              errors: this.props.commentErrors,
+              slug: this.props.match.params.id,
+              currentUser: this.props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 77 }, __self: this })))));
+
+
+
+
+
+  }}exports.default =
+
+
+(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Article);

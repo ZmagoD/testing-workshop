@@ -28,9 +28,14 @@ form.addEventListener('submit', e => {
 // call addInputValues with numbers as strings
 // (because input1.value and input2.value will always be strings)
 // For example:
-// const result = addInputValues('3', '4')
+const result = addInputValues('3', '4')
 // If the result is not the sum of those numbers (ie 7),
 // then throw an error!
+if (result !== 7) {
+    alert("banna");
+} else {
+    alert("test passed");
+}
 
 // Once you've finished your test, check your browser's console
 // and be sure the error is thrown.

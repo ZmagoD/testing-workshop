@@ -1,0 +1,43 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.generateArticleForClient = undefined;var _faker = require('faker');var _faker2 = _interopRequireDefault(_faker);
+var _lodash = require('lodash');var _lodash2 = _interopRequireDefault(_lodash);
+var _slugify = require('slugify');var _slugify2 = _interopRequireDefault(_slugify);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+generateArticleData;exports.
+generateArticleForClient = generateArticleForClient;
+
+function generateArticleData(author, overrides = {}) {
+  const baseArticle = generateArticleForClient(overrides);
+  return cleanObject(
+  Object.assign({ author, comments: [] }, baseArticle, overrides));
+
+}
+
+function generateArticleForClient(overrides = {}) {const
+  h = _faker2.default.hacker;
+  const title = `${h.ingverb()} the ${h.adjective()} ${h.noun()} like it's ${h.abbreviation()}`; // eslint-disable-line max-len
+  return Object.assign(
+  {
+    title,
+    slug: (0, _slugify2.default)(title).toLowerCase(),
+    description: _faker2.default.lorem.sentence(),
+    body: _faker2.default.lorem.paragraphs(),
+    favoritesCount: 0,
+    tagList: _lodash2.default.uniq(_lodash2.default.times(_lodash2.default.random(0, 5), _faker2.default.company.bsNoun) || []) },
+
+  overrides);
+
+}
+
+/**
+   * Prevent undefined properties from existing on the object
+   * @param {Object} obj the source object
+   * @return {Object} the clean object
+   */
+function cleanObject(obj) {
+  return Object.keys(obj).reduce((res, prop) => {
+    if (obj[prop] !== undefined) {
+      res[prop] = obj[prop];
+    }
+    return res;
+  }, {});
+}

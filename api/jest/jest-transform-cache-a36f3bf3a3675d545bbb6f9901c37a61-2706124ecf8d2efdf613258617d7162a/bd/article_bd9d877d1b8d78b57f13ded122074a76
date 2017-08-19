@@ -1,0 +1,50 @@
+'use strict';var _mongoose = require('mongoose');var _mongoose2 = _interopRequireDefault(_mongoose);
+var _utils = require('./helpers/utils');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _asyncToGenerator(fn) {return function () {var gen = fn.apply(this, arguments);return new Promise(function (resolve, reject) {function step(key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {return Promise.resolve(value).then(function (value) {step("next", value);}, function (err) {step("throw", err);});}}return step("next");});};}
+
+
+
+
+
+test('can create a new empty article', () => {
+  const Article = (0, _utils.getArticleConstructor)();
+  const article = new Article();
+  expect(article.toJSON()).toEqual({
+    _id: expect.any(_mongoose2.default.Types.ObjectId),
+    tagList: [],
+    comments: [],
+    favoritesCount: 0 });
+
+});
+
+test('generates a slug when validated', () => {var _generateArticle =
+  (0, _utils.generateArticle)({
+    title: 'I tested my codebase, you wont believe what happened next...' });const article = _generateArticle.article;
+
+  article.validate();
+  expect(article.slug).toBe(
+  'i-tested-my-codebase-you-wont-believe-what-happened-next...');
+
+});
+
+test('updates the favorite count via favoriters', _asyncToGenerator(function* () {var _generateArticle2 =
+  (0, _utils.generateArticle)();const article = _generateArticle2.article,MockUserModel = _generateArticle2.MockUserModel;
+  yield article.updateFavoriteCount();
+  expect(article.save).toHaveBeenCalledTimes(1);
+  expect(MockUserModel.count).toHaveBeenCalledTimes(1);
+  expect(MockUserModel.count).toHaveBeenCalledWith({
+    favorites: {
+      $in: [article._id] } });
+
+
+  expect(article.favoritesCount).toBe(MockUserModel._mockData.count);
+}));
+
+test.skip('can get JSON for a specific user', () => {var _generateArticle3 =
+  (0, _utils.generateArticle)();const article = _generateArticle3.article;var _generateUser =
+  (0, _utils.generateUser)();const loggedInUser = _generateUser.user;
+  // the next line fails because the article.author is not populated
+  // find out how to simulate populate...
+  const result = article.toJSONFor(loggedInUser);
+  expect(result).toMatchSnapshot();
+  expect(result.favorited).toBe(false);
+});

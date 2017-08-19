@@ -1,0 +1,84 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/article-preview.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRedux = require('react-redux');
+var _reactRouterDom = require('react-router-dom');
+var _agent = require('../agent');var _agent2 = _interopRequireDefault(_agent);
+var _smileyCyrus = require('../../shared/smiley-cyrus.jpg');var _smileyCyrus2 = _interopRequireDefault(_smileyCyrus);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const FAVORITED_CLASS = 'btn btn-sm btn-primary';
+const NOT_FAVORITED_CLASS = 'btn btn-sm btn-outline-primary';
+
+const mapDispatchToProps = dispatch => ({
+  favorite: slug =>
+  dispatch({
+    type: 'ARTICLE_FAVORITED',
+    payload: _agent2.default.Articles.favorite(slug) }),
+
+  unfavorite: slug =>
+  dispatch({
+    type: 'ARTICLE_UNFAVORITED',
+    payload: _agent2.default.Articles.unfavorite(slug) }) });
+
+
+
+const ArticlePreview = props => {
+  const article = props.article;
+  const favoriteButtonClass = article.favorited ?
+  FAVORITED_CLASS :
+  NOT_FAVORITED_CLASS;
+
+  const handleClick = ev => {
+    ev.preventDefault();
+    if (article.favorited) {
+      props.unfavorite(article.slug);
+    } else {
+      props.favorite(article.slug);
+    }
+  };
+
+  return (
+    _react2.default.createElement('div', { className: 'article-preview', __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: undefined },
+      _react2.default.createElement('div', { className: 'article-meta', __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: undefined },
+        _react2.default.createElement(_reactRouterDom.Link, { to: `/@${article.author.username}`, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: undefined },
+          _react2.default.createElement('img', { src: article.author.image || _smileyCyrus2.default, alt: 'author', __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: undefined })),
+
+
+        _react2.default.createElement('div', { className: 'info', __source: { fileName: _jsxFileName, lineNumber: 45 }, __self: undefined },
+          _react2.default.createElement(_reactRouterDom.Link, { className: 'author', to: `/@${article.author.username}`, __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: undefined },
+            article.author.username),
+
+          _react2.default.createElement('span', { className: 'date', __source: { fileName: _jsxFileName, lineNumber: 49 }, __self: undefined },
+            new Date(article.createdAt).toDateString())),
+
+
+
+        _react2.default.createElement('div', { className: 'pull-xs-right', __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: undefined },
+          _react2.default.createElement('button', { className: favoriteButtonClass, onClick: handleClick, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: undefined },
+            _react2.default.createElement('i', { className: 'ion-heart', __source: { fileName: _jsxFileName, lineNumber: 56 }, __self: undefined }), ' ', article.favoritesCount))),
+
+
+
+
+      _react2.default.createElement(_reactRouterDom.Link, { to: `/article/${article.slug}`, className: 'preview-link', __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: undefined },
+        _react2.default.createElement('h1', { __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: undefined }, article.title),
+        _react2.default.createElement('p', { __source: { fileName: _jsxFileName, lineNumber: 63 }, __self: undefined }, article.description),
+        _react2.default.createElement('span', { __source: { fileName: _jsxFileName, lineNumber: 64 }, __self: undefined }, 'Read more...'),
+        _react2.default.createElement('ul', { className: 'tag-list', __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: undefined },
+          article.tagList.
+          filter((tag, i, arr) => {
+            // Filter out duplicate values.
+            return arr.indexOf(tag) === i;
+          }).
+          map(tag => {
+            return (
+              _react2.default.createElement('li', { className: 'tag-default tag-pill tag-outline', key: tag, __source: { fileName: _jsxFileName, lineNumber: 73 }, __self: undefined },
+                tag));
+
+
+          })))));
+
+
+
+
+};exports.default =
+
+(0, _reactRedux.connect)(() => ({}), mapDispatchToProps)(ArticlePreview);

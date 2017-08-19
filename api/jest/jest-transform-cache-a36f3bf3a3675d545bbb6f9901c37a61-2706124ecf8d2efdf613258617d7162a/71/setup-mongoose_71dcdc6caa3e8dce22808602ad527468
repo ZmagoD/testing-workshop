@@ -1,0 +1,31 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });let setupMongoose = (() => {var _ref = _asyncToGenerator(
+
+
+
+
+
+
+  function* () {
+    if ('MONGODB_DEBUG' in process.env) {
+      _mongoose2.default.set('debug', true);
+    }
+    if (process.env.MONGODB_URI) {
+      yield connect(process.env.MONGODB_URI);
+    } else {
+      yield connect('mongodb://localhost/conduit');
+    }
+
+    return function cleanup() {
+      _mongoose2.default.connection.close();
+    };
+  });return function setupMongoose() {return _ref.apply(this, arguments);};})();var _mongoose = require('mongoose');var _mongoose2 = _interopRequireDefault(_mongoose);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _asyncToGenerator(fn) {return function () {var gen = fn.apply(this, arguments);return new Promise(function (resolve, reject) {function step(key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {return Promise.resolve(value).then(function (value) {step("next", value);}, function (err) {step("throw", err);});}}return step("next");});};} // use native promises... like... always 🙃
+_mongoose2.default.Promise = Promise;exports.default = setupMongoose;
+function connect(uri) {
+  return _mongoose2.default.connect(uri).catch(error => {
+    console.error(
+    'There was a problem connecting mongoose to mongodb',
+    'Do you have mongodb running?');
+
+    return Promise.reject(error);
+  });
+}

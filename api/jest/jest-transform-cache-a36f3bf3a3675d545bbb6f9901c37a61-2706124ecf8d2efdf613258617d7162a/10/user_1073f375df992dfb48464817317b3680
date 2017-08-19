@@ -1,0 +1,44 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.generateUserForClient = undefined;var _crypto = require('crypto');var _crypto2 = _interopRequireDefault(_crypto);
+var _faker = require('faker');var _faker2 = _interopRequireDefault(_faker);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+generateUserData;exports.
+generateUserForClient = generateUserForClient;
+
+function generateUserData(overrides = {}) {
+  const baseUser = generateUserForClient(overrides);
+  const password = baseUser.password || _faker2.default.internet.password();
+  const otherOverrides = Object.assign({}, baseUser);
+  delete otherOverrides.password;
+
+  const salt = _crypto2.default.randomBytes(16).toString('hex');
+  const hash = _crypto2.default.
+  pbkdf2Sync(password, salt, 10000, 512, 'sha512').
+  toString('hex');
+
+  return Object.assign(
+  {},
+  baseUser,
+  {
+    _id: _faker2.default.random.uuid(),
+    hash,
+    salt },
+
+  otherOverrides);
+
+}
+
+function generateUserForClient(overrides = {}) {var _faker$helpers$contex =
+  _faker2.default.helpers.contextualCard();const username = _faker$helpers$contex.username,email = _faker$helpers$contex.email,image = _faker$helpers$contex.avatar;
+
+  return Object.assign(
+  {
+    username: username.toLowerCase().replace(/[ |.|_|-]/g, ''),
+    email: email.toLowerCase(),
+    bio: _faker2.default.hacker.phrase(),
+    image,
+    favorites: [],
+    following: [] },
+
+  overrides);
+
+}

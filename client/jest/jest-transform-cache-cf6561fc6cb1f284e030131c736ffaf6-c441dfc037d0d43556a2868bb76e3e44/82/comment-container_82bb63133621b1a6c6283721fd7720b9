@@ -1,0 +1,42 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1ofithbod = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-container.js',hash = 'f87db2704a2e06657215f71a72d4492e0d3b8182',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-container.js', statementMap: { '0': { start: { line: 6, column: 25 }, end: { line: 40, column: 1 } }, '1': { start: { line: 7, column: 2 }, end: { line: 39, column: 3 } }, '2': { start: { line: 8, column: 4 }, end: { line: 21, column: 5 } }, '3': { start: { line: 23, column: 4 }, end: { line: 38, column: 5 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 6, column: 25 }, end: { line: 6, column: 26 } }, loc: { start: { line: 6, column: 34 }, end: { line: 40, column: 1 } }, line: 6 } }, branchMap: { '0': { loc: { start: { line: 7, column: 2 }, end: { line: 39, column: 3 } }, type: 'if', locations: [{ start: { line: 7, column: 2 }, end: { line: 39, column: 3 } }, { start: { line: 7, column: 2 }, end: { line: 39, column: 3 } }], line: 7 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0 }, f: { '0': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-container.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRouterDom = require('react-router-dom');
+var /* istanbul ignore next */_commentInput = require('./comment-input'); /* istanbul ignore next */var _commentInput2 = _interopRequireDefault(_commentInput);
+var /* istanbul ignore next */_commentList = require('./comment-list'); /* istanbul ignore next */var _commentList2 = _interopRequireDefault(_commentList);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_1ofithbod.s[0];
+
+const CommentContainer = props => {/* istanbul ignore next */++cov_1ofithbod.f[0];++cov_1ofithbod.s[1];
+  if (props.currentUser) {/* istanbul ignore next */++cov_1ofithbod.b[0][0];++cov_1ofithbod.s[2];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'col-xs-12 col-md-8 offset-md-2', __source: { fileName: _jsxFileName, lineNumber: 9 }, __self: undefined },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: undefined },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'list-errors', /* istanbul ignore next */{ errors: props.errors, __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: undefined }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_commentInput2.default, /* istanbul ignore next */{ slug: props.slug, currentUser: props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: undefined })),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_commentList2.default, /* istanbul ignore next */{
+          comments: props.comments,
+          slug: props.slug,
+          currentUser: props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 15 }, __self: undefined })));
+
+
+
+  } else {/* istanbul ignore next */++cov_1ofithbod.b[0][1];++cov_1ofithbod.s[3];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'col-xs-12 col-md-8 offset-md-2', __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: undefined },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: undefined },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: '/login', __source: { fileName: _jsxFileName, lineNumber: 26 }, __self: undefined }, /* istanbul ignore next */'Sign in'), /* istanbul ignore next */'\xA0or\xA0',
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: '/register', __source: { fileName: _jsxFileName, lineNumber: 28 }, __self: undefined }, /* istanbul ignore next */'sign up'), /* istanbul ignore next */'\xA0to add comments on this article.'),
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_commentList2.default, /* istanbul ignore next */{
+          comments: props.comments,
+          slug: props.slug,
+          currentUser: props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 32 }, __self: undefined })));
+
+
+
+  }
+}; /* istanbul ignore next */exports.default =
+
+CommentContainer;

@@ -1,0 +1,96 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_dj09e5s4e = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/header.js',hash = '16be636fecf909ee8bb61a5dc6566e6f29699d48',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/header.js', statementMap: { '0': { start: { line: 6, column: 2 }, end: { line: 30, column: 3 } }, '1': { start: { line: 7, column: 4 }, end: { line: 29, column: 5 } }, '2': { start: { line: 31, column: 2 }, end: { line: 31, column: 13 } }, '3': { start: { line: 35, column: 2 }, end: { line: 74, column: 3 } }, '4': { start: { line: 36, column: 4 }, end: { line: 73, column: 5 } }, '5': { start: { line: 76, column: 2 }, end: { line: 76, column: 13 } }, '6': { start: { line: 80, column: 2 }, end: { line: 93, column: 3 } } }, fnMap: { '0': { name: 'LoggedOutView', decl: { start: { line: 5, column: 9 }, end: { line: 5, column: 22 } }, loc: { start: { line: 5, column: 30 }, end: { line: 32, column: 1 } }, line: 5 }, '1': { name: 'LoggedInView', decl: { start: { line: 34, column: 9 }, end: { line: 34, column: 21 } }, loc: { start: { line: 34, column: 29 }, end: { line: 77, column: 1 } }, line: 34 }, '2': { name: 'Header', decl: { start: { line: 79, column: 9 }, end: { line: 79, column: 15 } }, loc: { start: { line: 79, column: 23 }, end: { line: 94, column: 1 } }, line: 79 } }, branchMap: { '0': { loc: { start: { line: 6, column: 2 }, end: { line: 30, column: 3 } }, type: 'if', locations: [{ start: { line: 6, column: 2 }, end: { line: 30, column: 3 } }, { start: { line: 6, column: 2 }, end: { line: 30, column: 3 } }], line: 6 }, '1': { loc: { start: { line: 35, column: 2 }, end: { line: 74, column: 3 } }, type: 'if', locations: [{ start: { line: 35, column: 2 }, end: { line: 74, column: 3 } }, { start: { line: 35, column: 2 }, end: { line: 74, column: 3 } }], line: 35 }, '2': { loc: { start: { line: 64, column: 19 }, end: { line: 64, column: 52 } }, type: 'binary-expr', locations: [{ start: { line: 64, column: 19 }, end: { line: 64, column: 42 } }, { start: { line: 64, column: 46 }, end: { line: 64, column: 52 } }], line: 64 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/header.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRouterDom = require('react-router-dom');
+var /* istanbul ignore next */_smileyCyrus = require('../../shared/smiley-cyrus.jpg'); /* istanbul ignore next */var _smileyCyrus2 = _interopRequireDefault(_smileyCyrus);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function LoggedOutView(props) {/* istanbul ignore next */++cov_dj09e5s4e.f[0];++cov_dj09e5s4e.s[0];
+  if (!props.currentUser) {/* istanbul ignore next */++cov_dj09e5s4e.b[0][0];++cov_dj09e5s4e.s[1];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */{ className: 'nav navbar-nav pull-xs-right', __source: { fileName: _jsxFileName, lineNumber: 8 }, __self: this },
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: '/', className: 'nav-link', __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: this }, /* istanbul ignore next */'Home')),
+
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 16 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: '/login', className: 'nav-link', /* istanbul ignore next */'data-test': 'sign-in-link', __source: { fileName: _jsxFileName, lineNumber: 17 }, __self: this }, /* istanbul ignore next */'Sign in')),
+
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 22 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: '/register', className: 'nav-link', /* istanbul ignore next */'data-test': 'sign-up-link', __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: this }, /* istanbul ignore next */'Sign up'))));
+
+
+
+
+
+
+  } else /* istanbul ignore next */{++cov_dj09e5s4e.b[0][1];}++cov_dj09e5s4e.s[2];
+  return null;
+}
+
+function LoggedInView(props) {/* istanbul ignore next */++cov_dj09e5s4e.f[1];++cov_dj09e5s4e.s[3];
+  if (props.currentUser) {/* istanbul ignore next */++cov_dj09e5s4e.b[1][0];++cov_dj09e5s4e.s[4];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */{ className: 'nav navbar-nav pull-xs-right', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this },
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: '/', className: 'nav-link', __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }, /* istanbul ignore next */'Home')),
+
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 45 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: '/editor', className: 'nav-link', __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'i', /* istanbul ignore next */{ className: 'ion-compose', __source: { fileName: _jsxFileName, lineNumber: 47 }, __self: this }), /* istanbul ignore next */'\xA0New Post')),
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: '/settings', className: 'nav-link', /* istanbul ignore next */'data-test': 'settings', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'i', /* istanbul ignore next */{ className: 'ion-gear-a', __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this }), /* istanbul ignore next */'\xA0Settings')),
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 57 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{
+              to: `/@${props.currentUser.username}`,
+              className: 'nav-link',
+              /* istanbul ignore next */'data-test': 'profile-link', __source: { fileName: _jsxFileName, lineNumber: 58 }, __self: this },
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{
+              src: /* istanbul ignore next */(++cov_dj09e5s4e.b[2][0], props.currentUser.image) || /* istanbul ignore next */(++cov_dj09e5s4e.b[2][1], _smileyCyrus2.default),
+              className: 'user-pic',
+              alt: 'you', __source: { fileName: _jsxFileName, lineNumber: 63 }, __self: this }),
+
+            props.currentUser.username))));
+
+
+
+
+
+  } else /* istanbul ignore next */{++cov_dj09e5s4e.b[1][1];}++cov_dj09e5s4e.s[5];
+
+  return null;
+}
+
+function Header(props) {/* istanbul ignore next */++cov_dj09e5s4e.f[2];++cov_dj09e5s4e.s[6];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'navbar navbar-light', __source: { fileName: _jsxFileName, lineNumber: 81 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'container', __source: { fileName: _jsxFileName, lineNumber: 82 }, __self: this },
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: '/', className: 'navbar-brand', __source: { fileName: _jsxFileName, lineNumber: 84 }, __self: this },
+          props.appName.toLowerCase()),
+
+
+        /* istanbul ignore next */_react2.default.createElement(LoggedOutView, /* istanbul ignore next */{ currentUser: props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 88 }, __self: this }),
+
+        /* istanbul ignore next */_react2.default.createElement(LoggedInView, /* istanbul ignore next */{ currentUser: props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 90 }, __self: this }))));
+
+
+
+} /* istanbul ignore next */exports.default =
+
+Header;

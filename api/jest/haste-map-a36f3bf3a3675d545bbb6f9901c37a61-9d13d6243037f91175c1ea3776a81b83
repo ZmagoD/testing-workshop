@@ -1,0 +1,1 @@
+{"clocks":{"/Users/zmagodevetak/Desktop/react/testing-workshop":"c:1502743360:6691:1:1906"},"files":{"/Users/zmagodevetak/Desktop/react/testing-workshop/api/tests/integration/articles.test.js":["",1502743843000,1,["axios","faker","../../../other/generate/article","../../../other/generate/user","../../src/start-server"]]},"map":{},"mocks":{}}

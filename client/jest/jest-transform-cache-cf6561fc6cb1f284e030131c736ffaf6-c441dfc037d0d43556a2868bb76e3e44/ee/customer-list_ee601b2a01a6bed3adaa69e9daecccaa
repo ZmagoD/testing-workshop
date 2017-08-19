@@ -1,0 +1,62 @@
+'use strict';var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/demo/unit/__tests__/customer-list.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _enzyme = require('enzyme');
+var _enzymeToJson = require('enzyme-to-json');
+var _customerList = require('../customer-list');var _customerList2 = _interopRequireDefault(_customerList);
+var _customers = require('../customers');var _customers2 = _interopRequireDefault(_customers);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+let storeCleanup;
+beforeAll(() => {
+  storeCleanup = initializeStore();
+});
+
+afterAll(() => {
+  storeCleanup();
+});
+
+test('should render no customers', () => {
+  const wrapper = (0, _enzyme.render)(_react2.default.createElement(_customerList2.default, { __source: { fileName: _jsxFileName, lineNumber: 17 }, __self: undefined }));
+  expect(wrapper).toMatchSnapshot();
+});
+
+test('should render customers', () => {
+  const cleanup = initializeStore([{ name: 'Bob' }, { name: 'Joanna' }]);
+  const wrapper = (0, _enzyme.render)(_react2.default.createElement(_customerList2.default, { __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: undefined }));
+  expect(wrapper).toMatchSnapshot();
+  cleanup();
+});
+
+test('should respond to store updates', () => {
+  const cleanup = initializeStore();
+  const wrapper = mountCustomerList();
+  expect(wrapper).toMatchSnapshot('1. before customers are added');
+  _customers2.default.setCustomers([{ name: 'Jill' }, { name: 'Fred' }]);
+  expect(wrapper).toMatchSnapshot('2. after customers are added');
+  cleanup();
+});
+
+test('unsubscribe when unmounted (to avoid memory leaks)', () => {
+  const unsubscribeMock = jest.fn();
+  const subscribeMock = jest.spyOn(_customers2.default, 'subscribe');
+  subscribeMock.mockImplementation(() => unsubscribeMock);
+  const wrapper = mountCustomerList();
+  wrapper.unmount();
+  expect(unsubscribeMock).toHaveBeenCalledTimes(1);
+  subscribeMock.mockRestore(); // cleanup
+});
+
+/**
+     * Mounts <CustomerList /> with the given props
+     * @param {Object} props - the props to mount with
+     * @return {Object} the rendered component
+     */
+function mountCustomerList() {
+  return (0, _enzyme.mount)(_react2.default.createElement(_customerList2.default, { __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this }));
+}
+
+function initializeStore(customers = []) {
+  const initialCustomers = _customers2.default.getCustomers();
+  _customers2.default.setCustomers(customers);
+  return function cleanup() {
+    _customers2.default.setCustomers(initialCustomers);
+  };
+}

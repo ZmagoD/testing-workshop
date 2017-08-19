@@ -1,0 +1,21 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_95hyqbozh = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/reducer.js',hash = 'd8c670e67839cfe86bebee368ea6303b03dd6b24',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/reducer.js', statementMap: {}, fnMap: {}, branchMap: {}, s: {}, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_redux = require('redux');
+var /* istanbul ignore next */_article = require('./reducers/article'); /* istanbul ignore next */var _article2 = _interopRequireDefault(_article);
+var /* istanbul ignore next */_articleList = require('./reducers/article-list'); /* istanbul ignore next */var _articleList2 = _interopRequireDefault(_articleList);
+var /* istanbul ignore next */_auth = require('./reducers/auth'); /* istanbul ignore next */var _auth2 = _interopRequireDefault(_auth);
+var /* istanbul ignore next */_common = require('./reducers/common'); /* istanbul ignore next */var _common2 = _interopRequireDefault(_common);
+var /* istanbul ignore next */_editor = require('./reducers/editor'); /* istanbul ignore next */var _editor2 = _interopRequireDefault(_editor);
+var /* istanbul ignore next */_home = require('./reducers/home'); /* istanbul ignore next */var _home2 = _interopRequireDefault(_home);
+var /* istanbul ignore next */_profile = require('./reducers/profile'); /* istanbul ignore next */var _profile2 = _interopRequireDefault(_profile);
+var /* istanbul ignore next */_profileFavorites = require('./reducers/profile-favorites'); /* istanbul ignore next */var _profileFavorites2 = _interopRequireDefault(_profileFavorites);
+var /* istanbul ignore next */_settings = require('./reducers/settings'); /* istanbul ignore next */var _settings2 = _interopRequireDefault(_settings);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+/* istanbul ignore next */(0, _redux.combineReducers)({
+  article: /* istanbul ignore next */_article2.default,
+  articleList: /* istanbul ignore next */_articleList2.default,
+  auth: /* istanbul ignore next */_auth2.default,
+  common: /* istanbul ignore next */_common2.default,
+  editor: /* istanbul ignore next */_editor2.default,
+  home: /* istanbul ignore next */_home2.default,
+  profile: /* istanbul ignore next */_profile2.default,
+  profileFavorites: /* istanbul ignore next */_profileFavorites2.default,
+  settings: /* istanbul ignore next */_settings2.default });

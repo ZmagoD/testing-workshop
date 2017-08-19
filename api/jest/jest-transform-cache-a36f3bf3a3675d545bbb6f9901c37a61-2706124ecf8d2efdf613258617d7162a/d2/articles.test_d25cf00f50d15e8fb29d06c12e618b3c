@@ -1,0 +1,131 @@
+'use strict';let createNewUser = (() => {var _ref12 = _asyncToGenerator(
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function* (overrides) {
+    const password = _faker2.default.internet.password();
+    const userData = (0, _user2.default)(overrides);const
+    email = userData.email,username = userData.username;
+    const user = yield api.
+    post('users', { user: { email, password, username } }).
+    then(getUser);
+    return {
+      user,
+      cleanup() {
+        return api.delete(`users/${user.username}`);
+      } };
+
+  });return function createNewUser(_x) {return _ref12.apply(this, arguments);};})();let createNewArticle = (() => {var _ref13 = _asyncToGenerator(
+
+  function* (overrides) {
+    const newArticle = (0, _article.generateArticleForClient)(overrides);
+    const article = yield api.
+    post('articles', { article: newArticle }).
+    then(getArticle);
+    return {
+      article,
+      cleanup() {
+        return api.delete(`articles/${article.slug}`);
+      } };
+
+  });return function createNewArticle(_x2) {return _ref13.apply(this, arguments);};})();var _axios = require('axios');var _axios2 = _interopRequireDefault(_axios);var _faker = require('faker');var _faker2 = _interopRequireDefault(_faker);var _article = require('../../../other/generate/article');var _user = require('../../../other/generate/user');var _user2 = _interopRequireDefault(_user);var _startServer = require('../../src/start-server');var _startServer2 = _interopRequireDefault(_startServer);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _asyncToGenerator(fn) {return function () {var gen = fn.apply(this, arguments);return new Promise(function (resolve, reject) {function step(key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {return Promise.resolve(value).then(function (value) {step("next", value);}, function (err) {step("throw", err);});}}return step("next");});};}const api = _axios2.default.create({ baseURL: 'http://localhost:3000/api' }); // just a handy utility for some of our promise-based code
+// you might consider making something similar for the articles
+// stuff
+const getUser = res => res.data.user;const getArticle = res => res.data.article;const getArticles = res => res.data.articles;let server;beforeAll(_asyncToGenerator(function* () {server = yield (0, _startServer2.default)();}));afterAll(done => {server.close(done);});describe('unauthenticated', () => {test('get with limit', _asyncToGenerator(function* () {const limit = 10;const articles = yield api.get(`articles?limit=${limit}&offset=0`).then(getArticles);expect(articles).toHaveLength(limit);}));test('get with offset', _asyncToGenerator(function* () {const articles1 = yield api.get(`articles?limit=2&offset=0`).then(getArticles);const articles2 = yield api.get(`articles?limit=1&offset=1`).then(getArticles);expect(articles1[1]).toEqual(articles2[0]);}));});describe('authenticated', () => {let cleanupUser;beforeAll(_asyncToGenerator(function* () {const results = yield createNewUser();cleanupUser = results.cleanup;api.defaults.headers.common.authorization = `Token ${results.user.token}`;}));afterAll(_asyncToGenerator(function* () {yield cleanupUser();api.defaults.headers.common.authorization = '';}));test('post a new article', _asyncToGenerator(function* () {const newArticle = (0, _article.generateArticleForClient)();var _ref7 = yield createNewArticle(newArticle);const article = _ref7.article,cleanup = _ref7.cleanup;expect(article).toMatchObject(newArticle);cleanup();}));test('update an article', _asyncToGenerator(function* () {var _ref9 = yield createNewArticle(),_ref9$article = _ref9.article;const slug = _ref9$article.slug,updatedAt = _ref9$article.updatedAt,body = _ref9$article.body,cleanup = _ref9.cleanup; // doesn't matter what it is, just that it's different
+    const newBody = `__${body}__`;const updatedArticle = yield api.put(`articles/${slug}`, { article: { body: newBody } }).then(getArticle);expect(updatedArticle.body).toEqual(newBody);expect(updatedArticle.updatedAt).not.toBe(updatedAt);yield cleanup();}));test('delete an article', _asyncToGenerator(function* () {var _ref11 = yield createNewArticle();const slug = _ref11.article.slug;yield api.delete(`articles/${slug}`);const error = yield api.get(`/articles/${slug}`).catch(function (e) {return e;});expect(error.response.status).toBe(404);}));});test('I submitted my elaboration and feedback', () => {const submitted = true;expect(true).toBe(submitted);
+});
+
+//////// EXTRA CREDIT ////////
+
+// If you get this far, try adding a few more tests,
+// then file a pull request to add them as extra credit!
+// Learn more here: http://kcd.im/testing-workshop-contributing

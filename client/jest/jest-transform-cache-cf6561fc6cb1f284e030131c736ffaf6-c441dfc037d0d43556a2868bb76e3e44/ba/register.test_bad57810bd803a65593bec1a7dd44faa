@@ -1,0 +1,31 @@
+'use strict';var _axios = require('axios');var _axios2 = _interopRequireDefault(_axios);
+var _register = require('../../src/screens/register');var _register2 = _interopRequireDefault(_register);
+var _utils = require('./helpers/utils');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+test('logs in when the form is submitted', async () => {
+  const setItemMock = jest.spyOn(window.localStorage, 'setItem');
+  const token = 'Luke, I am your father';
+  const user = {
+    password: 'my-password',
+    email: 'me@example.com',
+    username: 'vador' };
+
+  _axios2.default.__mock.instance.post.mockImplementation(() => {
+    return Promise.resolve({ data: { user: { token } } });
+  });
+
+  const { history, wrapper } = (0, _utils.renderApp)({ route: '/register' });
+  wrapper.find((0, _utils.sel)('username')).node.value = user.username;
+  wrapper.find((0, _utils.sel)('email')).node.value = user.email;
+  wrapper.find((0, _utils.sel)('password')).node.value = user.password;
+  wrapper.find('form').simulate('submit');
+  await (0, _utils.flushAllPromises)();
+  expect(_axios2.default.__mock.instance.post).toHaveBeenCalledTimes(1);
+  expect(_axios2.default.__mock.instance.post).toHaveBeenCalledWith('/users', {
+    user });
+
+  expect(history.location.pathname).toBe('/');
+  expect(setItemMock).toHaveBeenCalledTimes(1);
+  expect(setItemMock).toHaveBeenCalledWith('jwt', token);
+  setItemMock.mockRestore();
+});

@@ -1,0 +1,12 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default = (state = {}, action) => {
+  switch (action.type) {
+    case 'PROFILE_FAVORITES_PAGE_LOADED':
+      return Object.assign({},
+      action.payload[0].profile);
+
+    case 'PROFILE_FAVORITES_PAGE_UNLOADED':
+      return {};
+    default:
+      return state;}
+
+};

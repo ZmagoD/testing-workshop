@@ -1,0 +1,96 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/header.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRouterDom = require('react-router-dom');
+var _smileyCyrus = require('../../shared/smiley-cyrus.jpg');var _smileyCyrus2 = _interopRequireDefault(_smileyCyrus);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function LoggedOutView(props) {
+  if (!props.currentUser) {
+    return (
+      _react2.default.createElement('ul', { className: 'nav navbar-nav pull-xs-right', __source: { fileName: _jsxFileName, lineNumber: 8 }, __self: this },
+
+        _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: this },
+          _react2.default.createElement(_reactRouterDom.Link, { to: '/', className: 'nav-link', __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: this }, 'Home')),
+
+
+
+
+        _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 16 }, __self: this },
+          _react2.default.createElement(_reactRouterDom.Link, { to: '/login', className: 'nav-link', 'data-test': 'sign-in-link', __source: { fileName: _jsxFileName, lineNumber: 17 }, __self: this }, 'Sign in')),
+
+
+
+
+        _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 22 }, __self: this },
+          _react2.default.createElement(_reactRouterDom.Link, { to: '/register', className: 'nav-link', 'data-test': 'sign-up-link', __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: this }, 'Sign up'))));
+
+
+
+
+
+
+  }
+  return null;
+}
+
+function LoggedInView(props) {
+  if (props.currentUser) {
+    return (
+      _react2.default.createElement('ul', { className: 'nav navbar-nav pull-xs-right', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this },
+
+        _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this },
+          _react2.default.createElement(_reactRouterDom.Link, { to: '/', className: 'nav-link', __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }, 'Home')),
+
+
+
+
+        _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 45 }, __self: this },
+          _react2.default.createElement(_reactRouterDom.Link, { to: '/editor', className: 'nav-link', __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this },
+            _react2.default.createElement('i', { className: 'ion-compose', __source: { fileName: _jsxFileName, lineNumber: 47 }, __self: this }), '\xA0New Post')),
+
+
+
+        _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this },
+          _react2.default.createElement(_reactRouterDom.Link, { to: '/settings', className: 'nav-link', 'data-test': 'settings', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this },
+            _react2.default.createElement('i', { className: 'ion-gear-a', __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this }), '\xA0Settings')),
+
+
+
+        _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 57 }, __self: this },
+          _react2.default.createElement(_reactRouterDom.Link, {
+              to: `/@${props.currentUser.username}`,
+              className: 'nav-link',
+              'data-test': 'profile-link', __source: { fileName: _jsxFileName, lineNumber: 58 }, __self: this },
+
+            _react2.default.createElement('img', {
+              src: props.currentUser.image || _smileyCyrus2.default,
+              className: 'user-pic',
+              alt: 'you', __source: { fileName: _jsxFileName, lineNumber: 63 }, __self: this }),
+
+            props.currentUser.username))));
+
+
+
+
+
+  }
+
+  return null;
+}
+
+function Header(props) {
+  return (
+    _react2.default.createElement('nav', { className: 'navbar navbar-light', __source: { fileName: _jsxFileName, lineNumber: 81 }, __self: this },
+      _react2.default.createElement('div', { className: 'container', __source: { fileName: _jsxFileName, lineNumber: 82 }, __self: this },
+
+        _react2.default.createElement(_reactRouterDom.Link, { to: '/', className: 'navbar-brand', __source: { fileName: _jsxFileName, lineNumber: 84 }, __self: this },
+          props.appName.toLowerCase()),
+
+
+        _react2.default.createElement(LoggedOutView, { currentUser: props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 88 }, __self: this }),
+
+        _react2.default.createElement(LoggedInView, { currentUser: props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 90 }, __self: this }))));
+
+
+
+}exports.default =
+
+Header;

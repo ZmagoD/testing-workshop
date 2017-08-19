@@ -1,0 +1,58 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-input.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRedux = require('react-redux');
+var _smileyCyrus = require('../../shared/smiley-cyrus.jpg');var _smileyCyrus2 = _interopRequireDefault(_smileyCyrus);
+var _agent = require('../../shared/agent');var _agent2 = _interopRequireDefault(_agent);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const mapDispatchToProps = dispatch => ({
+  onSubmit: payload => dispatch({ type: 'ADD_COMMENT', payload }) });
+
+
+class CommentInput extends _react2.default.Component {
+  constructor() {
+    super();
+    this.state = {
+      body: '' };
+
+
+    this.setBody = ev => {
+      this.setState({ body: ev.target.value });
+    };
+
+    this.createComment = ev => {
+      ev.preventDefault();
+      const payload = _agent2.default.Comments.create(this.props.slug, {
+        body: this.state.body });
+
+      this.setState({ body: '' });
+      this.props.onSubmit(payload);
+    };
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('form', { className: 'card comment-form', onSubmit: this.createComment, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this },
+        _react2.default.createElement('div', { className: 'card-block', __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
+          _react2.default.createElement('textarea', {
+            className: 'form-control',
+            placeholder: 'Write a comment...',
+            value: this.state.body,
+            onChange: this.setBody,
+            rows: '3', __source: { fileName: _jsxFileName, lineNumber: 35 }, __self: this })),
+
+
+        _react2.default.createElement('div', { className: 'card-footer', __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this },
+          _react2.default.createElement('img', {
+            src: this.props.currentUser.image || _smileyCyrus2.default,
+            className: 'comment-author-img',
+            alt: 'you', __source: { fileName: _jsxFileName, lineNumber: 44 }, __self: this }),
+
+          _react2.default.createElement('button', { className: 'btn btn-sm btn-primary', type: 'submit', __source: { fileName: _jsxFileName, lineNumber: 49 }, __self: this }, 'Post Comment'))));
+
+
+
+
+
+  }}exports.default =
+
+
+(0, _reactRedux.connect)(() => ({}), mapDispatchToProps)(CommentInput);

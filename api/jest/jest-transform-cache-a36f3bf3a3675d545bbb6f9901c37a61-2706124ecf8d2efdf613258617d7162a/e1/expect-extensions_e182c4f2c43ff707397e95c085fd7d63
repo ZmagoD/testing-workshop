@@ -1,0 +1,12 @@
+'use strict';var _matchers = require('jest-matchers/build/matchers');var _matchers2 = _interopRequireDefault(_matchers);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+expect.extend({
+  toStrictlyMatchObject(received, argument) {
+    const matches = _matchers2.default.toMatchObject(received, argument);
+    if (!matches.pass) {
+      return matches;
+    }
+    const receivedKeys = Object.keys(received);
+    const expectedKeysLength = Object.keys(argument).length;
+    return _matchers2.default.toHaveLength(receivedKeys, expectedKeysLength);
+  } });

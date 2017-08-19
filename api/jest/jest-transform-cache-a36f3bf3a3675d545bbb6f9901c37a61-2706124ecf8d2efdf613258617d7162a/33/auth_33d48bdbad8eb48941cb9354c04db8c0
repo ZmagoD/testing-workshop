@@ -1,0 +1,19 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _expressJwt = require('express-jwt');var _expressJwt2 = _interopRequireDefault(_expressJwt);
+var _config = require('../config');
+var _getTokenFromHeader = require('./utils/get-token-from-header');var _getTokenFromHeader2 = _interopRequireDefault(_getTokenFromHeader);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const auth = {
+  required: (0, _expressJwt2.default)({
+    secret: _config.secret,
+    userProperty: 'payload',
+    getToken: _getTokenFromHeader2.default }),
+
+  optional: (0, _expressJwt2.default)({
+    secret: _config.secret,
+    userProperty: 'payload',
+    credentialsRequired: false,
+    getToken: _getTokenFromHeader2.default }) };exports.default =
+
+
+
+auth;

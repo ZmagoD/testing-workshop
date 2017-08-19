@@ -1,0 +1,4 @@
+'use strict';var _jestGlamorReact = require('jest-glamor-react');
+
+expect.extend(_jestGlamorReact.matcher);
+expect.addSnapshotSerializer(_jestGlamorReact.serializer);

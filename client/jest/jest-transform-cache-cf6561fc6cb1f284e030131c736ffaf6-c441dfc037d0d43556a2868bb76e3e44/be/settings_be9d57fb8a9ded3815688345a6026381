@@ -1,0 +1,37 @@
+'use strict';var _settings = require('../settings');var _settings2 = _interopRequireDefault(_settings);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+test('SETTINGS_SAVED', () => {
+  const initialState = {};
+  const action = { type: 'SETTINGS_SAVED' };
+  const result = (0, _settings2.default)(initialState, action);
+  expect(result).toEqual({ inProgress: false, errors: null });
+});
+
+test('SETTINGS_SAVED with errors', () => {
+  const initialState = {};
+  const errors = [{}];
+  const action = { type: 'SETTINGS_SAVED', error: true, payload: { errors } };
+  const result = (0, _settings2.default)(initialState, action);
+  expect(result).toEqual({ inProgress: false, errors });
+});
+
+test('SETTINGS_PAGE_UNLOADED', () => {
+  const initialState = {};
+  const action = { type: 'SETTINGS_PAGE_UNLOADED' };
+  const result = (0, _settings2.default)(initialState, action);
+  expect(result).toEqual({});
+});
+
+test('ASYNC_START', () => {
+  const initialState = {};
+  const action = { type: 'ASYNC_START' };
+  const result = (0, _settings2.default)(initialState, action);
+  expect(result).toEqual({ inProgress: true });
+});
+
+test('non-matching type', () => {
+  const initialState = { randomThing: 'blah' };
+  const action = { type: 'random_action' };
+  const result = (0, _settings2.default)(initialState, action);
+  expect(result).toEqual(initialState);
+});

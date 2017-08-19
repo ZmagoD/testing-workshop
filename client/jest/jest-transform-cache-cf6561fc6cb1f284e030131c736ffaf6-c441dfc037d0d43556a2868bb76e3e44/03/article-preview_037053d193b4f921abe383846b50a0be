@@ -1,0 +1,84 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_17co44n8mq = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/article-preview.js',hash = '214652fd59625318127454dc03cc11967668ee7e',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/article-preview.js', statementMap: { '0': { start: { line: 7, column: 24 }, end: { line: 7, column: 48 } }, '1': { start: { line: 8, column: 28 }, end: { line: 8, column: 60 } }, '2': { start: { line: 10, column: 27 }, end: { line: 21, column: 2 } }, '3': { start: { line: 10, column: 40 }, end: { line: 21, column: 1 } }, '4': { start: { line: 12, column: 4 }, end: { line: 15, column: 6 } }, '5': { start: { line: 17, column: 4 }, end: { line: 20, column: 6 } }, '6': { start: { line: 23, column: 23 }, end: { line: 82, column: 1 } }, '7': { start: { line: 24, column: 18 }, end: { line: 24, column: 31 } }, '8': { start: { line: 25, column: 30 }, end: { line: 27, column: 23 } }, '9': { start: { line: 29, column: 22 }, end: { line: 36, column: 3 } }, '10': { start: { line: 30, column: 4 }, end: { line: 30, column: 23 } }, '11': { start: { line: 31, column: 4 }, end: { line: 35, column: 5 } }, '12': { start: { line: 32, column: 6 }, end: { line: 32, column: 36 } }, '13': { start: { line: 34, column: 6 }, end: { line: 34, column: 34 } }, '14': { start: { line: 38, column: 2 }, end: { line: 81, column: 3 } }, '15': { start: { line: 69, column: 14 }, end: { line: 69, column: 43 } }, '16': { start: { line: 72, column: 14 }, end: { line: 76, column: 15 } }, '17': { start: { line: 84, column: 30 }, end: { line: 84, column: 32 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 10, column: 27 }, end: { line: 10, column: 28 } }, loc: { start: { line: 10, column: 40 }, end: { line: 21, column: 1 } }, line: 10 }, '1': { name: '(anonymous_1)', decl: { start: { line: 11, column: 12 }, end: { line: 11, column: 13 } }, loc: { start: { line: 12, column: 4 }, end: { line: 15, column: 6 } }, line: 12 }, '2': { name: '(anonymous_2)', decl: { start: { line: 16, column: 14 }, end: { line: 16, column: 15 } }, loc: { start: { line: 17, column: 4 }, end: { line: 20, column: 6 } }, line: 17 }, '3': { name: '(anonymous_3)', decl: { start: { line: 23, column: 23 }, end: { line: 23, column: 24 } }, loc: { start: { line: 23, column: 32 }, end: { line: 82, column: 1 } }, line: 23 }, '4': { name: '(anonymous_4)', decl: { start: { line: 29, column: 22 }, end: { line: 29, column: 23 } }, loc: { start: { line: 29, column: 28 }, end: { line: 36, column: 3 } }, line: 29 }, '5': { name: '(anonymous_5)', decl: { start: { line: 67, column: 20 }, end: { line: 67, column: 21 } }, loc: { start: { line: 67, column: 37 }, end: { line: 70, column: 13 } }, line: 67 }, '6': { name: '(anonymous_6)', decl: { start: { line: 71, column: 17 }, end: { line: 71, column: 18 } }, loc: { start: { line: 71, column: 24 }, end: { line: 77, column: 13 } }, line: 71 }, '7': { name: '(anonymous_7)', decl: { start: { line: 84, column: 23 }, end: { line: 84, column: 24 } }, loc: { start: { line: 84, column: 30 }, end: { line: 84, column: 32 } }, line: 84 } }, branchMap: { '0': { loc: { start: { line: 25, column: 30 }, end: { line: 27, column: 23 } }, type: 'cond-expr', locations: [{ start: { line: 26, column: 4 }, end: { line: 26, column: 19 } }, { start: { line: 27, column: 4 }, end: { line: 27, column: 23 } }], line: 25 }, '1': { loc: { start: { line: 31, column: 4 }, end: { line: 35, column: 5 } }, type: 'if', locations: [{ start: { line: 31, column: 4 }, end: { line: 35, column: 5 } }, { start: { line: 31, column: 4 }, end: { line: 35, column: 5 } }], line: 31 }, '2': { loc: { start: { line: 42, column: 20 }, end: { line: 42, column: 50 } }, type: 'binary-expr', locations: [{ start: { line: 42, column: 20 }, end: { line: 42, column: 40 } }, { start: { line: 42, column: 44 }, end: { line: 42, column: 50 } }], line: 42 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/article-preview.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_reactRouterDom = require('react-router-dom');
+var /* istanbul ignore next */_agent = require('../agent'); /* istanbul ignore next */var _agent2 = _interopRequireDefault(_agent);
+var /* istanbul ignore next */_smileyCyrus = require('../../shared/smiley-cyrus.jpg'); /* istanbul ignore next */var _smileyCyrus2 = _interopRequireDefault(_smileyCyrus);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const FAVORITED_CLASS = /* istanbul ignore next */(++cov_17co44n8mq.s[0], 'btn btn-sm btn-primary');
+const NOT_FAVORITED_CLASS = /* istanbul ignore next */(++cov_17co44n8mq.s[1], 'btn btn-sm btn-outline-primary'); /* istanbul ignore next */++cov_17co44n8mq.s[2];
+
+const mapDispatchToProps = dispatch => {/* istanbul ignore next */++cov_17co44n8mq.f[0];++cov_17co44n8mq.s[3];return {
+    favorite: slug =>
+    {/* istanbul ignore next */++cov_17co44n8mq.f[1];++cov_17co44n8mq.s[4];return dispatch({
+        type: 'ARTICLE_FAVORITED',
+        payload: /* istanbul ignore next */_agent2.default.Articles.favorite(slug) });
+    },
+    unfavorite: slug =>
+    {/* istanbul ignore next */++cov_17co44n8mq.f[2];++cov_17co44n8mq.s[5];return dispatch({
+        type: 'ARTICLE_UNFAVORITED',
+        payload: /* istanbul ignore next */_agent2.default.Articles.unfavorite(slug) });
+    } };
+}; /* istanbul ignore next */++cov_17co44n8mq.s[6];
+
+const ArticlePreview = props => {/* istanbul ignore next */++cov_17co44n8mq.f[3];
+  const article = /* istanbul ignore next */(++cov_17co44n8mq.s[7], props.article);
+  const favoriteButtonClass = /* istanbul ignore next */(++cov_17co44n8mq.s[8], article.favorited ? /* istanbul ignore next */(++cov_17co44n8mq.b[0][0],
+  FAVORITED_CLASS) : /* istanbul ignore next */(++cov_17co44n8mq.b[0][1],
+  NOT_FAVORITED_CLASS)); /* istanbul ignore next */++cov_17co44n8mq.s[9];
+
+  const handleClick = ev => {/* istanbul ignore next */++cov_17co44n8mq.f[4];++cov_17co44n8mq.s[10];
+    ev.preventDefault(); /* istanbul ignore next */++cov_17co44n8mq.s[11];
+    if (article.favorited) {/* istanbul ignore next */++cov_17co44n8mq.b[1][0];++cov_17co44n8mq.s[12];
+      props.unfavorite(article.slug);
+    } else {/* istanbul ignore next */++cov_17co44n8mq.b[1][1];++cov_17co44n8mq.s[13];
+      props.favorite(article.slug);
+    }
+  }; /* istanbul ignore next */++cov_17co44n8mq.s[14];
+
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'article-preview', __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: undefined },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'article-meta', __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: undefined },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: `/@${article.author.username}`, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: undefined },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */(++cov_17co44n8mq.b[2][0], article.author.image) || /* istanbul ignore next */(++cov_17co44n8mq.b[2][1], _smileyCyrus2.default), alt: 'author', __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: undefined })),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'info', __source: { fileName: _jsxFileName, lineNumber: 45 }, __self: undefined },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ className: 'author', to: `/@${article.author.username}`, __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: undefined },
+            article.author.username),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ className: 'date', __source: { fileName: _jsxFileName, lineNumber: 49 }, __self: undefined },
+            new Date(article.createdAt).toDateString())),
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'pull-xs-right', __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: undefined },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ className: favoriteButtonClass, onClick: handleClick, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: undefined },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'i', /* istanbul ignore next */{ className: 'ion-heart', __source: { fileName: _jsxFileName, lineNumber: 56 }, __self: undefined }), /* istanbul ignore next */' ', article.favoritesCount))),
+
+
+
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: `/article/${article.slug}`, className: 'preview-link', __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: undefined },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: undefined }, article.title),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 63 }, __self: undefined }, article.description),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 64 }, __self: undefined }, /* istanbul ignore next */'Read more...'),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */{ className: 'tag-list', __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: undefined },
+          article.tagList.
+          filter((tag, i, arr) => {/* istanbul ignore next */++cov_17co44n8mq.f[5];++cov_17co44n8mq.s[15];
+            // Filter out duplicate values.
+            return arr.indexOf(tag) === i;
+          }).
+          map(tag => {/* istanbul ignore next */++cov_17co44n8mq.f[6];++cov_17co44n8mq.s[16];
+            return (
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ className: 'tag-default tag-pill tag-outline', key: tag, __source: { fileName: _jsxFileName, lineNumber: 73 }, __self: undefined },
+                tag));
+
+
+          })))));
+
+
+
+
+}; /* istanbul ignore next */exports.default =
+
+/* istanbul ignore next */(0, _reactRedux.connect)(() => {/* istanbul ignore next */++cov_17co44n8mq.f[7];++cov_17co44n8mq.s[17];return {};}, mapDispatchToProps)(ArticlePreview);

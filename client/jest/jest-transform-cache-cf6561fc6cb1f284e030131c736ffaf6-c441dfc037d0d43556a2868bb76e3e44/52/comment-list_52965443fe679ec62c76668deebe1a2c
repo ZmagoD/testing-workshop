@@ -1,0 +1,21 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-list.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _comment = require('./comment');var _comment2 = _interopRequireDefault(_comment);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const CommentList = props => {
+  return (
+    _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 6 }, __self: undefined },
+      props.comments.map(comment => {
+        return (
+          _react2.default.createElement(_comment2.default, {
+            comment: comment,
+            currentUser: props.currentUser,
+            slug: props.slug,
+            key: comment.id, __source: { fileName: _jsxFileName, lineNumber: 9 }, __self: undefined }));
+
+
+      })));
+
+
+};exports.default =
+
+CommentList;

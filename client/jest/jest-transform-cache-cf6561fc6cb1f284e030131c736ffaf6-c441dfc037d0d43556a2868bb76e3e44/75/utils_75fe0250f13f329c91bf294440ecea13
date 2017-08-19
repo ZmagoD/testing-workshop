@@ -1,0 +1,36 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.flushAllPromises = exports.sel = exports.renderApp = undefined;var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/tests/integration/helpers/utils.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRedux = require('react-redux');
+var _reactRouter = require('react-router');
+var _history = require('history');
+var _enzyme = require('enzyme');
+var _app = require('../../../src/app');var _app2 = _interopRequireDefault(_app);
+var _store = require('../../../src/store');var _store2 = _interopRequireDefault(_store);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.
+
+renderApp = renderApp;exports.sel = sel;exports.flushAllPromises = flushAllPromises;
+
+// this renders the given component with a react-redux Provider
+// which is how we render it in our application.
+// Also renders with a react-router-dom MemoryRouder
+// which is how we render to a specific URL.
+function renderApp({ route = '/', state = {} }) {
+  const store = (0, _store2.default)(state);
+  const history = (0, _history.createMemoryHistory)({ initialEntries: [route] });
+  const wrapper = (0, _enzyme.mount)(
+  _react2.default.createElement(_reactRedux.Provider, { store: store, __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+    _react2.default.createElement(_reactRouter.Router, { history: history, __source: { fileName: _jsxFileName, lineNumber: 20 }, __self: this },
+      _react2.default.createElement(_app2.default, { __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: this }))));
+
+
+
+  return { history, store, wrapper };
+}
+
+function sel(id) {
+  return `[data-test="${id}"]`;
+}
+
+// this returns a new promise and is just a simple way to
+// wait until the next tick so resolved promises chains will continue
+function flushAllPromises() {
+  return new Promise(resolve => setImmediate(resolve));
+}

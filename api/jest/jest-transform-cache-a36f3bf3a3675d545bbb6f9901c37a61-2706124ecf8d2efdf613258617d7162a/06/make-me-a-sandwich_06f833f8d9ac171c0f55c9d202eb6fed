@@ -1,0 +1,26 @@
+'use strict';var _makeMeASandwich = require('../make-me-a-sandwich');var _makeMeASandwich2 = _interopRequireDefault(_makeMeASandwich);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+test('returns null if there is no sandwich query', () => {
+  const req = getReq();
+  const result = (0, _makeMeASandwich2.default)(req);
+  expect(result).toBe(null);
+});
+
+test('returns the sandwich if there is a sandwich query', () => {
+  const sandwich = 'Peanut Butter & Raspberry Jam';
+  const req = getReq(sandwich);
+  const result = (0, _makeMeASandwich2.default)(req);
+  // Rather than typing out the full value twice, we're using a variable.
+  // Not to be "DRY" per-se, but rather to indicate to the reader that
+  // these values are directly related to one another.
+  expect(result).toBe(sandwich);
+});
+
+// writing and using this may be going a tiny bit overboard
+// considering the req object for these tests is so small anyway
+// but often your test data is much larger than this so making
+// the differences in the input more readily noticeable can be
+// quite valuable.
+function getReq(sandwich) {
+  return { query: { sandwich } };
+}

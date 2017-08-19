@@ -1,0 +1,60 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2kkyj1a8xh = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/models/article.js',hash = '07ff8a90bb4d5cad8a376c3208a754154ace9486',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/models/article.js', statementMap: { '0': { start: { line: 8, column: 24 }, end: { line: 20, column: 3 } }, '1': { start: { line: 22, column: 2 }, end: { line: 22, column: 70 } }, '2': { start: { line: 24, column: 2 }, end: { line: 28, column: 4 } }, '3': { start: { line: 25, column: 4 }, end: { line: 25, column: 18 } }, '4': { start: { line: 27, column: 4 }, end: { line: 27, column: 10 } }, '5': { start: { line: 30, column: 2 }, end: { line: 32, column: 3 } }, '6': { start: { line: 31, column: 4 }, end: { line: 31, column: 32 } }, '7': { start: { line: 34, column: 2 }, end: { line: 40, column: 3 } }, '8': { start: { line: 35, column: 4 }, end: { line: 39, column: 6 } }, '9': { start: { line: 36, column: 6 }, end: { line: 36, column: 33 } }, '10': { start: { line: 38, column: 6 }, end: { line: 38, column: 24 } }, '11': { start: { line: 42, column: 2 }, end: { line: 57, column: 3 } }, '12': { start: { line: 43, column: 4 }, end: { line: 56, column: 5 } }, '13': { start: { line: 59, column: 2 }, end: { line: 59, column: 22 } } }, fnMap: { '0': { name: 'getArticleSchema', decl: { start: { line: 7, column: 9 }, end: { line: 7, column: 25 } }, loc: { start: { line: 7, column: 32 }, end: { line: 60, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 24, column: 32 }, end: { line: 24, column: 33 } }, loc: { start: { line: 24, column: 47 }, end: { line: 28, column: 3 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 30, column: 34 }, end: { line: 30, column: 35 } }, loc: { start: { line: 30, column: 45 }, end: { line: 32, column: 3 } } }, '3': { name: '(anonymous_3)', decl: { start: { line: 34, column: 46 }, end: { line: 34, column: 47 } }, loc: { start: { line: 34, column: 57 }, end: { line: 40, column: 3 } } }, '4': { name: '(anonymous_4)', decl: { start: { line: 35, column: 59 }, end: { line: 35, column: 60 } }, loc: { start: { line: 35, column: 68 }, end: { line: 39, column: 5 } } }, '5': { name: '(anonymous_5)', decl: { start: { line: 42, column: 36 }, end: { line: 42, column: 37 } }, loc: { start: { line: 42, column: 51 }, end: { line: 57, column: 3 } } } }, branchMap: { '0': { loc: { start: { line: 51, column: 17 }, end: { line: 51, column: 57 } }, type: 'cond-expr', locations: [{ start: { line: 51, column: 24 }, end: { line: 51, column: 49 } }, { start: { line: 51, column: 52 }, end: { line: 51, column: 57 } }] }, '1': { loc: { start: { line: 53, column: 14 }, end: { line: 55, column: 33 } }, type: 'cond-expr', locations: [{ start: { line: 54, column: 8 }, end: { line: 54, column: 42 } }, { start: { line: 55, column: 8 }, end: { line: 55, column: 33 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_mongoose = require('mongoose'); /* istanbul ignore next */var _mongoose2 = _interopRequireDefault(_mongoose);
+var /* istanbul ignore next */_mongooseUniqueValidator = require('mongoose-unique-validator'); /* istanbul ignore next */var _mongooseUniqueValidator2 = _interopRequireDefault(_mongooseUniqueValidator);
+var /* istanbul ignore next */_slugify = require('slugify'); /* istanbul ignore next */var _slugify2 = _interopRequireDefault(_slugify);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+getArticleSchema;
+
+function getArticleSchema(User) {/* istanbul ignore next */++cov_2kkyj1a8xh.f[0];
+  const ArticleSchema = /* istanbul ignore next */(++cov_2kkyj1a8xh.s[0], new /* istanbul ignore next */_mongoose2.default.Schema(
+  {
+    slug: { type: String, lowercase: true, unique: true },
+    title: String,
+    description: String,
+    body: String,
+    favoritesCount: { type: Number, default: 0 },
+    comments: [{ type: /* istanbul ignore next */_mongoose2.default.Schema.Types.ObjectId, ref: 'Comment' }],
+    tagList: [{ type: String }],
+    author: { type: /* istanbul ignore next */_mongoose2.default.Schema.Types.ObjectId, ref: 'User' } },
+
+  { timestamps: true })); /* istanbul ignore next */++cov_2kkyj1a8xh.s[1];
+
+
+  ArticleSchema.plugin( /* istanbul ignore next */_mongooseUniqueValidator2.default, { message: 'is already taken' }); /* istanbul ignore next */++cov_2kkyj1a8xh.s[2];
+
+  ArticleSchema.pre('validate', function (next) {/* istanbul ignore next */++cov_2kkyj1a8xh.f[1];++cov_2kkyj1a8xh.s[3];
+    this.slugify(); // eslint-disable-line babel/no-invalid-this
+    /* istanbul ignore next */++cov_2kkyj1a8xh.s[4];
+    next();
+  }); /* istanbul ignore next */++cov_2kkyj1a8xh.s[5];
+
+  ArticleSchema.methods.slugify = function () {/* istanbul ignore next */++cov_2kkyj1a8xh.f[2];++cov_2kkyj1a8xh.s[6];
+    this.slug = /* istanbul ignore next */(0, _slugify2.default)(this.title);
+  }; /* istanbul ignore next */++cov_2kkyj1a8xh.s[7];
+
+  ArticleSchema.methods.updateFavoriteCount = function () {/* istanbul ignore next */++cov_2kkyj1a8xh.f[3];++cov_2kkyj1a8xh.s[8];
+    return User.count({ favorites: { $in: [this._id] } }).then(count => {/* istanbul ignore next */++cov_2kkyj1a8xh.f[4];++cov_2kkyj1a8xh.s[9];
+      this.favoritesCount = count; /* istanbul ignore next */++cov_2kkyj1a8xh.s[10];
+
+      return this.save();
+    });
+  }; /* istanbul ignore next */++cov_2kkyj1a8xh.s[11];
+
+  ArticleSchema.methods.toJSONFor = function (user) {/* istanbul ignore next */++cov_2kkyj1a8xh.f[5];++cov_2kkyj1a8xh.s[12];
+    return {
+      slug: this.slug,
+      title: this.title,
+      description: this.description,
+      body: this.body,
+      createdAt: this.createdAt,
+      updatedAt: this.updatedAt,
+      tagList: this.tagList,
+      favorited: user ? /* istanbul ignore next */(++cov_2kkyj1a8xh.b[0][0], user.isFavorite(this._id)) : /* istanbul ignore next */(++cov_2kkyj1a8xh.b[0][1], false),
+      favoritesCount: this.favoritesCount,
+      author: this.author ? /* istanbul ignore next */(++cov_2kkyj1a8xh.b[1][0],
+      this.author.toProfileJSONFor(user)) : /* istanbul ignore next */(++cov_2kkyj1a8xh.b[1][1],
+      { username: 'userRemoved' }) };
+
+  }; /* istanbul ignore next */++cov_2kkyj1a8xh.s[13];
+
+  return ArticleSchema;
+}

@@ -1,0 +1,11 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });exports.default = arrayify;
+// Here's where you'll write arrayify. Look at
+// `api/src/routes/utils/arrayify.js` for instructions.
+
+function arrayify(input = []) {
+  if (input.length === 0) {
+    return input;
+  } else {
+    return [input];
+  }
+}

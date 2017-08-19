@@ -1,0 +1,93 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.Component = undefined;var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/login.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _propTypes = require('prop-types');var _propTypes2 = _interopRequireDefault(_propTypes);
+var _reactRouterDom = require('react-router-dom');
+var _reactRedux = require('react-redux');
+var _agent = require('../shared/agent');var _agent2 = _interopRequireDefault(_agent);
+var _listErrors = require('../shared/components/list-errors');var _listErrors2 = _interopRequireDefault(_listErrors);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const mapStateToProps = state => Object.assign({}, state.auth);
+
+const mapDispatchToProps = dispatch => ({
+  onSubmit: (email, password) =>
+  dispatch({ type: 'LOGIN', payload: _agent2.default.Auth.login(email, password) }),
+  onUnload: () => dispatch({ type: 'LOGIN_PAGE_UNLOADED' }) });
+
+
+class Login extends _react2.default.Component {constructor(...args) {var _temp;return _temp = super(...args), this.
+
+
+
+
+
+
+
+
+    submitForm = ev => {
+      ev.preventDefault();
+      this.props.onSubmit(this._email.value, this._password.value);
+    }, _temp;}
+
+  componentWillUnmount() {
+    this.props.onUnload();
+  }
+
+  render() {
+    return (
+      _react2.default.createElement('div', { className: 'auth-page', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
+        _react2.default.createElement('div', { className: 'container page', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this },
+          _react2.default.createElement('div', { className: 'row', __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this },
+
+            _react2.default.createElement('div', { className: 'col-md-6 offset-md-3 col-xs-12', __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this },
+              _react2.default.createElement('h1', { className: 'text-xs-center', __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this }, 'Sign In'),
+              _react2.default.createElement('p', { className: 'text-xs-center', __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: this },
+                _react2.default.createElement(_reactRouterDom.Link, { to: '/register', __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this }, 'Need an account?')),
+
+
+
+
+              _react2.default.createElement(_listErrors2.default, { errors: this.props.errors, __source: { fileName: _jsxFileName, lineNumber: 48 }, __self: this }),
+
+              _react2.default.createElement('form', { onSubmit: this.submitForm, __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this },
+                _react2.default.createElement('fieldset', { __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this },
+
+                  _react2.default.createElement('fieldset', { className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this },
+                    _react2.default.createElement('input', {
+                      className: 'form-control form-control-lg',
+                      type: 'email',
+                      placeholder: 'Email',
+                      ref: node => this._email = node,
+                      'data-test': 'email', __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this })),
+
+
+
+                  _react2.default.createElement('fieldset', { className: 'form-group', __source: { fileName: _jsxFileName, lineNumber: 63 }, __self: this },
+                    _react2.default.createElement('input', {
+                      className: 'form-control form-control-lg',
+                      type: 'password',
+                      placeholder: 'Password',
+                      ref: node => this._password = node,
+                      'data-test': 'password', __source: { fileName: _jsxFileName, lineNumber: 64 }, __self: this })),
+
+
+
+                  _react2.default.createElement('button', {
+                      className: 'btn btn-lg btn-primary pull-xs-right',
+                      type: 'submit',
+                      disabled: this.props.inProgress, __source: { fileName: _jsxFileName, lineNumber: 73 }, __self: this }, 'Sign in'))))))));
+
+
+
+
+
+
+
+
+
+
+
+
+  }}Login.propTypes = { onSubmit: _propTypes2.default.func.isRequired, onUnload: _propTypes2.default.func.isRequired, inProgress: _propTypes2.default.bool.isRequired, // forwarding these props
+  errors: _propTypes2.default.any };exports.
+
+Component = Login;exports.default =
+(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Login);

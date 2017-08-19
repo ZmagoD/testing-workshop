@@ -1,0 +1,21 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_7ctg7w9e8 = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-list.js',hash = 'f895b4ac0c1e173d3265426b9df6ec34b508f235',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-list.js', statementMap: { '0': { start: { line: 4, column: 20 }, end: { line: 19, column: 1 } }, '1': { start: { line: 5, column: 2 }, end: { line: 18, column: 3 } }, '2': { start: { line: 8, column: 8 }, end: { line: 15, column: 9 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 4, column: 20 }, end: { line: 4, column: 21 } }, loc: { start: { line: 4, column: 29 }, end: { line: 19, column: 1 } }, line: 4 }, '1': { name: '(anonymous_1)', decl: { start: { line: 7, column: 26 }, end: { line: 7, column: 27 } }, loc: { start: { line: 7, column: 37 }, end: { line: 16, column: 7 } }, line: 7 } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0 }, f: { '0': 0, '1': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-list.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_comment = require('./comment'); /* istanbul ignore next */var _comment2 = _interopRequireDefault(_comment);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_7ctg7w9e8.s[0];
+
+const CommentList = props => {/* istanbul ignore next */++cov_7ctg7w9e8.f[0];++cov_7ctg7w9e8.s[1];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 6 }, __self: undefined },
+      props.comments.map(comment => {/* istanbul ignore next */++cov_7ctg7w9e8.f[1];++cov_7ctg7w9e8.s[2];
+        return (
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_comment2.default, /* istanbul ignore next */{
+            comment: comment,
+            currentUser: props.currentUser,
+            slug: props.slug,
+            key: comment.id, __source: { fileName: _jsxFileName, lineNumber: 9 }, __self: undefined }));
+
+
+      })));
+
+
+}; /* istanbul ignore next */exports.default =
+
+CommentList;

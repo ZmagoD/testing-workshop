@@ -1,0 +1,42 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment-container.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRouterDom = require('react-router-dom');
+var _commentInput = require('./comment-input');var _commentInput2 = _interopRequireDefault(_commentInput);
+var _commentList = require('./comment-list');var _commentList2 = _interopRequireDefault(_commentList);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const CommentContainer = props => {
+  if (props.currentUser) {
+    return (
+      _react2.default.createElement('div', { className: 'col-xs-12 col-md-8 offset-md-2', __source: { fileName: _jsxFileName, lineNumber: 9 }, __self: undefined },
+        _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: undefined },
+          _react2.default.createElement('list-errors', { errors: props.errors, __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: undefined }),
+          _react2.default.createElement(_commentInput2.default, { slug: props.slug, currentUser: props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: undefined })),
+
+
+        _react2.default.createElement(_commentList2.default, {
+          comments: props.comments,
+          slug: props.slug,
+          currentUser: props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 15 }, __self: undefined })));
+
+
+
+  } else {
+    return (
+      _react2.default.createElement('div', { className: 'col-xs-12 col-md-8 offset-md-2', __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: undefined },
+        _react2.default.createElement('p', { __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: undefined },
+          _react2.default.createElement(_reactRouterDom.Link, { to: '/login', __source: { fileName: _jsxFileName, lineNumber: 26 }, __self: undefined }, 'Sign in'), '\xA0or\xA0',
+
+          _react2.default.createElement(_reactRouterDom.Link, { to: '/register', __source: { fileName: _jsxFileName, lineNumber: 28 }, __self: undefined }, 'sign up'), '\xA0to add comments on this article.'),
+
+
+
+        _react2.default.createElement(_commentList2.default, {
+          comments: props.comments,
+          slug: props.slug,
+          currentUser: props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 32 }, __self: undefined })));
+
+
+
+  }
+};exports.default =
+
+CommentContainer;

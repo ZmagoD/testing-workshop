@@ -1,0 +1,90 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_5sgf4wgwd = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/index.js',hash = 'e10e8c8989623ac45c63fa1ce2a4aed9bdc320df',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/index.js', statementMap: { '0': { start: { line: 8, column: 24 }, end: { line: 11, column: 2 } }, '1': { start: { line: 8, column: 34 }, end: { line: 11, column: 1 } }, '2': { start: { line: 13, column: 27 }, end: { line: 16, column: 2 } }, '3': { start: { line: 13, column: 40 }, end: { line: 16, column: 1 } }, '4': { start: { line: 14, column: 21 }, end: { line: 14, column: 69 } }, '5': { start: { line: 15, column: 18 }, end: { line: 15, column: 59 } }, '6': { start: { line: 20, column: 4 }, end: { line: 25, column: 5 } }, '7': { start: { line: 29, column: 4 }, end: { line: 29, column: 25 } }, '8': { start: { line: 33, column: 4 }, end: { line: 35, column: 5 } }, '9': { start: { line: 34, column: 6 }, end: { line: 34, column: 17 } }, '10': { start: { line: 37, column: 19 }, end: { line: 37, column: 78 } }, '11': { start: { line: 38, column: 22 }, end: { line: 39, column: 76 } }, '12': { start: { line: 40, column: 4 }, end: { line: 86, column: 5 } }, '13': { start: { line: 61, column: 18 }, end: { line: 65, column: 19 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 8, column: 24 }, end: { line: 8, column: 25 } }, loc: { start: { line: 8, column: 34 }, end: { line: 11, column: 1 } }, line: 8 }, '1': { name: '(anonymous_1)', decl: { start: { line: 13, column: 27 }, end: { line: 13, column: 28 } }, loc: { start: { line: 13, column: 40 }, end: { line: 16, column: 1 } }, line: 13 }, '2': { name: '(anonymous_2)', decl: { start: { line: 14, column: 10 }, end: { line: 14, column: 11 } }, loc: { start: { line: 14, column: 21 }, end: { line: 14, column: 69 } }, line: 14 }, '3': { name: '(anonymous_3)', decl: { start: { line: 15, column: 12 }, end: { line: 15, column: 13 } }, loc: { start: { line: 15, column: 18 }, end: { line: 15, column: 59 } }, line: 15 }, '4': { name: '(anonymous_4)', decl: { start: { line: 19, column: 2 }, end: { line: 19, column: 3 } }, loc: { start: { line: 19, column: 23 }, end: { line: 26, column: 3 } }, line: 19 }, '5': { name: '(anonymous_5)', decl: { start: { line: 28, column: 2 }, end: { line: 28, column: 3 } }, loc: { start: { line: 28, column: 25 }, end: { line: 30, column: 3 } }, line: 28 }, '6': { name: '(anonymous_6)', decl: { start: { line: 32, column: 2 }, end: { line: 32, column: 3 } }, loc: { start: { line: 32, column: 11 }, end: { line: 87, column: 3 } }, line: 32 }, '7': { name: '(anonymous_7)', decl: { start: { line: 60, column: 48 }, end: { line: 60, column: 49 } }, loc: { start: { line: 60, column: 55 }, end: { line: 66, column: 17 } }, line: 60 } }, branchMap: { '0': { loc: { start: { line: 33, column: 4 }, end: { line: 35, column: 5 } }, type: 'if', locations: [{ start: { line: 33, column: 4 }, end: { line: 35, column: 5 } }, { start: { line: 33, column: 4 }, end: { line: 35, column: 5 } }], line: 33 }, '1': { loc: { start: { line: 38, column: 22 }, end: { line: 39, column: 76 } }, type: 'binary-expr', locations: [{ start: { line: 38, column: 22 }, end: { line: 38, column: 44 } }, { start: { line: 39, column: 6 }, end: { line: 39, column: 76 } }], line: 38 }, '2': { loc: { start: { line: 78, column: 24 }, end: { line: 78, column: 49 } }, type: 'binary-expr', locations: [{ start: { line: 78, column: 24 }, end: { line: 78, column: 43 } }, { start: { line: 78, column: 47 }, end: { line: 78, column: 49 } }], line: 78 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/index.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRedux = require('react-redux');
+var /* istanbul ignore next */_marked = require('marked'); /* istanbul ignore next */var _marked2 = _interopRequireDefault(_marked);
+var /* istanbul ignore next */_agent = require('../../shared/agent'); /* istanbul ignore next */var _agent2 = _interopRequireDefault(_agent);
+var /* istanbul ignore next */_articleMeta = require('./article-meta'); /* istanbul ignore next */var _articleMeta2 = _interopRequireDefault(_articleMeta);
+var /* istanbul ignore next */_commentContainer = require('./comment-container'); /* istanbul ignore next */var _commentContainer2 = _interopRequireDefault(_commentContainer);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_5sgf4wgwd.s[0];
+
+const mapStateToProps = state => {/* istanbul ignore next */++cov_5sgf4wgwd.f[0];++cov_5sgf4wgwd.s[1];return (/* istanbul ignore next */Object.assign({},
+    state.article, {
+      currentUser: state.common.currentUser }));
+}; /* istanbul ignore next */++cov_5sgf4wgwd.s[2];
+
+const mapDispatchToProps = dispatch => {/* istanbul ignore next */++cov_5sgf4wgwd.f[1];++cov_5sgf4wgwd.s[3];return {
+    onLoad: payload => {/* istanbul ignore next */++cov_5sgf4wgwd.f[2];++cov_5sgf4wgwd.s[4];return dispatch({ type: 'ARTICLE_PAGE_LOADED', payload });},
+    onUnload: () => {/* istanbul ignore next */++cov_5sgf4wgwd.f[3];++cov_5sgf4wgwd.s[5];return dispatch({ type: 'ARTICLE_PAGE_UNLOADED' });} };
+};
+
+class Article extends /* istanbul ignore next */_react2.default.Component {
+  componentWillMount() {/* istanbul ignore next */++cov_5sgf4wgwd.f[4];++cov_5sgf4wgwd.s[6];
+    this.props.onLoad(
+    Promise.all([
+    /* istanbul ignore next */_agent2.default.Articles.get(this.props.match.params.id),
+    /* istanbul ignore next */_agent2.default.Comments.forArticle(this.props.match.params.id)]));
+
+
+  }
+
+  componentWillUnmount() {/* istanbul ignore next */++cov_5sgf4wgwd.f[5];++cov_5sgf4wgwd.s[7];
+    this.props.onUnload();
+  }
+
+  render() {/* istanbul ignore next */++cov_5sgf4wgwd.f[6];++cov_5sgf4wgwd.s[8];
+    if (!this.props.article) {/* istanbul ignore next */++cov_5sgf4wgwd.b[0][0];++cov_5sgf4wgwd.s[9];
+      return null;
+    } else /* istanbul ignore next */{++cov_5sgf4wgwd.b[0][1];}
+
+    const markup = /* istanbul ignore next */(++cov_5sgf4wgwd.s[10], { __html: /* istanbul ignore next */(0, _marked2.default)(this.props.article.body, { sanitize: true }) });
+    const canModify = /* istanbul ignore next */(++cov_5sgf4wgwd.s[11], /* istanbul ignore next */(++cov_5sgf4wgwd.b[1][0], this.props.currentUser) && /* istanbul ignore next */(++cov_5sgf4wgwd.b[1][1],
+    this.props.currentUser.username === this.props.article.author.username)); /* istanbul ignore next */++cov_5sgf4wgwd.s[12];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'article-page', __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this },
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'banner', __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'container', __source: { fileName: _jsxFileName, lineNumber: 44 }, __self: this },
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */{ /* istanbul ignore next */'data-test': 'title', __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this }, this.props.article.title),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_articleMeta2.default, /* istanbul ignore next */{ article: this.props.article, canModify: canModify, __source: { fileName: _jsxFileName, lineNumber: 47 }, __self: this }))),
+
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'container page', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this },
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'row article-content', __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'col-xs-12', __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this },
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ dangerouslySetInnerHTML: markup, /* istanbul ignore next */'data-test': 'body', __source: { fileName: _jsxFileName, lineNumber: 57 }, __self: this }),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */{ className: 'tag-list', /* istanbul ignore next */'data-test': 'tags', __source: { fileName: _jsxFileName, lineNumber: 59 }, __self: this },
+                this.props.article.tagList.map(tag => {/* istanbul ignore next */++cov_5sgf4wgwd.f[7];++cov_5sgf4wgwd.s[13];
+                  return (
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ className: 'tag-default tag-pill tag-outline', key: tag, __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: this },
+                      tag));
+
+
+                })))),
+
+
+
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'hr', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 72 }, __self: this }),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'article-actions', __source: { fileName: _jsxFileName, lineNumber: 74 }, __self: this }),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 76 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_commentContainer2.default, /* istanbul ignore next */{
+              comments: /* istanbul ignore next */(++cov_5sgf4wgwd.b[2][0], this.props.comments) || /* istanbul ignore next */(++cov_5sgf4wgwd.b[2][1], []),
+              errors: this.props.commentErrors,
+              slug: this.props.match.params.id,
+              currentUser: this.props.currentUser, __source: { fileName: _jsxFileName, lineNumber: 77 }, __self: this })))));
+
+
+
+
+
+  }} /* istanbul ignore next */exports.default =
+
+
+/* istanbul ignore next */(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Article);

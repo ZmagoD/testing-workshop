@@ -1,0 +1,76 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/demo/unit/toggle.js'; // see this live: https://codesandbox.io/s/GvWpGjKQ
+var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _propTypes = require('prop-types');var _propTypes2 = _interopRequireDefault(_propTypes);
+var _glamorous = require('glamorous');var _glamorous2 = _interopRequireDefault(_glamorous);
+var _polished = require('polished');function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// imagine this is in a "components" file
+const primaryColor = '#337ab7';
+const toggledOnStyles = {
+  backgroundColor: (0, _polished.darken)(0.15, primaryColor),
+  borderColor: (0, _polished.darken)(0.25, primaryColor),
+  '&:hover,&:active,&:focus': {
+    backgroundColor: (0, _polished.darken)(0.2, primaryColor),
+    borderColor: (0, _polished.darken)(0.3, primaryColor) } };
+
+
+const toggledOffStyles = {
+  backgroundColor: primaryColor,
+  borderColor: (0, _polished.darken)(0.1, primaryColor),
+  '&:hover,&:active,&:focus': {
+    backgroundColor: (0, _polished.darken)(0.1, primaryColor),
+    borderColor: (0, _polished.darken)(0.2, primaryColor) } };
+
+
+const ToggleButton = _glamorous2.default.button(
+{
+  display: 'inline-block',
+  padding: '6px 12px',
+  marginBottom: '0',
+  fontSize: '14px',
+  fontWeight: '400',
+  lineHeight: '1.4',
+  textAlign: 'center',
+  cursor: 'pointer',
+  borderRadius: '4px',
+  color: '#fff' },
+
+props => props.on ? toggledOnStyles : toggledOffStyles);
+
+
+class Toggle extends _react.Component {
+  constructor(props, ...rest) {
+    super(props, ...rest);this.
+
+
+
+
+
+    handleToggleClick = () => {
+      const toggledOn = !this.state.toggledOn;
+      this.props.onToggle(toggledOn);
+      this.setState({ toggledOn });
+    };this.state = { toggledOn: props.initialToggledOn || false };}
+
+  render() {
+    const { children } = this.props;
+    const { toggledOn } = this.state;
+    return (
+      _react2.default.createElement(ToggleButton, {
+          on: toggledOn,
+          onClick: this.handleToggleClick,
+          'data-test': 'button', __source: { fileName: _jsxFileName, lineNumber: 59 }, __self: this },
+
+        children));
+
+
+  }}
+
+
+Toggle.propTypes = {
+  initialToggledOn: _propTypes2.default.bool,
+  onToggle: _propTypes2.default.func.isRequired,
+  children: _propTypes2.default.any.isRequired };exports.default =
+
+
+Toggle;

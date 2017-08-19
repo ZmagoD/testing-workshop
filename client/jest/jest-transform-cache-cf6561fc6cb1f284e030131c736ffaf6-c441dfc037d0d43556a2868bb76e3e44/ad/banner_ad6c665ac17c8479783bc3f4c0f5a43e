@@ -1,0 +1,19 @@
+"use strict";Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = "/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/home/banner.js";var _react = require("react");var _react2 = _interopRequireDefault(_react);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const Banner = ({ appName, token }) => {
+  if (token) {
+    return null;
+  }
+  return (
+    _react2.default.createElement("div", { className: "banner", __source: { fileName: _jsxFileName, lineNumber: 8 }, __self: undefined },
+      _react2.default.createElement("div", { className: "container", __source: { fileName: _jsxFileName, lineNumber: 9 }, __self: undefined },
+        _react2.default.createElement("h1", { className: "logo-font", __source: { fileName: _jsxFileName, lineNumber: 10 }, __self: undefined },
+          appName.toLowerCase()),
+
+        _react2.default.createElement("p", { __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: undefined }, "A place to share your knowledge."))));
+
+
+
+};exports.default =
+
+Banner;

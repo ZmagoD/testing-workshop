@@ -1,0 +1,118 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_12mzkbyvum = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/api/users.js',hash = '6dc3f9317cbddae57888f4c1d9035e6a6185d512',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/api/users.js', statementMap: { '0': { start: { line: 9, column: 17 }, end: { line: 9, column: 33 } }, '1': { start: { line: 10, column: 15 }, end: { line: 10, column: 37 } }, '2': { start: { line: 13, column: 2 }, end: { line: 22, column: 4 } }, '3': { start: { line: 14, column: 17 }, end: { line: 16, column: 6 } }, '4': { start: { line: 15, column: 6 }, end: { line: 15, column: 25 } }, '5': { start: { line: 17, column: 4 }, end: { line: 19, column: 5 } }, '6': { start: { line: 18, column: 6 }, end: { line: 18, column: 32 } }, '7': { start: { line: 20, column: 4 }, end: { line: 20, column: 19 } }, '8': { start: { line: 21, column: 4 }, end: { line: 21, column: 10 } }, '9': { start: { line: 24, column: 2 }, end: { line: 34, column: 4 } }, '10': { start: { line: 25, column: 4 }, end: { line: 33, column: 18 } }, '11': { start: { line: 27, column: 8 }, end: { line: 29, column: 9 } }, '12': { start: { line: 28, column: 10 }, end: { line: 28, column: 36 } }, '13': { start: { line: 31, column: 8 }, end: { line: 31, column: 50 } }, '14': { start: { line: 36, column: 2 }, end: { line: 65, column: 4 } }, '15': { start: { line: 37, column: 4 }, end: { line: 64, column: 18 } }, '16': { start: { line: 39, column: 8 }, end: { line: 41, column: 9 } }, '17': { start: { line: 40, column: 10 }, end: { line: 40, column: 36 } }, '18': { start: { line: 44, column: 8 }, end: { line: 46, column: 9 } }, '19': { start: { line: 45, column: 10 }, end: { line: 45, column: 48 } }, '20': { start: { line: 47, column: 8 }, end: { line: 49, column: 9 } }, '21': { start: { line: 48, column: 10 }, end: { line: 48, column: 42 } }, '22': { start: { line: 50, column: 8 }, end: { line: 52, column: 9 } }, '23': { start: { line: 51, column: 10 }, end: { line: 51, column: 38 } }, '24': { start: { line: 53, column: 8 }, end: { line: 55, column: 9 } }, '25': { start: { line: 54, column: 10 }, end: { line: 54, column: 42 } }, '26': { start: { line: 56, column: 8 }, end: { line: 58, column: 9 } }, '27': { start: { line: 57, column: 10 }, end: { line: 57, column: 50 } }, '28': { start: { line: 60, column: 8 }, end: { line: 62, column: 10 } }, '29': { start: { line: 61, column: 10 }, end: { line: 61, column: 52 } }, '30': { start: { line: 67, column: 2 }, end: { line: 88, column: 4 } }, '31': { start: { line: 68, column: 4 }, end: { line: 70, column: 5 } }, '32': { start: { line: 69, column: 6 }, end: { line: 69, column: 70 } }, '33': { start: { line: 72, column: 4 }, end: { line: 74, column: 5 } }, '34': { start: { line: 73, column: 6 }, end: { line: 73, column: 73 } }, '35': { start: { line: 76, column: 4 }, end: { line: 87, column: 22 } }, '36': { start: { line: 77, column: 6 }, end: { line: 79, column: 7 } }, '37': { start: { line: 78, column: 8 }, end: { line: 78, column: 24 } }, '38': { start: { line: 81, column: 6 }, end: { line: 86, column: 7 } }, '39': { start: { line: 82, column: 8 }, end: { line: 82, column: 39 } }, '40': { start: { line: 83, column: 8 }, end: { line: 83, column: 50 } }, '41': { start: { line: 85, column: 8 }, end: { line: 85, column: 41 } }, '42': { start: { line: 90, column: 2 }, end: { line: 103, column: 4 } }, '43': { start: { line: 91, column: 17 }, end: { line: 91, column: 27 } }, '44': { start: { line: 93, column: 4 }, end: { line: 93, column: 42 } }, '45': { start: { line: 94, column: 4 }, end: { line: 94, column: 36 } }, '46': { start: { line: 95, column: 4 }, end: { line: 95, column: 44 } }, '47': { start: { line: 97, column: 4 }, end: { line: 102, column: 18 } }, '48': { start: { line: 100, column: 8 }, end: { line: 100, column: 50 } }, '49': { start: { line: 106, column: 2 }, end: { line: 115, column: 4 } }, '50': { start: { line: 107, column: 4 }, end: { line: 107, column: 39 } }, '51': { start: { line: 109, column: 4 }, end: { line: 114, column: 5 } }, '52': { start: { line: 110, column: 6 }, end: { line: 110, column: 29 } }, '53': { start: { line: 111, column: 6 }, end: { line: 111, column: 32 } }, '54': { start: { line: 113, column: 6 }, end: { line: 113, column: 32 } }, '55': { start: { line: 117, column: 2 }, end: { line: 117, column: 15 } } }, fnMap: { '0': { name: 'getUsersRouter', decl: { start: { line: 8, column: 9 }, end: { line: 8, column: 23 } }, loc: { start: { line: 8, column: 26 }, end: { line: 118, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 13, column: 27 }, end: { line: 13, column: 28 } }, loc: { start: { line: 13, column: 63 }, end: { line: 22, column: 3 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 14, column: 54 }, end: { line: 14, column: 55 } }, loc: { start: { line: 14, column: 60 }, end: { line: 16, column: 5 } } }, '3': { name: '(anonymous_3)', decl: { start: { line: 24, column: 37 }, end: { line: 24, column: 38 } }, loc: { start: { line: 24, column: 57 }, end: { line: 34, column: 3 } } }, '4': { name: '(anonymous_4)', decl: { start: { line: 26, column: 12 }, end: { line: 26, column: 13 } }, loc: { start: { line: 26, column: 20 }, end: { line: 32, column: 7 } } }, '5': { name: '(anonymous_5)', decl: { start: { line: 36, column: 37 }, end: { line: 36, column: 38 } }, loc: { start: { line: 36, column: 57 }, end: { line: 65, column: 3 } } }, '6': { name: '(anonymous_6)', decl: { start: { line: 38, column: 12 }, end: { line: 38, column: 13 } }, loc: { start: { line: 38, column: 20 }, end: { line: 63, column: 7 } } }, '7': { name: '(anonymous_7)', decl: { start: { line: 60, column: 32 }, end: { line: 60, column: 33 } }, loc: { start: { line: 60, column: 38 }, end: { line: 62, column: 9 } } }, '8': { name: '(anonymous_8)', decl: { start: { line: 67, column: 30 }, end: { line: 67, column: 31 } }, loc: { start: { line: 67, column: 50 }, end: { line: 88, column: 3 } } }, '9': { name: '(anonymous_9)', decl: { start: { line: 76, column: 53 }, end: { line: 76, column: 54 } }, loc: { start: { line: 76, column: 74 }, end: { line: 87, column: 5 } } }, '10': { name: '(anonymous_10)', decl: { start: { line: 90, column: 24 }, end: { line: 90, column: 25 } }, loc: { start: { line: 90, column: 44 }, end: { line: 103, column: 3 } } }, '11': { name: '(anonymous_11)', decl: { start: { line: 99, column: 12 }, end: { line: 99, column: 13 } }, loc: { start: { line: 99, column: 18 }, end: { line: 101, column: 7 } } }, '12': { name: '(anonymous_12)', decl: { start: { line: 106, column: 51 }, end: { line: 106, column: 52 } }, loc: { start: { line: 106, column: 71 }, end: { line: 115, column: 3 } } } }, branchMap: { '0': { loc: { start: { line: 17, column: 4 }, end: { line: 19, column: 5 } }, type: 'if', locations: [{ start: { line: 17, column: 4 }, end: { line: 19, column: 5 } }, { start: { line: 17, column: 4 }, end: { line: 19, column: 5 } }] }, '1': { loc: { start: { line: 27, column: 8 }, end: { line: 29, column: 9 } }, type: 'if', locations: [{ start: { line: 27, column: 8 }, end: { line: 29, column: 9 } }, { start: { line: 27, column: 8 }, end: { line: 29, column: 9 } }] }, '2': { loc: { start: { line: 39, column: 8 }, end: { line: 41, column: 9 } }, type: 'if', locations: [{ start: { line: 39, column: 8 }, end: { line: 41, column: 9 } }, { start: { line: 39, column: 8 }, end: { line: 41, column: 9 } }] }, '3': { loc: { start: { line: 44, column: 8 }, end: { line: 46, column: 9 } }, type: 'if', locations: [{ start: { line: 44, column: 8 }, end: { line: 46, column: 9 } }, { start: { line: 44, column: 8 }, end: { line: 46, column: 9 } }] }, '4': { loc: { start: { line: 47, column: 8 }, end: { line: 49, column: 9 } }, type: 'if', locations: [{ start: { line: 47, column: 8 }, end: { line: 49, column: 9 } }, { start: { line: 47, column: 8 }, end: { line: 49, column: 9 } }] }, '5': { loc: { start: { line: 50, column: 8 }, end: { line: 52, column: 9 } }, type: 'if', locations: [{ start: { line: 50, column: 8 }, end: { line: 52, column: 9 } }, { start: { line: 50, column: 8 }, end: { line: 52, column: 9 } }] }, '6': { loc: { start: { line: 53, column: 8 }, end: { line: 55, column: 9 } }, type: 'if', locations: [{ start: { line: 53, column: 8 }, end: { line: 55, column: 9 } }, { start: { line: 53, column: 8 }, end: { line: 55, column: 9 } }] }, '7': { loc: { start: { line: 56, column: 8 }, end: { line: 58, column: 9 } }, type: 'if', locations: [{ start: { line: 56, column: 8 }, end: { line: 58, column: 9 } }, { start: { line: 56, column: 8 }, end: { line: 58, column: 9 } }] }, '8': { loc: { start: { line: 68, column: 4 }, end: { line: 70, column: 5 } }, type: 'if', locations: [{ start: { line: 68, column: 4 }, end: { line: 70, column: 5 } }, { start: { line: 68, column: 4 }, end: { line: 70, column: 5 } }] }, '9': { loc: { start: { line: 72, column: 4 }, end: { line: 74, column: 5 } }, type: 'if', locations: [{ start: { line: 72, column: 4 }, end: { line: 74, column: 5 } }, { start: { line: 72, column: 4 }, end: { line: 74, column: 5 } }] }, '10': { loc: { start: { line: 77, column: 6 }, end: { line: 79, column: 7 } }, type: 'if', locations: [{ start: { line: 77, column: 6 }, end: { line: 79, column: 7 } }, { start: { line: 77, column: 6 }, end: { line: 79, column: 7 } }] }, '11': { loc: { start: { line: 81, column: 6 }, end: { line: 86, column: 7 } }, type: 'if', locations: [{ start: { line: 81, column: 6 }, end: { line: 86, column: 7 } }, { start: { line: 81, column: 6 }, end: { line: 86, column: 7 } }] }, '12': { loc: { start: { line: 109, column: 4 }, end: { line: 114, column: 5 } }, type: 'if', locations: [{ start: { line: 109, column: 4 }, end: { line: 114, column: 5 } }, { start: { line: 109, column: 4 }, end: { line: 114, column: 5 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0, '22': 0, '23': 0, '24': 0, '25': 0, '26': 0, '27': 0, '28': 0, '29': 0, '30': 0, '31': 0, '32': 0, '33': 0, '34': 0, '35': 0, '36': 0, '37': 0, '38': 0, '39': 0, '40': 0, '41': 0, '42': 0, '43': 0, '44': 0, '45': 0, '46': 0, '47': 0, '48': 0, '49': 0, '50': 0, '51': 0, '52': 0, '53': 0, '54': 0, '55': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0], '3': [0, 0], '4': [0, 0], '5': [0, 0], '6': [0, 0], '7': [0, 0], '8': [0, 0], '9': [0, 0], '10': [0, 0], '11': [0, 0], '12': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_express = require('express'); /* istanbul ignore next */var _express2 = _interopRequireDefault(_express);
+var /* istanbul ignore next */_mongoose = require('mongoose'); /* istanbul ignore next */var _mongoose2 = _interopRequireDefault(_mongoose);
+var /* istanbul ignore next */_passport = require('passport'); /* istanbul ignore next */var _passport2 = _interopRequireDefault(_passport);
+var /* istanbul ignore next */_auth = require('../auth'); /* istanbul ignore next */var _auth2 = _interopRequireDefault(_auth);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _asyncToGenerator(fn) {return function () {var gen = fn.apply(this, arguments);return new Promise(function (resolve, reject) {function step(key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {return Promise.resolve(value).then(function (value) {step("next", value);}, function (err) {step("throw", err);});}}return step("next");});};}exports.default =
+
+getUsersRouter;
+
+function getUsersRouter() {/* istanbul ignore next */++cov_12mzkbyvum.f[0];
+  const router = /* istanbul ignore next */(++cov_12mzkbyvum.s[0], /* istanbul ignore next */_express2.default.Router());
+  const User = /* istanbul ignore next */(++cov_12mzkbyvum.s[1], /* istanbul ignore next */_mongoose2.default.model('User'));
+
+  // Preload user objects on routes with ':username'
+  /* istanbul ignore next */++cov_12mzkbyvum.s[2];router.param('username', /* istanbul ignore next */(() => {var _ref = _asyncToGenerator(function* (req, res, next, username) {/* istanbul ignore next */++cov_12mzkbyvum.f[1];
+      const user = /* istanbul ignore next */(++cov_12mzkbyvum.s[3], yield User.findOne({ username }).catch(function () {/* istanbul ignore next */++cov_12mzkbyvum.f[2];++cov_12mzkbyvum.s[4];
+        res.sendStatus(500); // TODO make this more helpful
+      })); /* istanbul ignore next */++cov_12mzkbyvum.s[5];
+      if (!user) {/* istanbul ignore next */++cov_12mzkbyvum.b[0][0];++cov_12mzkbyvum.s[6];
+        return res.sendStatus(404);
+      } else /* istanbul ignore next */{++cov_12mzkbyvum.b[0][1];}++cov_12mzkbyvum.s[7];
+      req.user = user; /* istanbul ignore next */++cov_12mzkbyvum.s[8];
+      next();
+    });return function (_x, _x2, _x3, _x4) {return _ref.apply(this, arguments);};})()); /* istanbul ignore next */++cov_12mzkbyvum.s[9];
+
+  router.get('/user', /* istanbul ignore next */_auth2.default.required, (req, res, next) => {/* istanbul ignore next */++cov_12mzkbyvum.f[3];++cov_12mzkbyvum.s[10];
+    User.findById(req.payload.id).
+    then(user => {/* istanbul ignore next */++cov_12mzkbyvum.f[4];++cov_12mzkbyvum.s[11];
+      if (!user) {/* istanbul ignore next */++cov_12mzkbyvum.b[1][0];++cov_12mzkbyvum.s[12];
+        return res.sendStatus(401);
+      } else /* istanbul ignore next */{++cov_12mzkbyvum.b[1][1];}++cov_12mzkbyvum.s[13];
+
+      return res.json({ user: user.toAuthJSON() });
+    }).
+    catch(next);
+  }); /* istanbul ignore next */++cov_12mzkbyvum.s[14];
+
+  router.put('/user', /* istanbul ignore next */_auth2.default.required, (req, res, next) => {/* istanbul ignore next */++cov_12mzkbyvum.f[5];++cov_12mzkbyvum.s[15];
+    User.findById(req.payload.id).
+    then(user => {/* istanbul ignore next */++cov_12mzkbyvum.f[6];++cov_12mzkbyvum.s[16];
+      if (!user) {/* istanbul ignore next */++cov_12mzkbyvum.b[2][0];++cov_12mzkbyvum.s[17];
+        return res.sendStatus(401);
+      } else /* istanbul ignore next */{++cov_12mzkbyvum.b[2][1];}
+
+      // only update fields that were actually passed...
+      ++cov_12mzkbyvum.s[18];if (typeof req.body.user.username !== 'undefined') {/* istanbul ignore next */++cov_12mzkbyvum.b[3][0];++cov_12mzkbyvum.s[19];
+        user.username = req.body.user.username;
+      } else /* istanbul ignore next */{++cov_12mzkbyvum.b[3][1];}++cov_12mzkbyvum.s[20];
+      if (typeof req.body.user.email !== 'undefined') {/* istanbul ignore next */++cov_12mzkbyvum.b[4][0];++cov_12mzkbyvum.s[21];
+        user.email = req.body.user.email;
+      } else /* istanbul ignore next */{++cov_12mzkbyvum.b[4][1];}++cov_12mzkbyvum.s[22];
+      if (typeof req.body.user.bio !== 'undefined') {/* istanbul ignore next */++cov_12mzkbyvum.b[5][0];++cov_12mzkbyvum.s[23];
+        user.bio = req.body.user.bio;
+      } else /* istanbul ignore next */{++cov_12mzkbyvum.b[5][1];}++cov_12mzkbyvum.s[24];
+      if (typeof req.body.user.image !== 'undefined') {/* istanbul ignore next */++cov_12mzkbyvum.b[6][0];++cov_12mzkbyvum.s[25];
+        user.image = req.body.user.image;
+      } else /* istanbul ignore next */{++cov_12mzkbyvum.b[6][1];}++cov_12mzkbyvum.s[26];
+      if (typeof req.body.user.password !== 'undefined') {/* istanbul ignore next */++cov_12mzkbyvum.b[7][0];++cov_12mzkbyvum.s[27];
+        user.setPassword(req.body.user.password);
+      } else /* istanbul ignore next */{++cov_12mzkbyvum.b[7][1];}++cov_12mzkbyvum.s[28];
+
+      return user.save().then(() => {/* istanbul ignore next */++cov_12mzkbyvum.f[7];++cov_12mzkbyvum.s[29];
+        return res.json({ user: user.toAuthJSON() });
+      });
+    }).
+    catch(next);
+  }); /* istanbul ignore next */++cov_12mzkbyvum.s[30];
+
+  router.post('/users/login', (req, res, next) => {/* istanbul ignore next */++cov_12mzkbyvum.f[8];++cov_12mzkbyvum.s[31];
+    if (!req.body.user.email) {/* istanbul ignore next */++cov_12mzkbyvum.b[8][0];++cov_12mzkbyvum.s[32];
+      return res.status(422).json({ errors: { email: "can't be blank" } });
+    } else /* istanbul ignore next */{++cov_12mzkbyvum.b[8][1];}++cov_12mzkbyvum.s[33];
+
+    if (!req.body.user.password) {/* istanbul ignore next */++cov_12mzkbyvum.b[9][0];++cov_12mzkbyvum.s[34];
+      return res.status(422).json({ errors: { password: "can't be blank" } });
+    } else /* istanbul ignore next */{++cov_12mzkbyvum.b[9][1];}++cov_12mzkbyvum.s[35];
+
+    /* istanbul ignore next */_passport2.default.authenticate('local', { session: false }, (err, user, info) => {/* istanbul ignore next */++cov_12mzkbyvum.f[9];++cov_12mzkbyvum.s[36];
+      if (err) {/* istanbul ignore next */++cov_12mzkbyvum.b[10][0];++cov_12mzkbyvum.s[37];
+        return next(err);
+      } else /* istanbul ignore next */{++cov_12mzkbyvum.b[10][1];}++cov_12mzkbyvum.s[38];
+
+      if (user) {/* istanbul ignore next */++cov_12mzkbyvum.b[11][0];++cov_12mzkbyvum.s[39];
+        user.token = user.generateJWT(); /* istanbul ignore next */++cov_12mzkbyvum.s[40];
+        return res.json({ user: user.toAuthJSON() });
+      } else {/* istanbul ignore next */++cov_12mzkbyvum.b[11][1];++cov_12mzkbyvum.s[41];
+        return res.status(422).json(info);
+      }
+    })(req, res, next);
+  }); /* istanbul ignore next */++cov_12mzkbyvum.s[42];
+
+  router.post('/users', (req, res, next) => {/* istanbul ignore next */++cov_12mzkbyvum.f[10];
+    const user = /* istanbul ignore next */(++cov_12mzkbyvum.s[43], new User()); /* istanbul ignore next */++cov_12mzkbyvum.s[44];
+
+    user.username = req.body.user.username; /* istanbul ignore next */++cov_12mzkbyvum.s[45];
+    user.email = req.body.user.email; /* istanbul ignore next */++cov_12mzkbyvum.s[46];
+    user.setPassword(req.body.user.password); /* istanbul ignore next */++cov_12mzkbyvum.s[47];
+
+    user.
+    save().
+    then(() => {/* istanbul ignore next */++cov_12mzkbyvum.f[11];++cov_12mzkbyvum.s[48];
+      return res.json({ user: user.toAuthJSON() });
+    }).
+    catch(next);
+  });
+
+  // delete user
+  /* istanbul ignore next */++cov_12mzkbyvum.s[49];router.delete('/users/:username', /* istanbul ignore next */_auth2.default.required, /* istanbul ignore next */(() => {var _ref2 = _asyncToGenerator(function* (req, res) {/* istanbul ignore next */++cov_12mzkbyvum.f[12];++cov_12mzkbyvum.s[50];
+      yield User.findById(req.payload.id); /* istanbul ignore next */++cov_12mzkbyvum.s[51];
+
+      if (req.user._id.toString() === req.payload.id.toString()) {/* istanbul ignore next */++cov_12mzkbyvum.b[12][0];++cov_12mzkbyvum.s[52];
+        yield req.user.remove(); /* istanbul ignore next */++cov_12mzkbyvum.s[53];
+        return res.sendStatus(204);
+      } else {/* istanbul ignore next */++cov_12mzkbyvum.b[12][1];++cov_12mzkbyvum.s[54];
+        return res.sendStatus(403);
+      }
+    });return function (_x5, _x6) {return _ref2.apply(this, arguments);};})()); /* istanbul ignore next */++cov_12mzkbyvum.s[55];
+
+  return router;
+}

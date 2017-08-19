@@ -1,0 +1,194 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/containers/profile.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _propTypes = require('prop-types');var _propTypes2 = _interopRequireDefault(_propTypes);
+var _reactRedux = require('react-redux');
+var _reactRouterDom = require('react-router-dom');
+var _smileyCyrus = require('../smiley-cyrus.jpg');var _smileyCyrus2 = _interopRequireDefault(_smileyCyrus);
+var _agent = require('../agent');var _agent2 = _interopRequireDefault(_agent);
+var _articleList = require('../components/article-list');var _articleList2 = _interopRequireDefault(_articleList);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function Profile({
+  profile,
+  onFollow,
+  onUnfollow,
+  currentUser,
+  articles,
+  articlesCount,
+  currentPage,
+  activeTab })
+{
+  if (!profile || !profile.username) {
+    return null;
+  }
+
+  const isUser = currentUser && profile.username === currentUser.username;
+
+  return (
+    _react2.default.createElement('div', { className: 'profile-page', __source: { fileName: _jsxFileName, lineNumber: 26 }, __self: this },
+      _react2.default.createElement('div', { className: 'user-info', __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this },
+        _react2.default.createElement('div', { className: 'container', __source: { fileName: _jsxFileName, lineNumber: 28 }, __self: this },
+          _react2.default.createElement('div', { className: 'row', __source: { fileName: _jsxFileName, lineNumber: 29 }, __self: this },
+            _react2.default.createElement('div', { className: 'col-xs-12 col-md-10 offset-md-1', __source: { fileName: _jsxFileName, lineNumber: 30 }, __self: this },
+              _react2.default.createElement('img', {
+                src: profile.image || _smileyCyrus2.default,
+                className: 'user-img',
+                alt: 'user', __source: { fileName: _jsxFileName, lineNumber: 31 }, __self: this }),
+
+              _react2.default.createElement('h4', { __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }, profile.username),
+              _react2.default.createElement('p', { __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }, profile.bio),
+              _react2.default.createElement(EditProfileSettings, { isUser: isUser, __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }),
+              _react2.default.createElement(FollowUserButton, {
+                isUser: isUser,
+                user: profile,
+                follow: onFollow,
+                unfollow: onUnfollow, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this }))))),
+
+
+
+
+
+
+      _react2.default.createElement('div', { className: 'container', __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this },
+        _react2.default.createElement('div', { className: 'row', __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this },
+          _react2.default.createElement('div', { className: 'col-xs-12 col-md-10 offset-md-1', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this },
+            _react2.default.createElement('div', { className: 'articles-toggle', __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this },
+              _react2.default.createElement(Tabs, { username: profile.username, activeTab: activeTab, __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this })),
+
+            _react2.default.createElement(_articleList2.default, {
+              articles: articles,
+              articlesCount: articlesCount,
+              state: currentPage, __source: { fileName: _jsxFileName, lineNumber: 56 }, __self: this }))))));
+
+
+
+
+
+
+
+}
+Profile.propTypes = {
+  profile: _propTypes2.default.shape({
+    username: _propTypes2.default.string }),
+
+  currentUser: _propTypes2.default.shape({
+    username: _propTypes2.default.string.isRequired }),
+
+  onFollow: _propTypes2.default.func.isRequired,
+  onUnfollow: _propTypes2.default.func.isRequired,
+
+  // forward these on to other components
+  activeTab: _propTypes2.default.any,
+  articles: _propTypes2.default.any,
+  articlesCount: _propTypes2.default.any,
+  currentPage: _propTypes2.default.any };
+
+
+function Tabs({ username, activeTab }) {
+  const mineClasses = ['nav-link'];
+  const favoritesClasses = ['nav-link'];
+  if (activeTab === 'mine') {
+    mineClasses.push('active');
+  }
+  if (activeTab === 'favorites') {
+    favoritesClasses.push('active');
+  }
+  return (
+    _react2.default.createElement('ul', { className: 'nav nav-pills outline-active', __source: { fileName: _jsxFileName, lineNumber: 95 }, __self: this },
+      _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 96 }, __self: this },
+        _react2.default.createElement(_reactRouterDom.Link, { className: mineClasses.join(' '), to: `/@${username}`, __source: { fileName: _jsxFileName, lineNumber: 97 }, __self: this }, 'My Articles')),
+
+
+
+
+      _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 102 }, __self: this },
+        _react2.default.createElement(_reactRouterDom.Link, {
+            className: favoritesClasses.join(' '),
+            to: `/@${username}/favorites`, __source: { fileName: _jsxFileName, lineNumber: 103 }, __self: this }, 'Favorited Articles'))));
+
+
+
+
+
+
+}
+Tabs.propTypes = {
+  username: _propTypes2.default.string.isRequired,
+  activeTab: _propTypes2.default.string.isRequired };
+
+
+function EditProfileSettings({ isUser }) {
+  if (isUser) {
+    return null;
+  }
+  return (
+    _react2.default.createElement(_reactRouterDom.Link, {
+        to: '/settings',
+        className: 'btn btn-sm btn-outline-secondary action-btn', __source: { fileName: _jsxFileName, lineNumber: 123 }, __self: this },
+
+      _react2.default.createElement('i', { className: 'ion-gear-a', __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this }), ' Edit Profile Settings'));
+
+
+}
+EditProfileSettings.propTypes = { isUser: _propTypes2.default.bool.isRequired };
+
+function FollowUserButton({ isUser, user, unfollow, follow }) {
+  if (isUser) {
+    return null;
+  }
+
+  let classes = 'btn btn-sm action-btn';
+  if (user.following) {
+    classes += ' btn-secondary';
+  } else {
+    classes += ' btn-outline-secondary';
+  }
+
+  const handleClick = ev => {
+    ev.preventDefault();
+    if (user.following) {
+      unfollow(user.username);
+    } else {
+      follow(user.username);
+    }
+  };
+
+  return (
+    _react2.default.createElement('button', { className: classes, onClick: handleClick, __source: { fileName: _jsxFileName, lineNumber: 155 }, __self: this },
+      _react2.default.createElement('i', { className: 'ion-plus-round', __source: { fileName: _jsxFileName, lineNumber: 156 }, __self: this }), '\xA0',
+
+      user.following ? 'Unfollow' : 'Follow', ' ', user.username));
+
+
+}
+FollowUserButton.propTypes = {
+  isUser: _propTypes2.default.bool.isRequired,
+  user: _propTypes2.default.shape({
+    following: _propTypes2.default.bool.isRequired,
+    username: _propTypes2.default.string.isRequired }),
+
+  unfollow: _propTypes2.default.func.isRequired,
+  follow: _propTypes2.default.func.isRequired };
+
+
+function mapStateToProps(state) {
+  return Object.assign({},
+  state.articleList, {
+    currentUser: state.common.currentUser });
+
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    onFollow: username =>
+    dispatch({
+      type: 'FOLLOW_USER',
+      payload: _agent2.default.Profile.follow(username) }),
+
+    onUnfollow: username =>
+    dispatch({
+      type: 'UNFOLLOW_USER',
+      payload: _agent2.default.Profile.unfollow(username) }) };
+
+
+}exports.default =
+
+(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Profile);

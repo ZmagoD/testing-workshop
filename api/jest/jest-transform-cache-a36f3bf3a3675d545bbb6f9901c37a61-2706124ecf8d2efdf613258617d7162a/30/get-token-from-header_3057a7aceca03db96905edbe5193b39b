@@ -1,0 +1,20 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_3j102k6cj = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/utils/get-token-from-header.js',hash = 'cdf140e40bd7bab1a3b55f23f0255ec8720f194d',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/routes/utils/get-token-from-header.js', statementMap: { '0': { start: { line: 13, column: 2 }, end: { line: 18, column: 3 } }, '1': { start: { line: 17, column: 4 }, end: { line: 17, column: 50 } }, '2': { start: { line: 19, column: 2 }, end: { line: 19, column: 13 } } }, fnMap: { '0': { name: 'getTokenFromHeader', decl: { start: { line: 12, column: 9 }, end: { line: 12, column: 27 } }, loc: { start: { line: 12, column: 33 }, end: { line: 20, column: 1 } } } }, branchMap: { '0': { loc: { start: { line: 13, column: 2 }, end: { line: 18, column: 3 } }, type: 'if', locations: [{ start: { line: 13, column: 2 }, end: { line: 18, column: 3 } }, { start: { line: 13, column: 2 }, end: { line: 18, column: 3 } }] }, '1': { loc: { start: { line: 14, column: 4 }, end: { line: 15, column: 55 } }, type: 'binary-expr', locations: [{ start: { line: 14, column: 4 }, end: { line: 14, column: 29 } }, { start: { line: 15, column: 4 }, end: { line: 15, column: 55 } }] } }, s: { '0': 0, '1': 0, '2': 0 }, f: { '0': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();exports.default = getTokenFromHeader;
+
+// req is an express request object
+// Here's an example:
+// {
+//   headers: {
+//     authorization: 'Token blahblahblahblah.blahblahblah.blahblahblah',
+//     // other headers
+//   },
+//   // other properties
+// }
+function getTokenFromHeader(req) {/* istanbul ignore next */++cov_3j102k6cj.f[0];++cov_3j102k6cj.s[0];
+  if (
+  /* istanbul ignore next */(++cov_3j102k6cj.b[1][0], req.headers.authorization) && /* istanbul ignore next */(++cov_3j102k6cj.b[1][1],
+  req.headers.authorization.split(' ')[0] === 'Token'))
+  {/* istanbul ignore next */++cov_3j102k6cj.b[0][0];++cov_3j102k6cj.s[1];
+    return req.headers.authorization.split(' ')[1];
+  } else /* istanbul ignore next */{++cov_3j102k6cj.b[0][1];}++cov_3j102k6cj.s[2];
+  return null;
+}

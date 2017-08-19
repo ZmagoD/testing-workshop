@@ -1,0 +1,57 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/demo/unit/customer-list.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _propTypes = require('prop-types');var _propTypes2 = _interopRequireDefault(_propTypes);
+var _customers = require('./customers');var _customers2 = _interopRequireDefault(_customers);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+class CustomerList extends _react.Component {
+  constructor(...args) {
+    super(...args);this.
+
+
+
+
+
+
+
+
+
+
+
+    updateStateWithCustomers = () => {
+      const customers = _customers2.default.getCustomers();
+      this.setState({ customers });
+    };this.state = { customers: _customers2.default.getCustomers() };}componentDidMount() {this.unsubscribe = _customers2.default.subscribe(this.updateStateWithCustomers);}componentWillUnmount() {this.unsubscribe();}
+
+  render() {
+    const { customers } = this.state;
+    if (customers.length === 0) {
+      return _react2.default.createElement(NoCustomers, { __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this });
+    } else {
+      return _react2.default.createElement(ListOfCustomers, { customers: customers, __source: { fileName: _jsxFileName, lineNumber: 29 }, __self: this });
+    }
+  }}
+
+
+function ListOfCustomers({ customers }) {
+  return (
+    _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }, 'Here is your list of customers!',
+
+      _react2.default.createElement('ul', { __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this },
+        customers.map((c, i) => _react2.default.createElement('li', { key: i, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this }, c.name)))));
+
+
+
+}
+
+ListOfCustomers.propTypes = {
+  customers: _propTypes2.default.array };
+
+
+function NoCustomers() {
+  return (
+    _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this }, 'You have no customers. Better get to work!'));
+
+
+
+}exports.default =
+
+CustomerList;

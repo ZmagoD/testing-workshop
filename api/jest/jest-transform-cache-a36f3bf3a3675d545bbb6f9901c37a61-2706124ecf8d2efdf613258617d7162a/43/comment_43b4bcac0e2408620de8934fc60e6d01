@@ -1,0 +1,26 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2jzr7avnc6 = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/models/comment.js',hash = '641049f6769deac09f93a4815231cf8fb8cffe10',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/models/comment.js', statementMap: { '0': { start: { line: 6, column: 24 }, end: { line: 13, column: 3 } }, '1': { start: { line: 16, column: 2 }, end: { line: 23, column: 3 } }, '2': { start: { line: 17, column: 4 }, end: { line: 22, column: 5 } }, '3': { start: { line: 25, column: 2 }, end: { line: 25, column: 22 } } }, fnMap: { '0': { name: 'getCommentSchema', decl: { start: { line: 5, column: 9 }, end: { line: 5, column: 25 } }, loc: { start: { line: 5, column: 28 }, end: { line: 26, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 16, column: 36 }, end: { line: 16, column: 37 } }, loc: { start: { line: 16, column: 51 }, end: { line: 23, column: 3 } } } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0, '3': 0 }, f: { '0': 0, '1': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_mongoose = require('mongoose'); /* istanbul ignore next */var _mongoose2 = _interopRequireDefault(_mongoose);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+getCommentSchema;
+
+function getCommentSchema() {/* istanbul ignore next */++cov_2jzr7avnc6.f[0];
+  const CommentSchema = /* istanbul ignore next */(++cov_2jzr7avnc6.s[0], new /* istanbul ignore next */_mongoose2.default.Schema(
+  {
+    body: String,
+    author: { type: /* istanbul ignore next */_mongoose2.default.Schema.Types.ObjectId, ref: 'User' },
+    article: { type: /* istanbul ignore next */_mongoose2.default.Schema.Types.ObjectId, ref: 'Article' } },
+
+  { timestamps: true }));
+
+
+  // Requires population of author
+  /* istanbul ignore next */++cov_2jzr7avnc6.s[1];CommentSchema.methods.toJSONFor = function (user) {/* istanbul ignore next */++cov_2jzr7avnc6.f[1];++cov_2jzr7avnc6.s[2];
+    return {
+      id: this._id,
+      body: this.body,
+      createdAt: this.createdAt,
+      author: this.author.toProfileJSONFor(user) };
+
+  }; /* istanbul ignore next */++cov_2jzr7avnc6.s[3];
+
+  return CommentSchema;
+}

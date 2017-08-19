@@ -1,0 +1,32 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/article-list.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _articlePreview = require('./article-preview');var _articlePreview2 = _interopRequireDefault(_articlePreview);
+var _listPagination = require('./list-pagination');var _listPagination2 = _interopRequireDefault(_listPagination);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const ArticleList = props => {
+  if (!props.articles) {
+    return _react2.default.createElement('div', { className: 'article-preview', __source: { fileName: _jsxFileName, lineNumber: 7 }, __self: undefined }, 'Loading...');
+  }
+
+  if (props.articles.length === 0) {
+    return (
+      _react2.default.createElement('div', { className: 'article-preview', __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: undefined }, 'No articles are here... yet.'));
+
+
+
+  }
+
+  return (
+    _react2.default.createElement('div', { __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: undefined },
+      props.articles.map(article => {
+        return _react2.default.createElement(_articlePreview2.default, { article: article, key: article.slug, __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: undefined });
+      }),
+
+      _react2.default.createElement(_listPagination2.default, {
+        articlesCount: props.articlesCount,
+        currentPage: props.currentPage, __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: undefined })));
+
+
+
+};exports.default =
+
+ArticleList;

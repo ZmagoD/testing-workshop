@@ -1,0 +1,36 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_11guyr08m9 = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment.js',hash = '5550a61ef00cc9976b945cbd8be74ecbd2ae72df',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment.js', statementMap: { '0': { start: { line: 6, column: 16 }, end: { line: 34, column: 1 } }, '1': { start: { line: 7, column: 18 }, end: { line: 7, column: 31 } }, '2': { start: { line: 9, column: 4 }, end: { line: 9, column: 79 } }, '3': { start: { line: 10, column: 2 }, end: { line: 33, column: 3 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 6, column: 16 }, end: { line: 6, column: 17 } }, loc: { start: { line: 6, column: 25 }, end: { line: 34, column: 1 } }, line: 6 } }, branchMap: { '0': { loc: { start: { line: 9, column: 4 }, end: { line: 9, column: 79 } }, type: 'binary-expr', locations: [{ start: { line: 9, column: 4 }, end: { line: 9, column: 21 } }, { start: { line: 9, column: 25 }, end: { line: 9, column: 79 } }], line: 9 }, '1': { loc: { start: { line: 18, column: 17 }, end: { line: 18, column: 47 } }, type: 'binary-expr', locations: [{ start: { line: 18, column: 17 }, end: { line: 18, column: 37 } }, { start: { line: 18, column: 41 }, end: { line: 18, column: 47 } }], line: 18 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0 }, f: { '0': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/article/comment.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactRouterDom = require('react-router-dom');
+var /* istanbul ignore next */_smileyCyrus = require('../../shared/smiley-cyrus.jpg'); /* istanbul ignore next */var _smileyCyrus2 = _interopRequireDefault(_smileyCyrus);
+var /* istanbul ignore next */_deleteButton = require('./delete-button'); /* istanbul ignore next */var _deleteButton2 = _interopRequireDefault(_deleteButton);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_11guyr08m9.s[0];
+
+const Comment = props => {/* istanbul ignore next */++cov_11guyr08m9.f[0];
+  const comment = /* istanbul ignore next */(++cov_11guyr08m9.s[1], props.comment);
+  const show = /* istanbul ignore next */(++cov_11guyr08m9.s[2],
+  /* istanbul ignore next */(++cov_11guyr08m9.b[0][0], props.currentUser) && /* istanbul ignore next */(++cov_11guyr08m9.b[0][1], props.currentUser.username === comment.author.username)); /* istanbul ignore next */++cov_11guyr08m9.s[3];
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'card', __source: { fileName: _jsxFileName, lineNumber: 11 }, __self: undefined },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'card-block', __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: undefined },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */{ className: 'card-text', __source: { fileName: _jsxFileName, lineNumber: 13 }, __self: undefined }, comment.body)),
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'card-footer', __source: { fileName: _jsxFileName, lineNumber: 15 }, __self: undefined },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: `/@${comment.author.username}`, className: 'comment-author', __source: { fileName: _jsxFileName, lineNumber: 16 }, __self: undefined },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{
+            src: /* istanbul ignore next */(++cov_11guyr08m9.b[1][0], comment.author.image) || /* istanbul ignore next */(++cov_11guyr08m9.b[1][1], _smileyCyrus2.default),
+            className: 'comment-author-img',
+            alt: 'comment author', __source: { fileName: _jsxFileName, lineNumber: 17 }, __self: undefined })), /* istanbul ignore next */'\xA0',
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouterDom.Link, /* istanbul ignore next */{ to: `/@${comment.author.username}`, className: 'comment-author', __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: undefined },
+          comment.author.username),
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ className: 'date-posted', __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: undefined },
+          new Date(comment.createdAt).toDateString()),
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_deleteButton2.default, /* istanbul ignore next */{ show: show, slug: props.slug, commentId: comment.id, __source: { fileName: _jsxFileName, lineNumber: 30 }, __self: undefined }))));
+
+
+
+}; /* istanbul ignore next */exports.default =
+
+Comment;

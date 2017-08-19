@@ -1,0 +1,32 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1v32415sp3 = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/article-list.js',hash = '4f311843e5dddbaaed603749545dba81a493ea3a',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/article-list.js', statementMap: { '0': { start: { line: 5, column: 20 }, end: { line: 30, column: 1 } }, '1': { start: { line: 6, column: 2 }, end: { line: 8, column: 3 } }, '2': { start: { line: 7, column: 4 }, end: { line: 7, column: 60 } }, '3': { start: { line: 10, column: 2 }, end: { line: 16, column: 3 } }, '4': { start: { line: 11, column: 4 }, end: { line: 15, column: 5 } }, '5': { start: { line: 18, column: 2 }, end: { line: 29, column: 3 } }, '6': { start: { line: 21, column: 8 }, end: { line: 21, column: 70 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 5, column: 20 }, end: { line: 5, column: 21 } }, loc: { start: { line: 5, column: 29 }, end: { line: 30, column: 1 } }, line: 5 }, '1': { name: '(anonymous_1)', decl: { start: { line: 20, column: 26 }, end: { line: 20, column: 27 } }, loc: { start: { line: 20, column: 37 }, end: { line: 22, column: 7 } }, line: 20 } }, branchMap: { '0': { loc: { start: { line: 6, column: 2 }, end: { line: 8, column: 3 } }, type: 'if', locations: [{ start: { line: 6, column: 2 }, end: { line: 8, column: 3 } }, { start: { line: 6, column: 2 }, end: { line: 8, column: 3 } }], line: 6 }, '1': { loc: { start: { line: 10, column: 2 }, end: { line: 16, column: 3 } }, type: 'if', locations: [{ start: { line: 10, column: 2 }, end: { line: 16, column: 3 } }, { start: { line: 10, column: 2 }, end: { line: 16, column: 3 } }], line: 10 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, f: { '0': 0, '1': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/shared/components/article-list.js';var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_articlePreview = require('./article-preview'); /* istanbul ignore next */var _articlePreview2 = _interopRequireDefault(_articlePreview);
+var /* istanbul ignore next */_listPagination = require('./list-pagination'); /* istanbul ignore next */var _listPagination2 = _interopRequireDefault(_listPagination);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}++cov_1v32415sp3.s[0];
+
+const ArticleList = props => {/* istanbul ignore next */++cov_1v32415sp3.f[0];++cov_1v32415sp3.s[1];
+  if (!props.articles) {/* istanbul ignore next */++cov_1v32415sp3.b[0][0];++cov_1v32415sp3.s[2];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'article-preview', __source: { fileName: _jsxFileName, lineNumber: 7 }, __self: undefined }, /* istanbul ignore next */'Loading...'));
+  } else /* istanbul ignore next */{++cov_1v32415sp3.b[0][1];}++cov_1v32415sp3.s[3];
+
+  if (props.articles.length === 0) {/* istanbul ignore next */++cov_1v32415sp3.b[1][0];++cov_1v32415sp3.s[4];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'article-preview', __source: { fileName: _jsxFileName, lineNumber: 12 }, __self: undefined }, /* istanbul ignore next */'No articles are here... yet.'));
+
+
+
+  } else /* istanbul ignore next */{++cov_1v32415sp3.b[1][1];}++cov_1v32415sp3.s[5];
+
+  return (
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: undefined },
+      props.articles.map(article => {/* istanbul ignore next */++cov_1v32415sp3.f[1];++cov_1v32415sp3.s[6];
+        return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_articlePreview2.default, /* istanbul ignore next */{ article: article, key: article.slug, __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: undefined }));
+      }),
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_listPagination2.default, /* istanbul ignore next */{
+        articlesCount: props.articlesCount,
+        currentPage: props.currentPage, __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: undefined })));
+
+
+
+}; /* istanbul ignore next */exports.default =
+
+ArticleList;

@@ -1,0 +1,8 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.default = getAge;
+
+function getAge(person) {
+  if (typeof person.age !== 'undefinded') {
+    return person.age;
+  }
+  return null;
+}

@@ -1,0 +1,30 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_r4gt1ft9e = function () {var path = '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/config/setup-passport.js',hash = '976e1dfb516c04d6f34d26ed2d7f89500043c176',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/Users/zmagodevetak/Desktop/react/testing-workshop/api/src/config/setup-passport.js', statementMap: { '0': { start: { line: 8, column: 15 }, end: { line: 8, column: 37 } }, '1': { start: { line: 9, column: 2 }, end: { line: 29, column: 3 } }, '2': { start: { line: 16, column: 8 }, end: { line: 26, column: 22 } }, '3': { start: { line: 18, column: 12 }, end: { line: 22, column: 13 } }, '4': { start: { line: 19, column: 14 }, end: { line: 21, column: 16 } }, '5': { start: { line: 24, column: 12 }, end: { line: 24, column: 35 } } }, fnMap: { '0': { name: 'setupPassport', decl: { start: { line: 7, column: 9 }, end: { line: 7, column: 22 } }, loc: { start: { line: 7, column: 25 }, end: { line: 30, column: 1 } } }, '1': { name: '(anonymous_1)', decl: { start: { line: 15, column: 6 }, end: { line: 15, column: 7 } }, loc: { start: { line: 15, column: 33 }, end: { line: 27, column: 7 } } }, '2': { name: '(anonymous_2)', decl: { start: { line: 17, column: 16 }, end: { line: 17, column: 17 } }, loc: { start: { line: 17, column: 24 }, end: { line: 25, column: 11 } } } }, branchMap: { '0': { loc: { start: { line: 18, column: 12 }, end: { line: 22, column: 13 } }, type: 'if', locations: [{ start: { line: 18, column: 12 }, end: { line: 22, column: 13 } }, { start: { line: 18, column: 12 }, end: { line: 22, column: 13 } }] }, '1': { loc: { start: { line: 18, column: 16 }, end: { line: 18, column: 54 } }, type: 'binary-expr', locations: [{ start: { line: 18, column: 16 }, end: { line: 18, column: 21 } }, { start: { line: 18, column: 25 }, end: { line: 18, column: 54 } }] } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_passport = require('passport'); /* istanbul ignore next */var _passport2 = _interopRequireDefault(_passport);
+var /* istanbul ignore next */_passportLocal = require('passport-local'); /* istanbul ignore next */var _passportLocal2 = _interopRequireDefault(_passportLocal);
+var /* istanbul ignore next */_mongoose = require('mongoose'); /* istanbul ignore next */var _mongoose2 = _interopRequireDefault(_mongoose);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+setupPassport;
+
+function setupPassport() {/* istanbul ignore next */++cov_r4gt1ft9e.f[0];
+  const User = /* istanbul ignore next */(++cov_r4gt1ft9e.s[0], /* istanbul ignore next */_mongoose2.default.model('User')); /* istanbul ignore next */++cov_r4gt1ft9e.s[1];
+  /* istanbul ignore next */_passport2.default.use(
+  new /* istanbul ignore next */_passportLocal2.default.Strategy(
+  {
+    usernameField: 'user[email]',
+    passwordField: 'user[password]' },
+
+  (email, password, done) => {/* istanbul ignore next */++cov_r4gt1ft9e.f[1];++cov_r4gt1ft9e.s[2];
+    User.findOne({ email }).
+    then(user => {/* istanbul ignore next */++cov_r4gt1ft9e.f[2];++cov_r4gt1ft9e.s[3];
+      if ( /* istanbul ignore next */(++cov_r4gt1ft9e.b[1][0], !user) || /* istanbul ignore next */(++cov_r4gt1ft9e.b[1][1], !user.validPassword(password))) {/* istanbul ignore next */++cov_r4gt1ft9e.b[0][0];++cov_r4gt1ft9e.s[4];
+        return done(null, false, {
+          errors: { 'email or password': 'is invalid' } });
+
+      } else /* istanbul ignore next */{++cov_r4gt1ft9e.b[0][1];}++cov_r4gt1ft9e.s[5];
+
+      return done(null, user);
+    }).
+    catch(done);
+  }));
+
+
+}

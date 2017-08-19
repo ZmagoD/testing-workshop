@@ -1,0 +1,99 @@
+'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _jsxFileName = '/Users/zmagodevetak/Desktop/react/testing-workshop/client/src/screens/home/main-view.js';var _react = require('react');var _react2 = _interopRequireDefault(_react);
+var _reactRedux = require('react-redux');
+var _articleList = require('../../shared/components/article-list');var _articleList2 = _interopRequireDefault(_articleList);
+var _agent = require('../../shared/agent');var _agent2 = _interopRequireDefault(_agent);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+const YourFeedTab = props => {
+  if (props.token) {
+    const clickHandler = ev => {
+      ev.preventDefault();
+      props.onTabClick('feed', _agent2.default.Articles.feed());
+    };
+
+    return (
+      _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 14 }, __self: undefined },
+        _react2.default.createElement('a', {
+            href: '',
+            className: props.tab === 'feed' ? 'nav-link active' : 'nav-link',
+            onClick: clickHandler, __source: { fileName: _jsxFileName, lineNumber: 15 }, __self: undefined }, 'Your Feed')));
+
+
+
+
+
+  }
+  return null;
+};
+
+const GlobalFeedTab = props => {
+  const clickHandler = ev => {
+    ev.preventDefault();
+    props.onTabClick('all', _agent2.default.Articles.all());
+  };
+  return (
+    _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: undefined },
+      _react2.default.createElement('a', {
+          href: '',
+          className: props.tab === 'all' ? 'nav-link active' : 'nav-link',
+          onClick: clickHandler, __source: { fileName: _jsxFileName, lineNumber: 35 }, __self: undefined }, 'Global Feed')));
+
+
+
+
+
+};
+
+const TagFilterTab = props => {
+  if (!props.tag) {
+    return null;
+  }
+
+  return (
+    _react2.default.createElement('li', { className: 'nav-item', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: undefined },
+      _react2.default.createElement('a', { href: '', className: 'nav-link active', __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: undefined },
+        _react2.default.createElement('i', { className: 'ion-pound', __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: undefined }), ' ', props.tag)));
+
+
+
+};
+
+const mapStateToProps = state => Object.assign({},
+state.articleList, {
+  tags: state.home.tags,
+  token: state.common.token });
+
+
+const mapDispatchToProps = dispatch => ({
+  onTabClick: (tab, payload) => dispatch({ type: 'CHANGE_TAB', tab, payload }) });
+
+
+const MainView = props => {
+  return (
+    _react2.default.createElement('div', { className: 'col-md-9', __source: { fileName: _jsxFileName, lineNumber: 72 }, __self: undefined },
+      _react2.default.createElement('div', { className: 'feed-toggle', __source: { fileName: _jsxFileName, lineNumber: 73 }, __self: undefined },
+        _react2.default.createElement('ul', { className: 'nav nav-pills outline-active', __source: { fileName: _jsxFileName, lineNumber: 74 }, __self: undefined },
+
+          _react2.default.createElement(YourFeedTab, {
+            token: props.token,
+            tab: props.tab,
+            onTabClick: props.onTabClick, __source: { fileName: _jsxFileName, lineNumber: 76 }, __self: undefined }),
+
+
+          _react2.default.createElement(GlobalFeedTab, { tab: props.tab, onTabClick: props.onTabClick, __source: { fileName: _jsxFileName, lineNumber: 82 }, __self: undefined }),
+
+          _react2.default.createElement(TagFilterTab, { tag: props.tag, __source: { fileName: _jsxFileName, lineNumber: 84 }, __self: undefined }))),
+
+
+
+
+      _react2.default.createElement(_articleList2.default, {
+        articles: props.articles,
+        loading: props.loading,
+        articlesCount: props.articlesCount,
+        currentPage: props.currentPage, __source: { fileName: _jsxFileName, lineNumber: 89 }, __self: undefined })));
+
+
+
+};exports.default =
+
+(0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(MainView);

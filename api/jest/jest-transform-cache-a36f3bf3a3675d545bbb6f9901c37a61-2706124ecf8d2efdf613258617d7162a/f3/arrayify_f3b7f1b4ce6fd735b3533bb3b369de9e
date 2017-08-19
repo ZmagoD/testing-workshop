@@ -1,0 +1,23 @@
+'use strict';var _arrayify = require('../arrayify');var _arrayify2 = _interopRequireDefault(_arrayify);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+test('arrayify returns an empty array when given nothing', () => {
+  const result = (0, _arrayify2.default)();
+  expect(result).toEqual([]);
+});
+
+test(`arrayify returns the array-ed version of what it's given`, () => {
+  const input = 'hi there';
+  const result = (0, _arrayify2.default)(input);
+  expect(result).toEqual([input]);
+});
+
+test(`arrayify returns the array if it's given an array`, () => {
+  const input = [1, 2, 3];
+  const result = (0, _arrayify2.default)(input);
+  expect(result).toEqual(input);
+});
+
+test('I submitted my elaboration and feedback', () => {
+  const submitted = true;
+  expect(true).toBe(submitted);
+});
